@@ -1,15 +1,14 @@
 ---
-title: Round Icons
-subtitle: Graphic Design
+title: ginoparadise.sk
+subtitle: Web design and programming
 layout: default
 modal-id: 6
-date: 2014-07-15
-img: roundicons.png
-thumbnail: roundicons-thumbnail.png
-alt: image-alt
-project-date: April 2014
-client: Start Bootstrap
+date: 2019-03-01
+img: ginoparadise.png
+thumbnail: ginoparadise-thumbnail.png
+alt: ginoparadise.sk
+project-date: March 2019
+client: ginoparadise.sk
 category: Web Development
-description: Lorem ipsum dolor sit amet, usu cu alterum nominavi lobortis. At duo novum diceret. Tantas apeirian vix et, usu sanctus postulant inciderint ut, populo diceret necessitatibus in vim. Cu eum dicam feugiat noluisse.
-
+description: A website to present new apartments to be build in Slovakia Bešeňová and an investment opportunity for investors.
 ---
