@@ -1,0 +1,305 @@
+<style>
+  /* input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"]+label:before {
+    content: "☐";
+    font-size: 24px
+  }
+
+  input:checked+label:before {
+    content: "☑";
+    font-size: 24px
+  } */
+
+  label:hover {
+    color: #2ba22e;
+  }
+
+  .ui-datepicker select.ui-datepicker-month,
+  .ui-datepicker select.ui-datepicker-year {
+    color: black;
+  }
+
+  .touched:required:invalid {
+    -moz-box-shadow: none;
+    border: 2px red solid;
+  }
+
+  .touched:required:valid,
+  input:focus:valid {
+    -moz-box-shadow: none;
+    background-color: 1px green solid;
+  }
+
+  #error-list {
+    list-style: none;
+  }
+
+  #error-list li i {
+    margin-right: 10px;
+  }
+</style>
+
+<script>
+  $(function () {
+    $("#inputStartDate3").datepicker({
+      changeMonth: true,
+      changeYear: true,
+      minDate: 0,
+      firstDay: 1,
+      dateFormat: "dd.mm.yy"
+    });
+
+    // validation
+    $(':required').one('blur keydown', function () {
+      console.log('touched', this);
+      $(this).addClass('touched');
+    });
+
+    $('#btnUploadCV').click(e => e.preventDefault());
+    $('#file').change((e) => {
+      const filePath = e.target.files[0].name;
+      $('#filepath').html(`<i class="fas fa-file"></i> ${filePath}`);
+      console.log(filePath);
+    })
+
+    $('#submit').click((e) => {
+      if (!submitForm()) {
+        e.preventDefault();
+      }
+    })
+  });
+
+  function submitForm() {
+    const errorMessages = validateForm();
+    if (errorMessages.length) {
+      console.log(errorMessages);
+    } else {
+      $('.alert.alert-danger').hide();
+      console.log('submit success');
+      return true;
+    }
+  }
+
+  function validateForm() {
+    const messages = [];
+    if ($('#file').val() == '') messages.push('Uploading a CV is required.')
+    $('input:required').each(function(i) {
+      if (!$(this).val() || ($(this).is(':checkbox') && !$(this).is(':checked'))) {
+        const labelFor = $(this).attr('name');
+        const labelText = $(`label[for="${labelFor}"]`).text();
+        messages.push(`${labelText} is required`);
+      }
+    })
+
+    $('.alert.alert-danger').show();
+    $('#error-list').html('');
+    messages.forEach(message => {
+      const $li = `<li>
+        <i class="fas fa-exclamation-triangle"></i> ${message}
+      </li>`;
+      $($li).appendTo('#error-list');
+    })
+    return messages;
+  }
+</script>
+
+<h1>Join Skyvault freelancers</h1>
+<form action="">
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label">EMAIL *</label>
+    <div class="col-sm-10">
+      <input type="email" name="inputEmail3" class="form-control" id="inputEmail3" placeholder="Email" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputFullname3" class="col-sm-2 col-form-label">FULL NAME *</label>
+    <div class="col-sm-10">
+      <input type="text" name="inputFullname3" class="form-control" id="inputFullname3" placeholder="Full name" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputStartDate3" class="col-sm-2 col-form-label">POSSIBLE START DATE</label>
+    <div class="col-sm-10">
+      <input type="text" autocomplete="off" class="form-control" id="inputStartDate3" placeholder="Possible start date">
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-2"><label>PREFERRED TYPE OF PROJECT</label></div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <div class="col-sm-6">
+          <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <label class="form-check-label" for="gridCheck1">
+            Full-time
+          </label>
+        </div>
+
+        <div class="col-sm-6">
+          <input class="form-check-input" type="checkbox" id="gridCheck2">
+          <label class="form-check-label" for="gridCheck2">
+            Part-time
+          </label>
+        </div>
+
+        <div class="col-sm-6">
+          <input class="form-check-input" type="checkbox" id="gridCheck3">
+          <label class="form-check-label" for="gridCheck3">
+            On-site
+          </label>
+        </div>
+
+        <div class="col-sm-6">
+          <input class="form-check-input" type="checkbox" id="gridCheck4">
+          <label class="form-check-label" for="gridCheck4">
+            Off-site (home office)
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2"><label>PREFERRED PROJECT LOCATION</label></div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <div class="col-sm-6">
+          <input class="form-check-input" type="checkbox" id="gridCheck5">
+          <label class="form-check-label" for="gridCheck5">
+            Slovak Republic
+          </label>
+        </div>
+
+        <div class="col-sm-6">
+          <input class="form-check-input" type="checkbox" id="gridCheck6">
+          <label class="form-check-label" for="gridCheck6">
+            Czech Republic
+          </label>
+        </div>
+
+        <div class="col-sm-6">
+          <input class="form-check-input" type="checkbox" id="gridCheck7">
+          <label class="form-check-label" for="gridCheck7">
+            Abroad
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2"><label>UPLOAD CV *</label></div>
+    <div class="col-sm-10" style="max-width: 550px;">
+      Please prepare the CV in line with our template (English CV template, Slovak CV template) or any similiar template
+      (e.g. Europass) in the .DOCX, .DOC, .RTF or .ODT format.
+
+      <br><br>
+      <input type="file" id="file" name="file" style="display: none;" />
+      <label for="file" onclick="javascript:(document.getElementById('file').click())" class="col-md-6 col-sm-12">
+        <button id="btnUploadCV" class="btn btn-lg btn-default">UPLOAD CV
+          <i class="fas fa-upload"></i>
+        </button>
+      </label>
+      <div id="filepath" style="margin-top: 10px;" class="col-md-6 col-sm-12">
+          file: not uploaded
+      </div>
+
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2"><label for="additional-info">ADDITIONAL INFORMATION</label></div>
+    <div class="col-sm-10">
+
+      <textarea class="form-control" id="additional-info" name="additional-info" rows="3"></textarea>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <div class="col-sm-2"><label>CONSENT TO THE PROCESSING OF PERSONAL DATA *</label></div>
+    <div class="col-sm-10">
+      <input class="form-check-input" name="gridCheck8" type="checkbox" id="gridCheck8" checked="checked" required>
+      <label class="form-check-label" for="gridCheck8">
+        I. Consent with the Processing of Personal Data
+      </label>
+
+      <div style="overflow-y: scroll; max-height: 100px; max-width: 550px;">
+
+        Skyvault OÜ with its registered seat at Pärnu mnt 158, 11317 Tallin, Estonia Company ID: 14603713 (hereinafter
+        the “Company”) informs the Candidate ... that it processes his/her personal data pursuant to Article 10 of Act
+        No. 122/2013 Coll. on Personal Data Protection, as amended, in the scope: name, surname, address, business name,
+        address of the registered seat, Org. ID (registry code), date of birth, e-mail address, phone number, age,
+        qualifications, work experience and other data provided voluntarily by the Candidate.
+        <br><br>
+        By sending his/her CV, which also includes this consent, the Candidate grants a consent to the Company to
+        process his/her personal data until 1.1.2060 period in the above scope, and to provide, disclose and transfer
+        them across the border to the legal and natural persons that will be interested in the supply of the services
+        provided by the Candidate. The Candidate has the right to revoke his/her consent at any time by delivering a
+        written revocation of his/her consent to the Company’s address.
+        <br><br>
+        The purpose of the processing of the Candidate’s personal data is to create an opportunity for the Candidate to
+        conclude a commercial-law contract with the Company, whose subject matter will be the supply of the services
+        provided by the Candidate to a third party, depending on the requirements of third parties that have expressed
+        interest in the supply of the services provided by the Candidate.
+        <br><br>
+        II. Information for the Data Subject Pursuant to Act No. 122/2013 Coll. on Personal Data Protection, as Amended
+        Skyvault OÜ with its registered seat at Pärnu mnt 158, 11317 Tallin, Estonia Company ID: 14603713 acts through
+        its executive Alexander Sádovský (hereinafter the “Authorised Person”) for the purposes of collection and
+        processing of the data subject’s personal data in line with Act No. 122/2013 Coll. on Personal Data Protection,
+        as amended, (hereinafter “APDP”) in the position of
+        <br><br>
+        data controller (hereinafter the “Data Controller”) for the purposes of processing the collected personal data
+        of the data subject.
+        Scope and Purpose of Personal Data Processing
+        In line with APDP, the Data Controller processes the personal data of the Candidate (hereinafter the “Data
+        Subject”) based on his/her consent in the scope: name, surname, address, date of birth, e-mail address, phone
+        number, age, qualifications, work experience and other data provided voluntarily by the Candidate. The purpose
+        of the processing of the Data Subject’s personal data is to create an opportunity for the Data Subject to
+        conclude a commercial-law contract with the Data Controller, whose subject matter will be the supply of the
+        services provided by the Data Subject to a third party, depending on the requirements of third parties that have
+        expressed interest in the supply of the services provided by the Data Subject.
+        <br><br>
+        Third parties, Recipients, Third Countries
+        The Data Subject’s personal data may be provided to the legal and natural persons that will be interested in the
+        supply of the services provided by the Data Subject. The Candidate’s personal data may be transferred across the
+        border, and the Candidate expressly agrees, given his/her interest, with the transfer of his/her personal data
+        to any third country for the above purpose.
+        <br><br>
+        Rights of the Data Subject
+        The Data Subject who provides personal data has the right to request a proof of identity of the Authorised
+        Person collecting personal data, or a credible proof of affiliation of the Authorised Person with the entity on
+        whose behalf the Authorised Person acts. The Authorised Person shall grant such request of the Data Subject
+        without undue delay. The Data Subject has the right to revoke his/her consent with the processing of personal
+        data at any time by delivering a written revocation of his/her consent to the Company’s address. The Data Person
+        has been advised that the consent with the processing of personal data is voluntary. Other rights of the Data
+        Subject are contained in APDP.
+        <br><br>
+        Advice to and Declaration of the Data Subject
+        The Data Subject declares that he/she has been advised of his/her rights in line with Article 28 of APDP. The
+        Data Subject declares that he/she has been fully informed about all matters in line with Article 15 of APDP.
+        <br><br>
+        By sending my CV to the Company, I, the Candidate/Data Subject ... express my consent with the processing of
+        personal data and confirm that I am familiar with all the information referred to in the above Article II. The
+        date of my consent is the date of sending my CV to the Company.
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="form-group row" style="margin: 88px 0px 50px 0px;">
+    <div class="col-sm-10">
+      <div class="alert alert-danger" style="margin-bottom: 10px; display: none;">
+        <ul id="error-list">
+
+        </ul>
+      </div>
+      <div id="success"></div>
+      <button id="submit" type="submit" class="btn btn-primary btn-block">Send</button>
+    </div>
+  </div>
+</form>
