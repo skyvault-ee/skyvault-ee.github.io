@@ -78,7 +78,8 @@
       console.log(errorMessages);
     } else {
       $('.alert.alert-danger').hide();
-      console.log('submit success');
+      var $spinner = `<i class="fa fa-spinner fa-spin fa-5x fa-fw"></i>`;
+      $('#success').html($spinner);
       return true;
     }
   }
@@ -298,7 +299,7 @@
 
         </ul>
       </div>
-      <div id="success"></div>
+      <div id="success" style="margin-bottom: 10px; text-align: center;"></div>
       <button id="submit" type="submit" class="btn btn-primary btn-block">Send</button>
     </div>
   </div>
