@@ -48,36 +48,35 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $('#submit').attr('disabled', 'disabled');
-            $.ajax({
-                url: "https://skyvault.dopice.sk/send_cv.php",
-                type: "POST",
-                data: formData,
-                dataType: 'text',
-                cache: false,
-                processData: false,
-                contentType: false,
-                success: function() {
-                    // Success message
-                    $('#success').html("<div class='alert alert-success'>");
-                    $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $('#success > .alert-success')
-                        .append("<strong>Your CV has been sent. Thank you " + firstName + "! </strong>");
-                    $('#success > .alert-success')
-                        .append('</div>');
+            var url = 'https://skyvault.dopice.sk/send_cv.php';
+            fetch(url, {
+                method: "POST",
+                mode: "cors",
+                cache: "no-cache",
+                body: formData
+            })
+            .then((res) => {
+                console.log(res)
+                if (!res.ok) throw new Error('error');
+                $('#success').html("<div class='alert alert-success'>");
+                $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                    .append("</button>");
+                $('#success > .alert-success')
+                    .append("<strong>Your CV has been sent. Thank you " + firstName + "! </strong>");
+                $('#success > .alert-success')
+                    .append('</div>');
 
-                    $('#submit').hide(100);
-                },
-                error: function() {
-                    // Fail message
-                    $('#success').html("<div class='alert alert-danger'>");
-                    $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
-                        .append("</button>");
-                    $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
-                    $('#success > .alert-danger').append('</div>');
+                $('#submit').hide(100);
+            })
+            .catch(() => {
+                // Fail message
+                $('#success').html("<div class='alert alert-danger'>");
+                $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+                    .append("</button>");
+                $('#success > .alert-danger').append("<strong>Sorry " + firstName + ", it seems that my mail server is not responding. Please try again later!");
+                $('#success > .alert-danger').append('</div>');
 
-                    $('#submit').removeAttr('disabled');
-                },
+                $('#submit').removeAttr('disabled');
             })
         },
         filter: function() {
