@@ -52,6 +52,7 @@ $(function() {
                 url: "https://skyvault.dopice.sk/send_cv.php",
                 type: "POST",
                 data: formData,
+                dataType: 'text',
                 cache: false,
                 processData: false,
                 contentType: false,
