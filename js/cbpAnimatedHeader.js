@@ -28,11 +28,11 @@ var cbpAnimatedHeader = (function() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
 			classie.add( header, 'navbar-shrink' );
-			document.querySelector('#logo').style.height = '50px';
+			// document.querySelector('#logo').style.height = '50px';
 		}
 		else {
 			classie.remove( header, 'navbar-shrink' );
-			document.querySelector('#logo').style.height = '88px';
+			// document.querySelector('#logo').style.height = '88px';
 		}
 		didScroll = false;
 	}
