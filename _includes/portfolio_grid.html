@@ -4,23 +4,24 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Recent work</h2>
-                    <h3 class="section-subheading text-muted">Most of the work we do is inside other companies and private, but sometimes we also do something on the public internet.</h3>
+                    <h3 class="section-subheading text-muted">Most of what we build lives inside other companies and stays there. Here is what we can show.</h3>
                 </div>
             </div>
             <div class="row">
             {% for post in site.posts %}
-                <div class="col-md-4 col-sm-6 portfolio-item">
+                <div class="col-md-6 portfolio-item">
                     <a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
                             <div class="portfolio-hover-content">
                                 <i class="fa fa-plus fa-3x"></i>
                             </div>
                         </div>
-                        <img src="img/portfolio/{{ post.thumbnail }}" class="img-responsive img-centered" alt="">
+                        <img src="{{ site.baseurl }}/img/portfolio/{{ post.thumbnail }}" class="img-responsive img-centered" alt="{{ post.alt }}">
                     </a>
                     <div class="portfolio-caption">
-                        <h4>{{ post.title }}</h4>
+                        <h4>{{ post.title }}{% if post.archived %} <span class="portfolio-archived">2019</span>{% endif %}</h4>
                         <p class="text-muted">{{ post.subtitle }}</p>
+                        {% if post.stack %}<p class="portfolio-stack">{{ post.stack }}</p>{% endif %}
                     </div>
                 </div>
             {% endfor %}

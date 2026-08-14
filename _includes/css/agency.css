@@ -276,10 +276,11 @@ fieldset[disabled] .btn-xl.active {
 header {
     text-align: center;
     color: #fff;
+    background-color: #03151f;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/header-bg.jpg');
-    background-position: center center;
-    background-repeat: none;
+    background-image: url('{{ site.baseurl }}/img/hero-vault.svg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -287,48 +288,91 @@ header {
 }
 
 header .intro-text {
-    padding-top: 100px;
-    padding-bottom: 50px;
+    padding-top: 130px;
+    padding-bottom: 80px;
 }
 
-header .intro-text .intro-lead-in {
-    margin-bottom: 25px;
-    font-family: {{ site.data.template.font.secondary }};
-    font-size: 22px;
-    font-style: italic;
-    line-height: 22px;
+header .intro-text .intro-kicker {
+    margin-bottom: 22px;
+    font-family: {{ site.data.template.font.primary }};
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #4fc3f7;
 }
 
 header .intro-text .intro-heading {
-    margin-bottom: 25px;
-    text-transform: uppercase;
+    margin-bottom: 22px;
     font-family: {{ site.data.template.font.primary }};
-    font-size: 50px;
+    font-size: 34px;
     font-weight: 700;
-    line-height: 50px;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+header .intro-text .intro-sub {
+    max-width: 620px;
+    margin: 0 auto 34px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255,255,255,.78);
+}
+
+header .intro-text .intro-actions .btn-xl {
+    margin: 0 6px 14px;
+}
+
+header .intro-text .intro-actions .btn-ghost {
+    display: inline-block;
+    margin: 0 6px 14px;
+    padding: 18px 24px;
+    font-family: {{ site.data.template.font.primary }};
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(255,255,255,.85);
+    border-bottom: 1px solid rgba(255,255,255,.28);
+    text-decoration: none;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+header .intro-text .intro-actions .btn-ghost:hover,
+header .intro-text .intro-actions .btn-ghost:focus {
+    color: #fff;
+    border-bottom-color: #4fc3f7;
+    text-decoration: none;
+}
+
+header .intro-text .intro-actions .btn-ghost .fa {
+    margin-left: 6px;
+    font-size: 13px;
 }
 
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 300px;
+        padding-top: 260px;
         padding-bottom: 200px;
     }
 
-    header .intro-text .intro-lead-in {
-        margin-bottom: 25px;
-        font-family: {{ site.data.template.font.secondary }};
-        font-size: 40px;
-        font-style: italic;
-        line-height: 40px;
+    header .intro-text .intro-kicker {
+        margin-bottom: 28px;
+        font-size: 13px;
+        letter-spacing: 4px;
     }
 
     header .intro-text .intro-heading {
-        margin-bottom: 50px;
-        text-transform: uppercase;
+        margin-bottom: 28px;
         font-family: {{ site.data.template.font.primary }};
-        font-size: 75px;
+        font-size: 66px;
         font-weight: 700;
-        line-height: 75px;
+        line-height: 1.08;
+        letter-spacing: -1.5px;
+    }
+
+    header .intro-text .intro-sub {
+        font-size: 18px;
+        margin-bottom: 42px;
     }
 }
 
@@ -382,8 +426,10 @@ section h3.section-subheading {
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
-    background: rgba(254,209,54,.9); /* Fallback when no plugin support */
-    background: rgba({{ site.data.template.color.primary | hex_to_rgb | join: ',' }}, .9);
+    /* Hardcoded: _plugins/ does not run on GitHub Pages, so the old
+       hex_to_rgb Liquid filter emitted invalid CSS in production.
+       Keep in sync with _data/template.yml color.primary. */
+    background: rgba(0,126,176,.9);
 }
 
 #portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
@@ -413,7 +459,7 @@ section h3.section-subheading {
 #portfolio .portfolio-item .portfolio-caption {
     margin: 0 auto;
     padding: 25px;
-    max-width: 400px;
+    max-width: 100%;
     text-align: center;
     background-color: #fff;
 }
@@ -427,6 +473,90 @@ section h3.section-subheading {
     margin: 0;
     font-family: {{ site.data.template.font.secondary }};
     font-size: 16px;
+    font-style: italic;
+}
+
+#portfolio .portfolio-item .portfolio-caption p.portfolio-stack {
+    margin-top: 12px;
+    font-family: {{ site.data.template.font.primary }};
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #{{ site.data.template.color.primary }};
+}
+
+#portfolio .portfolio-item .portfolio-caption h4 .portfolio-archived {
+    display: inline-block;
+    margin-left: 6px;
+    padding: 3px 8px;
+    vertical-align: middle;
+    font-family: {{ site.data.template.font.primary }};
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #999;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+}
+
+.modal-actions {
+    margin-top: 25px;
+}
+
+.modal-actions .btn {
+    margin: 0 4px 10px;
+}
+
+.modal-actions .archived-note {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 13px;
+    font-style: italic;
+    color: #999;
+}
+
+.modal-actions .archived-note .fa {
+    margin-right: 5px;
+}
+
+.contact-alt {
+    margin-top: 22px;
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.contact-alt a {
+    color: #fff;
+    border-bottom: 1px solid rgba(255,255,255,.4);
+}
+
+.contact-alt a:hover {
+    color: #fff;
+    text-decoration: none;
+    border-bottom-color: #fff;
+}
+
+footer .footer-contact {
+    margin: 0;
+}
+
+footer .footer-contact a {
+    font-size: 13px;
+    color: #{{ site.data.template.color.muted }};
+}
+
+footer .footer-contact a:hover {
+    color: #{{ site.data.template.color.primary }};
+    text-decoration: none;
+}
+
+.portfolio-modal .modal-content .modal-subtitle {
+    margin-top: -6px;
+    margin-bottom: 0;
+    font-family: {{ site.data.template.font.secondary }};
+    font-size: 17px;
     font-style: italic;
 }
 
@@ -665,10 +795,9 @@ aside.clients img {
 }
 
 section#contact {
-    background-color: #222;
-    background-image: url('{{ site.baseurl }}/img/map-image.png');
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #1a2b33;
+    background-image: -webkit-linear-gradient(top, #16252c 0%, #0d1a1f 100%);
+    background-image: linear-gradient(to bottom, #16252c 0%, #0d1a1f 100%);
 }
 
 section#contact .section-heading {

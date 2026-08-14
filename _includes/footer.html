@@ -1,10 +1,10 @@
   <footer>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; {{ site.title }} {{ 'now' | date: "%Y" }}</span>
+                <div class="col-md-5">
+                    <span class="copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.title }} O&Uuml;</span>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 text-center">
                     <ul class="list-inline social-buttons">
                         {% for network in site.social %}
                         <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
@@ -12,13 +12,10 @@
                         {% endfor %}
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <!-- <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul> -->
+                <div class="col-md-3">
+                    <ul class="list-inline quicklinks footer-contact">
+                        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Portfolio entries are records rendered into the grid on the homepage,
+         not standalone pages. Bounce to the work section instead of shipping a
+         duplicate copy of the homepage at every category URL. -->
+    <meta http-equiv="refresh" content="0; url={{ site.baseurl }}/#portfolio">
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}/">
+    <meta name="robots" content="noindex">
+    <title>{{ page.title }} &middot; {{ site.title }}</title>
+</head>
+<body>
+    <p>Redirecting to <a href="{{ site.baseurl }}/#portfolio">{{ site.title }}</a>&hellip;</p>
+</body>
+</html>

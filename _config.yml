@@ -1,11 +1,11 @@
-url: ""
+url: "https://www.skyvault.ee"
 baseurl: ""
 
 # Site settings
 title: Skyvault
 email: alino.sadovsky@skyvault.ee
-description: "Skyvault - Software development and IT outsourcing services in Europe"
-
+description: "Skyvault builds and runs production software — e-commerce, custom applications and the infrastructure underneath them. Estonian company, EU-based team."
+lang: en
 
 # Team names, titles and social links
 people:
@@ -25,7 +25,7 @@ people:
 #     url:
 #   - title: stack-overflow
 #     url: http://stackoverflow.com/questions/tagged/jekyll
-#   - title: bitbucket 
+#   - title: bitbucket
 #     url: http://bitbucket.org/jekyll
 #   - title: github
 #     url: http://github.com/jekyll
@@ -34,3 +34,25 @@ people:
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - .hermes
+  # Untracked draft: placeholder specialists and a 2019 job offer. Not for production.
+  - specialists.markdown
+  - _layouts/outsourcing.html
+  - _includes/outsourcing
+
+defaults:
+  - scope:
+      path: "send_cv.markdown"
+    values:
+      sitemap: false
