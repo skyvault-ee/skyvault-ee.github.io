@@ -521,37 +521,6 @@ section h3.section-subheading {
     margin-right: 5px;
 }
 
-.contact-alt {
-    margin-top: 22px;
-    margin-bottom: 0;
-    font-size: 14px;
-}
-
-.contact-alt a {
-    color: #fff;
-    border-bottom: 1px solid rgba(255,255,255,.4);
-}
-
-.contact-alt a:hover {
-    color: #fff;
-    text-decoration: none;
-    border-bottom-color: #fff;
-}
-
-footer .footer-contact {
-    margin: 0;
-}
-
-footer .footer-contact a {
-    font-size: 13px;
-    color: #{{ site.data.template.color.muted }};
-}
-
-footer .footer-contact a:hover {
-    color: #{{ site.data.template.color.primary }};
-    text-decoration: none;
-}
-
 .portfolio-modal .modal-content .modal-subtitle {
     margin-top: -6px;
     margin-bottom: 0;

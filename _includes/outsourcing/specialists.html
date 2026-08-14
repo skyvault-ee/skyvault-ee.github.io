@@ -1,0 +1,100 @@
+<style>
+    .border-left {
+        border-left: 2px solid gray;
+        padding-left: 50px;
+    }
+    .specialist {
+        max-width: 600px;
+        border: 1px solid black;
+        margin-bottom: 30px;
+    }
+    .specialist-id {
+        position: absolute;
+        left: 63px;
+        font-size: 16px;
+        background-color: white;
+        color: lightskyblue;
+        padding: 5px;
+        margin-top: 25px;
+    }
+    .specialist-title {
+        background-color: #007eb0;
+        color: lightskyblue;
+        padding: 20px;
+    }
+    .skills {
+        background-color: aliceblue;
+        padding: 5px;
+    }
+    .skills .row:not(:last-child) {
+        margin-bottom: 10px;
+    }
+</style>
+
+<section id="specialists">
+    <div class="container">
+        <div>
+            <p>Would you like to join this list as a freelancer?</p>
+            <a href="/send_cv/" target="_blank">
+                <button class="btn btn-primary">Join us!</button>
+            </a>
+        </div>
+
+        <hr>
+
+        <h2>Specialists</h2>
+        <div class="border-left">
+            <div class="specialist">
+                <div class="specialist-id">1</div>
+                <div class="specialist-title"><h4>Javascript Developer</h4></div>
+                <div class="skills">
+                    <div class="row">
+                        <div class="skill-title col-md-6">Programming</div>
+                        <div class="skill-values col-md-6">Javascript, PHP</div>
+                    </div>
+                    <div class="row">
+                        <div class="skill-title col-md-6">DB</div>
+                        <div class="skill-values col-md-6">MySQL, MongoDB</div>
+                    </div>
+                    <div class="row">
+                        <div class="skill-title col-md-6">Management</div>
+                        <div class="skill-values col-md-6">Scrum, Targetprocess</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="specialist">
+                    <div class="specialist-id">2</div>
+                    <div class="specialist-title"><h4>Javascript Developer</h4></div>
+                    <div class="skills">
+                        <div class="row">
+                            <div class="skill-title col-md-6">Programming</div>
+                            <div class="skill-values col-md-6">Javascript, PHP</div>
+                        </div>
+                        <div class="row">
+                            <div class="skill-title col-md-6">DB</div>
+                            <div class="skill-values col-md-6">MySQL, MongoDB</div>
+                        </div>
+                        <div class="row">
+                            <div class="skill-title col-md-6">Management</div>
+                            <div class="skill-values col-md-6">Scrum, Targetprocess</div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+
+<section id="job-offers">
+    <div class="container">
+        <h2>Job offers</h2>
+        <span>Skyvault offers many <b>jobs and projects</b> for IT freelancers. See the list of jobs.</span>
+        <br><br>
+        <div class="job-offer">
+                <div class="job-title">Senior Javascript Developer</div>
+                <div class="job-preffered-location">Bratislava / Off-site</div>
+                <div class="job-rate">4200-4600 monthly</div>
+                <div class="job-availability">03.06.2019 - 30.11.2019</div>
+        </div>
+    </div>
+</section>

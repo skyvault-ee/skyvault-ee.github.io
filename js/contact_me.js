@@ -14,13 +14,6 @@ $(function() {
         return body === '' || SUCCESS_RESPONSE.test(body);
     }
 
-    // Kept in one place so the address is never duplicated: the contact section
-    // renders it from site.email, and .js files are not run through Liquid.
-    function fallbackEmail() {
-        var href = $('.contact-alt a').attr('href') || '';
-        return href.replace(/^mailto:/, '');
-    }
-
     function showAlert(type, html) {
         $('#success').html(
             $('<div>')
@@ -39,21 +32,13 @@ $(function() {
         showAlert('success', $('<strong>').text('Thanks — your message has been sent.'));
     }
 
-    // Never a dead end: if the form cannot deliver, hand over the mail address
-    // so the enquiry is not lost.
-    function showFailure(lead) {
-        var email = fallbackEmail();
-        var $msg = $('<span>').append($('<strong>').text(lead));
-
-        if (email) {
-            $msg.append(
-                document.createTextNode(' Please email us directly at '),
-                $('<a>').attr('href', 'mailto:' + email).text(email),
-                document.createTextNode('.')
-            );
-        }
-
-        showAlert('danger', $msg);
+    // The form is the only contact channel on the page, so a failure message
+    // must not be a dead end: say plainly that it did not send, and invite a
+    // retry rather than implying the enquiry is on its way.
+    function showFailure(lead, advice) {
+        showAlert('danger', $('<span>')
+            .append($('<strong>').text(lead))
+            .append(document.createTextNode(' ' + advice)));
     }
 
     $("input,textarea").jqBootstrapValidation({
@@ -88,15 +73,24 @@ $(function() {
 
                     // HTTP 200, but the server reported a problem.
                     if (/no arguments provided/i.test(String(response))) {
-                        showFailure('We could not send that — some details were missing or the email address looked invalid.');
+                        showFailure(
+                            'We could not send that.',
+                            'Please check your details — the email address in particular — and try again.'
+                        );
                     } else {
-                        showFailure('Sorry, your message could not be sent.');
+                        showFailure(
+                            'Sorry, your message could not be sent.',
+                            'Please try again in a few minutes.'
+                        );
                     }
                     // Deliberately NOT resetting the form: the visitor keeps
-                    // what they typed and can retry or copy it into an email.
+                    // what they typed and can retry without retyping it.
                 },
                 error: function() {
-                    showFailure('Sorry, our mail server is not responding right now.');
+                    showFailure(
+                        'Sorry, our mail server is not responding right now.',
+                        'Please try again in a few minutes.'
+                    );
                 }
             })
         },
