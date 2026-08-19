@@ -6,6 +6,12 @@
     {% seo %}
     <meta name="twitter:card" content="summary_large_image">
 
+    <!-- One page per language, cross-linked. x-default points at English. -->
+    {% for l in site.data.languages %}
+    <link rel="alternate" hreflang="{{ l.hreflang }}" href="{{ site.url }}{{ l.url | prepend: site.baseurl }}">
+    {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}/">
+
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link rel="stylesheet" href="{{ "/style.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/js/jquery-ui.min.css" | prepend: site.baseurl }}">

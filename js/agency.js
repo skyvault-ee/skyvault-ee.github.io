@@ -21,7 +21,9 @@ $('body').scrollspy({
 })
 
 // Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function() {
+// The language dropdown lives in the same nav: its toggle must open the menu
+// rather than collapse it, and its links are real page navigations.
+$('.navbar-collapse ul li a').not('[data-toggle="dropdown"]').click(function() {
     $('.navbar-toggle:visible').click();
 });
 

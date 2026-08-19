@@ -1,5 +1,7 @@
  <!-- Portfolio Modals -->
  {% for post in site.posts %}
+    {%- assign mid = post.modal-id | append: '' -%}
+    {%- assign w = t.work[mid] -%}
     <div class="portfolio-modal modal fade" id="portfolioModal{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -13,25 +15,25 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <h2>{{ post.title }}</h2>
-                            <p class="modal-subtitle text-muted">{{ post.subtitle }}</p>
+                            <p class="modal-subtitle text-muted">{{ w.subtitle | default: post.subtitle }}</p>
                             <hr class="star-primary">
                             <img src="{{ site.baseurl }}/img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
-                            <p>{{ post.description }}</p>
+                            <p>{{ w.description | default: post.description }}</p>
                             <ul class="list-inline item-details">
-                                <li>Client:
+                                <li>{{ t.portfolio.label_client }}:
                                     <strong>{{ post.client }}
                                     </strong>
                                 </li>
-                                <li>Date:
+                                <li>{{ t.portfolio.label_date }}:
                                     <strong>{{ post.project-date }}
                                     </strong>
                                 </li>
-                                <li>Service:
-                                    <strong>{{ post.category }}
+                                <li>{{ t.portfolio.label_service }}:
+                                    <strong>{{ w.category | default: post.category }}
                                     </strong>
                                 </li>
                                 {% if post.stack %}
-                                <li>Built with:
+                                <li>{{ t.portfolio.label_stack }}:
                                     <strong>{{ post.stack }}
                                     </strong>
                                 </li>
@@ -40,12 +42,12 @@
                             <div class="modal-actions">
                                 {% if post.site_url %}
                                 <a href="{{ post.site_url }}" target="_blank" rel="noopener" class="btn btn-primary">
-                                    <i class="fa fa-external-link"></i> Visit the site
+                                    <i class="fa fa-external-link"></i> {{ t.portfolio.visit }}
                                 </a>
                                 {% elsif post.archived %}
-                                <span class="archived-note"><i class="fa fa-archive"></i> Archived &mdash; screenshot of the site as we delivered it</span>
+                                <span class="archived-note"><i class="fa fa-archive"></i> {{ t.portfolio.archived_note }}</span>
                                 {% endif %}
-                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> {{ t.portfolio.close }}</button>
                             </div>
                         </div>
                     </div>

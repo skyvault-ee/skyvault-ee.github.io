@@ -9,6 +9,14 @@ $(function() {
     // so we never tell a visitor their message went through when it did not.
     var SUCCESS_RESPONSE = /^(success|ok|sent|true|1)$/i;
 
+    // User-facing strings come from data attributes on #contactForm so they
+    // follow the page's language (see _includes/contact.html). The English
+    // fallbacks only apply if the markup is missing an attribute.
+    function msg(key, fallback) {
+        var value = $('#contactForm').data(key);
+        return value == null || value === '' ? fallback : String(value);
+    }
+
     function serverSaidSuccess(response) {
         var body = $.trim(response == null ? '' : String(response));
         return body === '' || SUCCESS_RESPONSE.test(body);
@@ -29,7 +37,8 @@ $(function() {
     }
 
     function showSuccess() {
-        showAlert('success', $('<strong>').text('Thanks — your message has been sent.'));
+        showAlert('success', $('<strong>').text(
+            msg('msgSuccess', 'Thanks — your message has been sent.')));
     }
 
     // The form is the only contact channel on the page, so a failure message
@@ -74,13 +83,13 @@ $(function() {
                     // HTTP 200, but the server reported a problem.
                     if (/no arguments provided/i.test(String(response))) {
                         showFailure(
-                            'We could not send that.',
-                            'Please check your details — the email address in particular — and try again.'
+                            msg('msgInvalidLead', 'We could not send that.'),
+                            msg('msgInvalidAdvice', 'Please check your details — the email address in particular — and try again.')
                         );
                     } else {
                         showFailure(
-                            'Sorry, your message could not be sent.',
-                            'Please try again in a few minutes.'
+                            msg('msgFailLead', 'Sorry, your message could not be sent.'),
+                            msg('msgFailAdvice', 'Please try again in a few minutes.')
                         );
                     }
                     // Deliberately NOT resetting the form: the visitor keeps
@@ -88,8 +97,8 @@ $(function() {
                 },
                 error: function() {
                     showFailure(
-                        'Sorry, our mail server is not responding right now.',
-                        'Please try again in a few minutes.'
+                        msg('msgOfflineLead', 'Sorry, our mail server is not responding right now.'),
+                        msg('msgOfflineAdvice', 'Please try again in a few minutes.')
                     );
                 }
             })

@@ -3,12 +3,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Recent work</h2>
-                    <h3 class="section-subheading text-muted">Most of what we build lives inside other companies and stays there. Here is what we can show.</h3>
+                    <h2 class="section-heading">{{ t.portfolio.heading }}</h2>
+                    <h3 class="section-subheading text-muted">{{ t.portfolio.subheading }}</h3>
                 </div>
             </div>
             <div class="row">
             {% for post in site.posts %}
+                {%- comment -%}
+                  modal-id is an integer in the post front matter, but the
+                  _data/i18n work table is keyed by string, so coerce before
+                  the lookup or every entry silently resolves to nil.
+                {%- endcomment -%}
+                {%- assign mid = post.modal-id | append: '' -%}
+                {%- assign w = t.work[mid] -%}
                 <div class="col-md-6 portfolio-item">
                     <a href="#portfolioModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
                         <div class="portfolio-hover">
@@ -20,7 +27,7 @@
                     </a>
                     <div class="portfolio-caption">
                         <h4>{{ post.title }}{% if post.archived %} <span class="portfolio-archived">2019</span>{% endif %}</h4>
-                        <p class="text-muted">{{ post.subtitle }}</p>
+                        <p class="text-muted">{{ w.subtitle | default: post.subtitle }}</p>
                         {% if post.stack %}<p class="portfolio-stack">{{ post.stack }}</p>{% endif %}
                     </div>
                 </div>

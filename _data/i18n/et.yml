@@ -1,0 +1,169 @@
+# Eesti keel. Tõlge on vaba — tekst peab kõlama omakeelsena, mitte tõlgitud
+# inglise keelena. Võtmed peavad kattuma failiga _data/i18n/en.yml.
+
+meta:
+  title: Tarkvaraarendus, e-pood ja DevOps
+  description: >-
+    Skyvault ehitab ja hoiab töös produktsioonitarkvara — e-poed, eritellimusel
+    rakendused ja nende all olev taristu. Koolitame meeskondi AI-agentide
+    kasutamises ja automatiseerime korduvat tööd. Eesti ettevõte, tiim EL-is.
+
+nav:
+  services: Teenused
+  training: AI-koolitus
+  portfolio: Tehtud tööd
+  contact: Kontakt
+  language: Keel
+
+hero:
+  kicker: Tarkvaraettevõte · Eesti
+  heading_line1: Tarkvara, mis peab
+  heading_line2: esmaspäeval töötama
+  sub: >-
+    Ehitame ja haldame päris ettevõtete produktsioonisüsteeme — e-poode,
+    sisemisi tööriistu ja servereid nende all. Väike tiim, ilma
+    kliendihaldurite ja piletijärjekorrata.
+  cta_work: Vaata meie töid
+  cta_contact: Võta ühendust
+
+services:
+  heading: Mida me teeme
+  subheading: >-
+    Väike tiim, ilma kliendihalduriteta. Räägid otse nendega, kes koodi
+    kirjutavad.
+  items:
+    - icon: fa-shopping-cart
+      title: Veeb ja e-pood
+      text: >-
+        E-poed ja ärilehed, mis peavad päriselt töötama: tootekataloogid,
+        tarnijate hinnakirjade import, tellimused, arved ja e-kiri, mis jõuab
+        postkasti, mitte rämpsposti.
+    - icon: fa-code
+      title: Eritellimustarkvara
+      text: >-
+        Sisemised tööriistad, liidestused ja see ebamugav asi, mida ükski
+        valmistoode ei lahenda. Võtame projektid, kus huvitav osa on probleem,
+        mitte raamistik.
+    - icon: fa-server
+      title: DevOps ja hosting
+      text: >-
+        Juurutused, serverite seadistus, andmebaasi migratsioonid ja e-kiri, mis
+        lakkas välja minemast. Tänamatu pool, millest sõltub, kas kõik ülejäänu
+        püsti püsib.
+
+training:
+  heading: AI-koolitus ja automatiseerimine
+  subheading: >-
+    Kasutame AI-agente iga päev päris kliendide töös. Õpetame sama ka teie
+    tiimile — ja võtame ära korduva töö, mis vaikselt teie nädalat sööb.
+  block1:
+    title: Teie tiimi koolitamine
+    lead: >-
+      Praktilised sessioonid teie enda repositooriumi ja teie enda ülesannetega.
+      Mitte slaidiesitlus AI tulevikust.
+    items:
+      - strong: Claude ja Claude Code
+        text: >-
+          — kuidas panna agent tegema päris tööd päris koodibaasis, mitte lihtsalt
+          küsimustele vastama.
+      - strong: Codex ja OpenCode
+        text: >-
+          — alternatiivid, milles kumbki hea on ja millal tasub vahetada.
+      - strong: Promptid, projektijuhised ja kontekst
+        text: mis peavad vastu kohtumisele segase repositooriumiga.
+      - strong: Agendi töö ülevaatamine
+        text: >-
+          — mida kontrollida enne, kui midagi liidetakse, juurutatakse või
+          kliendile saadetakse.
+      - strong: Mudelid teie enda riistvaral
+        text: kui andmed ei tohi majast välja liikuda.
+  block2:
+    title: Korduva töö automatiseerimine
+    lead: >-
+      Enamikus ettevõtetes on käputäis ülesandeid, mida keegi teeb iga nädal
+      uuesti, sest keegi pole kunagi maha istunud ja neid ära kaotanud. Meie
+      leiame need üles ja kaotame ära.
+    items:
+      - text: >-
+          Kõigepealt selgitame välja, mida üldse tasub automatiseerida — märkimisväärset
+          osa sellest ei tasu.
+      - text: >-
+          Agendid ühendatud tööriistadega, mille eest te niikuinii maksate: e-post,
+          tabelid, arveldus, teie pood, teie serverid.
+      - text: >-
+          Ajastatud tööd, mis teevad igava ringi ära ja annavad häält ainult siis,
+          kui midagi on viltu.
+      - text: >-
+          Üleandmine: see elab teie repositooriumis, dokumenteerituna, ja töötab
+          edasi ka siis, kui te meile enam kunagi ei helista.
+    example: >-
+      Igal esmaspäeva hommikul saabub tarnija hinnakiri PDF-ina. Keegi ei peaks
+      seda käsitsi poodi ümber trükkima.
+  price:
+    unit: / tund
+    vat: Käibemaksuta
+    terms:
+      - Kaugteel või kohapeal Slovakkias, Tšehhis, Poolas, Eestis ja Paraguays.
+      - Sessioonid alates ühest tunnist. Sisukas esimene töötuba kestab tavaliselt pool päeva.
+      - Läbiviimise keel on inglise või slovaki keel.
+      - Eesti ettevõte — EL-i ettevõtetele esitame arve pöördmaksustamisega.
+    cta: Broneeri koolitus
+
+portfolio:
+  heading: Tehtud tööd
+  subheading: >-
+    Suurem osa sellest, mida ehitame, elab teiste ettevõtete sees ja jääb sinna.
+    Seda saame näidata.
+  label_client: Klient
+  label_date: Kuupäev
+  label_service: Teenus
+  label_stack: Ehitatud
+  visit: Ava veebileht
+  archived_note: Arhiveeritud — ekraanipilt lehest sellisena, nagu me selle üle andsime
+  close: Sulge
+
+contact:
+  heading: Võta ühendust
+  subheading: >-
+    Kirjuta, mida ehitad või mis töötamast lakkas. Vastame ühe tööpäeva jooksul.
+  name: Sinu nimi *
+  email: Sinu e-post *
+  phone: Sinu telefon *
+  message: Sinu sõnum *
+  err_name: Palun sisesta oma nimi.
+  err_email: Palun sisesta oma e-posti aadress.
+  err_phone: Palun sisesta oma telefoninumber.
+  err_message: Palun kirjuta sõnum.
+  submit: Saada sõnum
+  js_success: Aitäh — sinu sõnum on saadetud.
+  js_invalid_lead: Me ei saanud seda saata.
+  js_invalid_advice: >-
+    Palun kontrolli oma andmeid — eriti e-posti aadressi — ja proovi uuesti.
+  js_fail_lead: Kahjuks ei õnnestunud sinu sõnumit saata.
+  js_fail_advice: Palun proovi mõne minuti pärast uuesti.
+  js_offline_lead: Kahjuks ei vasta meie postiserver praegu.
+  js_offline_advice: Palun proovi mõne minuti pärast uuesti.
+# Tehtud tööd. Võtmeks on postituse `modal-id`. Pealkiri, pildid, klient,
+# tehnoloogiad ja kuupäevad jäävad front matter'isse — tõlgitakse ainult tekst.
+work:
+  "1":
+    subtitle: E-pood looduskivi tarnijale
+    category: E-pood
+    description: >-
+      E-pood looduskivi tarnijale — travertiin, marmor, andesiit, liivakivi,
+      sillutuskivid. Kataloogi taga on tarnija hinnakirja automaatne import, nii
+      et sajad tooted ja nende variandid püsivad ajakohased ilma, et keegi peaks
+      hinnakirja ümber trükkima. Hind arvutatakse olenevalt materjalist
+      ruutmeetri või tüki kaupa, ostukorv väljastab kaardimakse asemel korraliku
+      arve ja tehingukirjad on DKIM-allkirjastatud, nii et tellimuse kinnitused
+      päriselt kliendini jõuavad.
+  "2":
+    subtitle: Kinnisvarainvesteeringu tutvustus
+    category: Veebiarendus
+    description: >-
+      Tutvustusleht Gino Paradise kuurordi uutele korteritele Bešeňovás,
+      suunatud ostjatele, kes kaalusid neid pigem investeeringu kui koduna.
+      Selle keskmes oli tootluskalkulaator, mis muutis pakkumise — garanteeritud
+      tootlus, omaniku ööbimispäevad, lepingu pikkus — arvuks, mida investor
+      sai päriselt võrrelda. Üle antud 2019. aastal; klient on lehe vahepeal
+      välja vahetanud.

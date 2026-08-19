@@ -238,6 +238,71 @@ fieldset[disabled] .btn-xl.active {
     background-color: #{{ site.data.template.color.secondary }};
 }
 
+.navbar-default .nav li.lang-switch>a .fa-globe {
+    margin-right: 5px;
+}
+
+/* Scrollspy toggles `active` on nav items as the page scrolls. The language
+   switcher is not a section link, so keep it visually neutral when it does. */
+.navbar-default .navbar-nav>li.lang-switch.active>a,
+.navbar-default .navbar-nav>li.lang-switch.active>a:hover,
+.navbar-default .navbar-nav>li.lang-switch.active>a:focus {
+    color: #fff;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>li.lang-switch.open>a,
+.navbar-default .navbar-nav>li.lang-switch.open>a:hover,
+.navbar-default .navbar-nav>li.lang-switch.open>a:focus {
+    color: #fff;
+    background-color: transparent;
+}
+
+.navbar-default .nav li.lang-switch .dropdown-menu {
+    min-width: 160px;
+    padding: 6px 0;
+    border: 0;
+    border-radius: 3px;
+    background-color: #222;
+    box-shadow: 0 6px 18px rgba(0,0,0,.3);
+}
+
+.navbar-default .nav li.lang-switch .dropdown-menu>li>a {
+    padding: 8px 20px;
+    text-transform: none;
+    font-family: {{ site.data.template.font.primary }};
+    font-size: 13px;
+    letter-spacing: .5px;
+    color: rgba(255,255,255,.85);
+}
+
+.navbar-default .nav li.lang-switch .dropdown-menu>li>a:hover,
+.navbar-default .nav li.lang-switch .dropdown-menu>li>a:focus {
+    color: #fff;
+    background-color: #{{ site.data.template.color.primary }};
+}
+
+.navbar-default .nav li.lang-switch .dropdown-menu>li.lang-current>a {
+    color: #{{ site.data.template.color.primary }};
+    background-color: transparent;
+}
+
+.navbar-default .nav li.lang-switch .dropdown-menu>li.lang-current>a:hover,
+.navbar-default .nav li.lang-switch .dropdown-menu>li.lang-current>a:focus {
+    color: #fff;
+    background-color: #{{ site.data.template.color.primary }};
+}
+
+@media(max-width:767px) {
+    /* Collapsed menu: the dropdown renders inline, so drop the dark panel and
+       let it read as a nested list instead of a floating menu. */
+    .navbar-default .nav li.lang-switch .dropdown-menu {
+        padding-left: 15px;
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
 @media(min-width:768px) {
     #logo {
         top: 15px;

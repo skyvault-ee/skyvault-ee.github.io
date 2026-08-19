@@ -1,5 +1,16 @@
 <!DOCTYPE html>
-<html>
+{%- comment -%}
+  Language resolution for the whole page. Pages carry `lang:` in front matter
+  as a full locale (sk_SK), because jekyll-seo-tag renders that value straight
+  into og:locale. The short code is derived from it and drives the i18n lookup,
+  so a translated page is a front matter line plus a file in _data/i18n/, never
+  a duplicated template.
+{%- endcomment -%}
+{% assign lang_code = page.lang | default: 'en_US' | split: '_' | first %}
+{% assign t = site.data.i18n[lang_code] %}
+{% assign lang_entry = site.data.languages | where: 'code', lang_code | first %}
+{% assign lang_home = lang_entry.url | prepend: site.baseurl %}
+<html lang="{{ lang_entry.hreflang }}">
 
   {% include head.html %}
 

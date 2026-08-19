@@ -1,0 +1,25 @@
+# Languages the site is published in.
+#
+# `url` is the page permalink; `code` must match a file in _data/i18n/<code>.yml
+# and the `lang:` front matter of the corresponding page. `hreflang` is what
+# goes into the alternate link tags.
+- code: en
+  label: English
+  short: EN
+  hreflang: en
+  url: /
+- code: sk
+  label: Slovenčina
+  short: SK
+  hreflang: sk
+  url: /sk/
+- code: es
+  label: Español
+  short: ES
+  hreflang: es
+  url: /es/
+- code: et
+  label: Eesti
+  short: ET
+  hreflang: et
+  url: /et/

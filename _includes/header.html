@@ -23,16 +23,33 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#services">{{ t.nav.services }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#training">AI training</a>
+                        <a class="page-scroll" href="#training">{{ t.nav.training }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Recent work</a>
+                        <a class="page-scroll" href="#portfolio">{{ t.nav.portfolio }}</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">{{ t.nav.contact }}</a>
+                    </li>
+                    <li class="dropdown lang-switch">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="{{ t.nav.language }}">
+                            <i class="fa fa-globe"></i> {{ lang_entry.short }} <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            {%- comment -%}
+                              Marked with `lang-current`, not `active`: Bootstrap's
+                              scrollspy owns the `active` class on every .nav li and
+                              strips it on the first scroll event.
+                            {%- endcomment -%}
+                            {% for l in site.data.languages %}
+                            <li{% if l.code == lang_code %} class="lang-current"{% endif %}>
+                                <a href="{{ l.url | prepend: site.baseurl }}" hreflang="{{ l.hreflang }}" lang="{{ l.hreflang }}">{{ l.label }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -45,19 +62,13 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-kicker">Software company &middot; Estonia</div>
-                <div class="intro-heading">Software that has to<br class="hidden-xs"> work on Monday</div>
-                <p class="intro-sub">We build and run production systems for real businesses &mdash; online shops, internal tools, and the servers underneath them. Small team, no account managers, no ticket queue.</p>
+                <div class="intro-kicker">{{ t.hero.kicker }}</div>
+                <div class="intro-heading">{{ t.hero.heading_line1 }}<br class="hidden-xs"> {{ t.hero.heading_line2 }}</div>
+                <p class="intro-sub">{{ t.hero.sub }}</p>
                 <div class="intro-actions">
-                    <a href="#portfolio" class="page-scroll btn btn-xl">See our work</a>
-                    <a href="#contact" class="page-scroll btn-ghost">Start a conversation <i class="fa fa-arrow-right"></i></a>
+                    <a href="#portfolio" class="page-scroll btn btn-xl">{{ t.hero.cta_work }}</a>
+                    <a href="#contact" class="page-scroll btn-ghost">{{ t.hero.cta_contact }} <i class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </header>
-<!--
-        {% for page in site.pages %}
-          {% if page.title %}<a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{% endif %}
-        {% endfor %}
- -->
-

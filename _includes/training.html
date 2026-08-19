@@ -3,46 +3,42 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">AI training &amp; automation</h2>
-                <h3 class="section-subheading text-muted">We run AI coding agents on real client work every day. We teach your team to do the same &mdash; and remove the repetitive work that is quietly eating your week.</h3>
+                <h2 class="section-heading">{{ t.training.heading }}</h2>
+                <h3 class="section-subheading text-muted">{{ t.training.subheading }}</h3>
             </div>
         </div>
         <div class="row training-row">
             <div class="col-md-7">
                 <div class="training-block">
-                    <h4>Training your team</h4>
-                    <p class="training-lead">Hands-on sessions on your own repository and your own tasks. Not a slide deck about the future of AI.</p>
+                    <h4>{{ t.training.block1.title }}</h4>
+                    <p class="training-lead">{{ t.training.block1.lead }}</p>
                     <ul class="training-list">
-                        <li><strong>Claude and Claude Code</strong> &mdash; getting an agent to do real work in a real codebase, not just answer questions.</li>
-                        <li><strong>Codex and OpenCode</strong> &mdash; the alternatives, what each one is good at, and when it is worth switching.</li>
-                        <li><strong>Prompts, project instructions and context</strong> that survive contact with a messy repository.</li>
-                        <li><strong>Reviewing what the agent produced</strong> &mdash; what to check before anything gets merged, deployed or sent to a customer.</li>
-                        <li><strong>Running models on your own hardware</strong> when the data is not allowed to leave the building.</li>
+                        {% for item in t.training.block1.items %}
+                        <li>{% if item.strong %}<strong>{{ item.strong }}</strong> {% endif %}{{ item.text }}</li>
+                        {% endfor %}
                     </ul>
                 </div>
                 <div class="training-block">
-                    <h4>Automating the repetitive work</h4>
-                    <p class="training-lead">Most companies have a handful of tasks somebody redoes every week, because nobody ever sat down and got rid of them. We find those and get rid of them.</p>
+                    <h4>{{ t.training.block2.title }}</h4>
+                    <p class="training-lead">{{ t.training.block2.lead }}</p>
                     <ul class="training-list">
-                        <li>Working out what is actually worth automating first &mdash; a fair amount of it is not.</li>
-                        <li>Agents wired into the tools you already pay for: mail, spreadsheets, invoicing, your shop, your servers.</li>
-                        <li>Scheduled jobs that do the boring pass and only speak up when something looks wrong.</li>
-                        <li>Handover: it lives in your repository, documented, and it keeps working if you never call us again.</li>
+                        {% for item in t.training.block2.items %}
+                        <li>{% if item.strong %}<strong>{{ item.strong }}</strong> {% endif %}{{ item.text }}</li>
+                        {% endfor %}
                     </ul>
-                    <p class="training-example">A supplier price list arrives as a PDF every Monday morning. Nobody should be retyping it into the shop.</p>
+                    <p class="training-example">{{ t.training.block2.example }}</p>
                 </div>
             </div>
             <div class="col-md-5">
                 <div class="price-card">
-                    <div class="price-amount">&euro;150<span class="price-unit"> / hour</span></div>
-                    <div class="price-vat">Excl. VAT</div>
+                    <div class="price-amount">&euro;150<span class="price-unit"> {{ t.training.price.unit }}</span></div>
+                    <div class="price-vat">{{ t.training.price.vat }}</div>
                     <ul class="price-terms">
-                        <li>Remote, or on-site if you are within reach of Bratislava.</li>
-                        <li>Sessions start at one hour. A useful first workshop is usually half a day.</li>
-                        <li>Delivered in English or Slovak.</li>
-                        <li>Estonian company &mdash; EU businesses are invoiced under reverse charge.</li>
+                        {% for term in t.training.price.terms %}
+                        <li>{{ term }}</li>
+                        {% endfor %}
                     </ul>
-                    <a href="#contact" class="page-scroll btn btn-xl">Book a session</a>
+                    <a href="#contact" class="page-scroll btn btn-xl">{{ t.training.price.cta }}</a>
                 </div>
             </div>
         </div>

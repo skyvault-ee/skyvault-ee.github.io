@@ -3,35 +3,21 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">What we do</h2>
-                <h3 class="section-subheading text-muted">Small team, no account managers. You talk to the people who write the code.</h3>
+                <h2 class="section-heading">{{ t.services.heading }}</h2>
+                <h3 class="section-subheading text-muted">{{ t.services.subheading }}</h3>
             </div>
         </div>
         <div class="row text-center">
+            {% for item in t.services.items %}
             <div class="col-md-4">
                 <span class="fa-stack fa-4x">
                     <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    <i class="fa {{ item.icon }} fa-stack-1x fa-inverse"></i>
                 </span>
-                <h4 class="service-heading">Web &amp; e-commerce</h4>
-                <p class="text-muted">Shops and business sites that have to work for real: product catalogs, supplier feeds, orders, invoices, transactional mail that lands in the inbox instead of the spam folder.</p>
+                <h4 class="service-heading">{{ item.title }}</h4>
+                <p class="text-muted">{{ item.text }}</p>
             </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-code fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="service-heading">Custom software</h4>
-                <p class="text-muted">Internal tools, integrations and the awkward thing that no off-the-shelf product does. We take the projects where the interesting part is the problem, not the framework.</p>
-            </div>
-            <div class="col-md-4">
-                <span class="fa-stack fa-4x">
-                    <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                    <i class="fa fa-server fa-stack-1x fa-inverse"></i>
-                </span>
-                <h4 class="service-heading">DevOps &amp; hosting</h4>
-                <p class="text-muted">Deployments, server configs, database migrations, the mail that stopped sending. The unglamorous half that decides whether everything else stays up.</p>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
