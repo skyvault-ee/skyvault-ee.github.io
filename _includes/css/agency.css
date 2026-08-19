@@ -406,6 +406,150 @@ section h3.section-subheading {
     text-transform: none;
 }
 
+section#training {
+    background-color: #eef4f8;
+    border-top: 1px solid #dde8ef;
+    border-bottom: 1px solid #dde8ef;
+}
+
+section#training .training-block {
+    margin-bottom: 45px;
+}
+
+section#training .training-block:last-child {
+    margin-bottom: 0;
+}
+
+section#training .training-block h4 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    text-transform: none;
+}
+
+section#training .training-lead {
+    margin-bottom: 18px;
+    font-family: {{ site.data.template.font.secondary }};
+    font-size: 16px;
+    font-style: italic;
+    color: #{{ site.data.template.color.muted }};
+}
+
+section#training ul.training-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+section#training ul.training-list li {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 22px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+section#training ul.training-list li:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    background-color: #{{ site.data.template.color.primary }};
+}
+
+section#training ul.training-list li strong {
+    font-family: {{ site.data.template.font.primary }};
+    font-weight: 700;
+}
+
+section#training .training-example {
+    margin: 20px 0 0;
+    padding-left: 18px;
+    border-left: 3px solid #cfe0ea;
+    font-family: {{ site.data.template.font.secondary }};
+    font-size: 15px;
+    font-style: italic;
+    color: #{{ site.data.template.color.muted }};
+}
+
+section#training .price-card {
+    margin-top: 40px;
+    padding: 35px 30px;
+    border-top: 4px solid #{{ site.data.template.color.primary }};
+    border-radius: 3px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 14px rgba(3,21,31,.07);
+}
+
+section#training .price-card .price-amount {
+    font-family: {{ site.data.template.font.primary }};
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1;
+    color: #{{ site.data.template.color.secondary-dark }};
+}
+
+section#training .price-card .price-amount .price-unit {
+    font-size: 20px;
+    font-weight: 400;
+    color: #{{ site.data.template.color.muted }};
+}
+
+section#training .price-card .price-vat {
+    margin-top: 8px;
+    font-family: {{ site.data.template.font.primary }};
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #{{ site.data.template.color.muted }};
+}
+
+section#training .price-card ul.price-terms {
+    margin: 26px 0 30px;
+    padding: 24px 0 0;
+    border-top: 1px solid #eee;
+    list-style: none;
+    text-align: left;
+}
+
+section#training .price-card ul.price-terms li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: #{{ site.data.template.color.muted }};
+}
+
+section#training .price-card ul.price-terms li:last-child {
+    margin-bottom: 0;
+}
+
+@media(min-width:992px) {
+    /* Bootstrap 3 floats the columns, so the price column collapses to the
+       card's own height and leaves a dead gap under it. Flex lets the card
+       centre itself against the taller text column instead. */
+    section#training .training-row {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    section#training .training-row:before,
+    section#training .training-row:after {
+        display: none;
+    }
+
+    section#training .price-card {
+        margin-top: 0;
+    }
+}
+
 #portfolio .portfolio-item {
     right: 0;
     margin: 0 0 15px;
