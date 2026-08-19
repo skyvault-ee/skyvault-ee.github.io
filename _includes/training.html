@@ -13,8 +13,13 @@
                     <h4>{{ t.training.block1.title }}</h4>
                     <p class="training-lead">{{ t.training.block1.lead }}</p>
                     <ul class="training-list">
+                        {%- comment -%}
+                          The lead-in and the explanation are separate strings so
+                          translators are not stuck with an English dash glued
+                          into their copy; the colon is added here instead.
+                        {%- endcomment -%}
                         {% for item in t.training.block1.items %}
-                        <li>{% if item.strong %}<strong>{{ item.strong }}</strong> {% endif %}{{ item.text }}</li>
+                        <li>{% if item.strong %}<strong>{{ item.strong }}</strong>: {% endif %}{{ item.text }}</li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -23,7 +28,7 @@
                     <p class="training-lead">{{ t.training.block2.lead }}</p>
                     <ul class="training-list">
                         {% for item in t.training.block2.items %}
-                        <li>{% if item.strong %}<strong>{{ item.strong }}</strong> {% endif %}{{ item.text }}</li>
+                        <li>{% if item.strong %}<strong>{{ item.strong }}</strong>: {% endif %}{{ item.text }}</li>
                         {% endfor %}
                     </ul>
                     <p class="training-example">{{ t.training.block2.example }}</p>

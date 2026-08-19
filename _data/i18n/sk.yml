@@ -1,11 +1,12 @@
-# Slovenčina. Preklad je voľný — cieľom je, aby to znelo ako pôvodný text,
-# nie ako preložená angličtina. Kľúče musia zodpovedať _data/i18n/en.yml.
+# Slovenčina. Píšeme po slovensky, nie prekladáme z angličtiny — vyhýbame sa
+# kalkom ("žije v repozitári", "nudný prechod") aj pomlčkám v strede vety.
+# Vykanie, konzistentne. Kľúče musia zodpovedať _data/i18n/en.yml.
 
 meta:
   title: Vývoj softvéru, e-commerce a DevOps
   description: >-
-    Skyvault stavia a prevádzkuje produkčný softvér — e-shopy, aplikácie na
-    mieru a infraštruktúru pod nimi. Školíme tímy v práci s AI agentmi a
+    Skyvault stavia a prevádzkuje softvér, ktorý firmám beží naostro: e-shopy,
+    aplikácie na mieru a servery pod nimi. Školíme tímy v práci s AI agentmi a
     automatizujeme opakovanú prácu. Estónska firma, tím v EÚ.
 
 nav:
@@ -20,16 +21,17 @@ hero:
   heading_line1: Softvér, ktorý musí
   heading_line2: fungovať v pondelok
   sub: >-
-    Staviame a prevádzkujeme produkčné systémy pre reálne firmy — e-shopy,
-    interné nástroje a servery pod nimi. Malý tím, žiadni account manažéri,
-    žiadny tiketový systém.
+    Staviame a prevádzkujeme systémy, na ktorých firmám stojí každodenná
+    prevádzka: e-shopy, interné nástroje a servery pod nimi. Malý tím, žiadni
+    account manažéri, žiadne tikety.
   cta_work: Pozrite si našu prácu
   cta_contact: Napíšte nám
 
 services:
   heading: Čo robíme
   subheading: >-
-    Malý tím, žiadni account manažéri. Bavíte sa priamo s ľuďmi, ktorí píšu kód.
+    Malý tím, žiadni account manažéri. Rozprávate sa priamo s ľuďmi, ktorí píšu
+    kód.
   items:
     - icon: fa-shopping-cart
       title: Web a e-commerce
@@ -53,71 +55,69 @@ services:
 training:
   heading: AI školenia a automatizácia
   subheading: >-
-    AI agentov používame každý deň na reálnej práci pre klientov. Naučíme to aj
-    váš tím — a zbavíme vás opakovanej roboty, ktorá vám potichu žerie týždeň.
+    AI agentov používame každý deň na skutočných zákazkách. Naučíme to aj váš
+    tím a zbavíme vás opakovanej roboty, na ktorej vám potichu odchádza čas.
   block1:
     title: Školenie vášho tímu
     lead: >-
-      Praktické sedenia na vašom vlastnom repozitári a vašich úlohách. Žiadna
+      Praktické školenie priamo na vašom repozitári a vašich úlohách. Žiadna
       prezentácia o budúcnosti AI.
     items:
       - strong: Claude a Claude Code
         text: >-
-          — ako donútiť agenta robiť skutočnú prácu v reálnom kóde, nie len
-          odpovedať na otázky.
+          ako z agenta dostať skutočnú prácu v reálnom kóde, nie len odpovede
+          na otázky.
       - strong: Codex a OpenCode
-        text: >-
-          — alternatívy, v čom je každá dobrá a kedy sa oplatí prepnúť.
+        text: v čom je ktorý dobrý a kedy sa oplatí prepnúť.
       - strong: Prompty, inštrukcie k projektu a kontext
-        text: ktoré prežijú stret s neupratným repozitárom.
-      - strong: Kontrola toho, čo agent vyrobil
+        text: napísané tak, aby fungovali aj v poriadne neporiadnom repozitári.
+      - strong: Kontrola toho, čo agent napísal
         text: >-
-          — čo si overiť predtým, než sa to zlúči, nasadí alebo pošle
-          zákazníkovi.
+          čo si overiť predtým, než sa to zlúči, nasadí alebo pošle zákazníkovi.
       - strong: Modely na vlastnom hardvéri
-        text: keď dáta nesmú opustiť firmu.
+        text: pre prípady, keď dáta nesmú opustiť firmu.
   block2:
     title: Automatizácia opakovanej práce
     lead: >-
-      Väčšina firiem má pár úloh, ktoré niekto každý týždeň robí odznova, lebo
-      si nikdy nikto nesadol a nezrušil ich. Tie nájdeme a zrušíme.
+      Skoro v každej firme sa nájde pár úloh, ktoré niekto každý týždeň robí
+      odznova len preto, že to doteraz nikto neriešil. Tie nájdeme a zrušíme.
     items:
       - text: >-
-          Najskôr zistíme, čo sa vôbec oplatí automatizovať — poriadny kus
-          toho sa neoplatí.
+          Najskôr zistíme, čo sa vôbec oplatí automatizovať. Dosť veľa vecí sa
+          neoplatí.
       - text: >-
-          Agenti napojení na nástroje, ktoré už platíte: pošta, tabuľky,
+          Agenti napojení na nástroje, ktoré už aj tak platíte: pošta, tabuľky,
           fakturácia, váš e-shop, vaše servery.
       - text: >-
-          Naplánované úlohy, ktoré odrobia nudný prechod a ozvú sa len vtedy,
-          keď niečo nesedí.
+          Naplánované úlohy, ktoré odrobia tú nudnú časť a ozvú sa, len keď
+          niečo nesedí.
       - text: >-
-          Odovzdanie: všetko žije vo vašom repozitári, zdokumentované, a beží
+          Odovzdanie: všetko je vo vašom repozitári, zdokumentované, a beží
           ďalej, aj keby ste nám už nikdy nezavolali.
     example: >-
-      Každý pondelok ráno príde cenník od dodávateľa v PDF. Nikto by ho nemal
-      prepisovať do e-shopu ručne.
+      Každý pondelok ráno príde od dodávateľa cenník v PDF. Nikto by ho nemal
+      ručne prepisovať do e-shopu.
   price:
     unit: / hodina
     vat: Bez DPH
     terms:
       - Online, alebo osobne na Slovensku, v Česku, Poľsku, Estónsku a Paraguaji.
-      - Sedenia od jednej hodiny. Zmysluplný prvý workshop býva na pol dňa.
+      - Školenie od jednej hodiny. Prvý workshop má zmysel aspoň na pol dňa.
       - Vedieme ich po slovensky alebo po anglicky.
-      - Estónska firma — firmám z EÚ fakturujeme v režime prenesenej daňovej povinnosti.
+      - Estónska firma. Firmám z EÚ fakturujeme v režime prenesenej daňovej povinnosti.
     cta: Objednať školenie
 
 portfolio:
   heading: Referencie
   subheading: >-
-    Väčšina toho, čo staviame, žije vnútri iných firiem a tam aj ostáva. Toto
+    Väčšina toho, čo staviame, beží vnútri iných firiem a tam aj ostáva. Toto
     môžeme ukázať.
   label_client: Klient
   label_date: Dátum
   label_service: Služba
   label_stack: Postavené na
   visit: Otvoriť stránku
-  archived_note: Archivované — snímka stránky v podobe, v akej sme ju odovzdali
+  archived_note: Archivované, snímka stránky v podobe, v akej sme ju odovzdali
   close: Zavrieť
 
 contact:
@@ -134,36 +134,35 @@ contact:
   err_phone: Zadajte, prosím, vaše telefónne číslo.
   err_message: Napíšte, prosím, správu.
   submit: Odoslať správu
-  js_success: Ďakujeme — vaša správa bola odoslaná.
+  js_success: Ďakujeme, vaša správa je odoslaná.
   js_invalid_lead: Správu sa nepodarilo odoslať.
   js_invalid_advice: >-
-    Skontrolujte, prosím, svoje údaje — najmä e-mailovú adresu — a skúste to
-    znova.
+    Skontrolujte si, prosím, údaje, najmä e-mailovú adresu, a skúste to znova.
   js_fail_lead: Prepáčte, vašu správu sa nepodarilo odoslať.
   js_fail_advice: Skúste to, prosím, o pár minút znova.
   js_offline_lead: Prepáčte, náš poštový server práve neodpovedá.
   js_offline_advice: Skúste to, prosím, o pár minút znova.
 # Referencie. Kľúčom je `modal-id` z príspevku. Názov, obrázky, klient, stack
-# a dátumy ostávajú vo front matter — prekladá sa len text.
+# a dátumy ostávajú vo front matter, prekladá sa len text.
 work:
   "1":
     subtitle: E-shop pre dodávateľa prírodného kameňa
     category: E-commerce
     description: >-
-      E-shop pre dodávateľa prírodného kameňa — travertín, mramor, andezit,
-      pieskovec, dlažobné kocky. Katalóg poháňa automatický import feedu od
+      E-shop pre dodávateľa prírodného kameňa: travertín, mramor, andezit,
+      pieskovec, dlažobné kocky. Katalóg ťahá automatický import feedu od
       dodávateľa, takže stovky produktov a ich variantov ostávajú aktuálne bez
-      toho, aby niekto prepisoval cenník. Ceny sa počítajú za meter štvorcový
+      toho, aby niekto prepisoval cenník. Ceny sa rátajú za meter štvorcový
       alebo za kus podľa materiálu, objednávka vystaví riadnu faktúru namiesto
       platby kartou a transakčné e-maily sú podpísané cez DKIM, takže
-      potvrdenia objednávok naozaj doručia.
+      potvrdenia objednávok naozaj dorazia.
   "2":
     subtitle: Prezentácia investičnej nehnuteľnosti
     category: Vývoj webu
     description: >-
       Prezentačná stránka nových apartmánov v rezorte Gino Paradise v Bešeňovej,
-      určená kupujúcim, ktorí ich zvažovali ako investíciu, nie ako bývanie.
-      Postavená okolo kalkulačky výnosu, ktorá z ponuky — garantovaný výnos, dni
-      pobytu pre majiteľa, dĺžka zmluvy — spravila číslo, ktoré si investor
-      vedel reálne porovnať. Odovzdané v roku 2019; stránku odvtedy klient
+      určená ľuďom, ktorí ich zvažovali ako investíciu, nie ako bývanie.
+      Postavená okolo kalkulačky výnosu, ktorá ponuku (garantovaný výnos, dni
+      pobytu pre majiteľa, dĺžka zmluvy) premenila na číslo, s ktorým vedel
+      investor reálne počítať. Odovzdané v roku 2019, stránku odvtedy klient
       nahradil.

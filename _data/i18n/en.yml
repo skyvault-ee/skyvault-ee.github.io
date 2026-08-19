@@ -4,9 +4,9 @@
 meta:
   title: Software development, e-commerce and DevOps
   description: >-
-    Skyvault builds and runs production software — e-commerce, custom
-    applications and the infrastructure underneath them. We also train teams to
-    use AI coding agents and automate repetitive business processes. Estonian
+    Skyvault builds and runs the software a business depends on day to day:
+    online shops, custom applications and the servers underneath them. We also
+    train teams to use AI coding agents and automate repetitive work. Estonian
     company, EU-based team.
 
 nav:
@@ -21,9 +21,9 @@ hero:
   heading_line1: Software that has to
   heading_line2: work on Monday
   sub: >-
-    We build and run production systems for real businesses — online shops,
-    internal tools, and the servers underneath them. Small team, no account
-    managers, no ticket queue.
+    We build and run the systems a business depends on day to day: online
+    shops, internal tools, and the servers underneath them. Small team, no
+    account managers, no ticket queue.
   cta_work: See our work
   cta_contact: Start a conversation
 
@@ -55,8 +55,7 @@ training:
   heading: AI training &amp; automation
   subheading: >-
     We run AI coding agents on real client work every day. We teach your team to
-    do the same — and remove the repetitive work that is quietly eating your
-    week.
+    do the same, and take away the repetitive work that quietly eats your week.
   block1:
     title: Training your team
     lead: >-
@@ -65,29 +64,27 @@ training:
     items:
       - strong: Claude and Claude Code
         text: >-
-          — getting an agent to do real work in a real codebase, not just answer
-          questions.
+          how to get real work out of an agent in a real codebase, not just
+          answers to questions.
       - strong: Codex and OpenCode
-        text: >-
-          — the alternatives, what each one is good at, and when it is worth
-          switching.
+        text: what each one is good at, and when it is worth switching.
       - strong: Prompts, project instructions and context
-        text: that survive contact with a messy repository.
+        text: written so they hold up in a repository that is a genuine mess.
       - strong: Reviewing what the agent produced
         text: >-
-          — what to check before anything gets merged, deployed or sent to a
+          what to check before anything gets merged, deployed or sent to a
           customer.
       - strong: Running models on your own hardware
-        text: when the data is not allowed to leave the building.
+        text: for when the data is not allowed to leave the building.
   block2:
     title: Automating the repetitive work
     lead: >-
-      Most companies have a handful of tasks somebody redoes every week, because
-      nobody ever sat down and got rid of them. We find those and get rid of
-      them.
+      Almost every company has a handful of tasks somebody redoes every week,
+      only because nobody has ever sat down and got rid of them. We find those
+      and get rid of them.
     items:
       - text: >-
-          Working out what is actually worth automating first — a fair amount of
+          Working out what is actually worth automating first. A fair amount of
           it is not.
       - text: >-
           Agents wired into the tools you already pay for: mail, spreadsheets,
@@ -106,22 +103,22 @@ training:
     vat: Excl. VAT
     terms:
       - Remote, or on-site in Slovakia, the Czech Republic, Poland, Estonia and Paraguay.
-      - Sessions start at one hour. A useful first workshop is usually half a day.
+      - From one hour. A first workshop worth doing usually takes half a day.
       - Delivered in English or Slovak.
-      - Estonian company — EU businesses are invoiced under reverse charge.
+      - Estonian company. EU businesses are invoiced under reverse charge.
     cta: Book a session
 
 portfolio:
   heading: Recent work
   subheading: >-
-    Most of what we build lives inside other companies and stays there. Here is
+    Most of what we build runs inside other companies and stays there. Here is
     what we can show.
   label_client: Client
   label_date: Date
   label_service: Service
   label_stack: Built with
   visit: Visit the site
-  archived_note: Archived — screenshot of the site as we delivered it
+  archived_note: Archived, screenshot of the site as we delivered it
   close: Close
 
 contact:
@@ -138,22 +135,22 @@ contact:
   err_phone: Please enter your phone number.
   err_message: Please enter a message.
   submit: Send message
-  js_success: Thanks — your message has been sent.
+  js_success: Thanks, your message has been sent.
   js_invalid_lead: We could not send that.
   js_invalid_advice: >-
-    Please check your details — the email address in particular — and try again.
+    Please check your details, the email address in particular, and try again.
   js_fail_lead: Sorry, your message could not be sent.
   js_fail_advice: Please try again in a few minutes.
   js_offline_lead: Sorry, our mail server is not responding right now.
   js_offline_advice: Please try again in a few minutes.
 # Portfolio entries. Keyed by the post's `modal-id`. Title, images, client,
-# stack and dates stay in the post front matter — only prose is translated.
+# stack and dates stay in the post front matter, only prose is translated.
 work:
   "1":
     subtitle: E-commerce for a natural stone supplier
     category: E-commerce
     description: >-
-      An online shop for a natural stone supplier — travertine, marble,
+      An online shop for a natural stone supplier: travertine, marble,
       andesite, sandstone, paving cubes. The catalog is driven by an automated
       supplier feed import, so hundreds of products and their variants stay in
       sync without anyone retyping a price list. Pricing works per square metre
@@ -165,8 +162,8 @@ work:
     category: Web Development
     description: >-
       A presentation site for new apartments in the Gino Paradise resort in
-      Bešeňová, aimed at buyers evaluating them as an investment rather than a
-      home. Built around a return calculator that turned the offer — guaranteed
-      yield, owner stay days, contract length — into a number a prospective
-      investor could actually compare. Delivered in 2019; the site has since
-      been replaced by the client.
+      Bešeňová, aimed at buyers weighing them up as an investment rather than a
+      home. The centre of the page was a return calculator that turned the offer
+      (guaranteed yield, owner stay days, contract length) into a number a
+      prospective investor could actually work with. Delivered in 2019, the
+      client has since replaced the site.

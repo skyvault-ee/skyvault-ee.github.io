@@ -1,13 +1,14 @@
-# Español. Traducción libre: debe leerse como texto original, no como inglés
-# traducido. Las claves deben coincidir con _data/i18n/en.yml.
+# Español neutro: tuteo consistente (tú/tu), sin "vosotros" ni "-áis", porque
+# la página también se dirige a Paraguay y a Latinoamérica. Se escribe como
+# texto original, no como inglés traducido. Claves iguales a _data/i18n/en.yml.
 
 meta:
   title: Desarrollo de software, e-commerce y DevOps
   description: >-
-    Skyvault construye y mantiene software en producción — tiendas online,
-    aplicaciones a medida y la infraestructura que hay debajo. También formamos
-    equipos en el uso de agentes de IA y automatizamos trabajo repetitivo.
-    Empresa estonia, equipo en la UE.
+    Skyvault construye y mantiene el software del que dependen las empresas a
+    diario: tiendas online, aplicaciones a medida y los servidores que hay
+    debajo. También formamos equipos en el uso de agentes de IA y automatizamos
+    trabajo repetitivo. Empresa estonia, equipo en la UE.
 
 nav:
   services: Servicios
@@ -21,9 +22,9 @@ hero:
   heading_line1: Software que tiene que
   heading_line2: funcionar el lunes
   sub: >-
-    Construimos y mantenemos sistemas en producción para empresas reales —
-    tiendas online, herramientas internas y los servidores que hay debajo.
-    Equipo pequeño, sin gestores de cuenta, sin cola de tickets.
+    Construimos y mantenemos los sistemas de los que depende el día a día de
+    una empresa: tiendas online, herramientas internas y los servidores que hay
+    debajo. Equipo pequeño, sin gestores de cuenta, sin colas de tickets.
   cta_work: Ver nuestro trabajo
   cta_contact: Hablemos
 
@@ -55,73 +56,70 @@ services:
 training:
   heading: Formación en IA y automatización
   subheading: >-
-    Usamos agentes de IA todos los días en trabajo real para clientes. Enseñamos
-    a tu equipo a hacer lo mismo — y eliminamos el trabajo repetitivo que se
-    está comiendo vuestra semana sin que nadie lo note.
+    Usamos agentes de IA todos los días en trabajo real para clientes. Le
+    enseñamos a tu equipo a hacer lo mismo y te quitamos de encima el trabajo
+    repetitivo que se come la semana sin que nadie se dé cuenta.
   block1:
     title: Formar a tu equipo
     lead: >-
-      Sesiones prácticas sobre vuestro propio repositorio y vuestras propias
-      tareas. Nada de diapositivas sobre el futuro de la IA.
+      Sesiones prácticas sobre tu propio repositorio y tus propias tareas. Nada
+      de diapositivas sobre el futuro de la IA.
     items:
       - strong: Claude y Claude Code
         text: >-
-          — cómo conseguir que un agente haga trabajo real sobre código real, no
-          que se limite a responder preguntas.
+          cómo sacarle trabajo real sobre código real, y no solo respuestas a
+          preguntas.
       - strong: Codex y OpenCode
-        text: >-
-          — las alternativas, en qué es bueno cada uno y cuándo merece la pena
-          cambiar.
+        text: en qué es bueno cada uno y cuándo compensa cambiar.
       - strong: Prompts, instrucciones de proyecto y contexto
-        text: que sobrevivan al contacto con un repositorio desordenado.
-      - strong: Revisar lo que ha producido el agente
+        text: escritos para que aguanten en un repositorio hecho un desastre.
+      - strong: Revisar lo que ha hecho el agente
         text: >-
-          — qué comprobar antes de fusionar, desplegar o enviarlo a un cliente.
-      - strong: Modelos en vuestro propio hardware
-        text: cuando los datos no pueden salir de la empresa.
+          qué comprobar antes de fusionar, desplegar o mandárselo a un cliente.
+      - strong: Modelos en tu propio hardware
+        text: para cuando los datos no pueden salir de la empresa.
   block2:
     title: Automatizar el trabajo repetitivo
     lead: >-
       Casi toda empresa tiene un puñado de tareas que alguien rehace cada
-      semana, porque nunca nadie se sentó a eliminarlas. Nosotros las
-      encontramos y las eliminamos.
+      semana solo porque nadie se ha parado a quitarlas de en medio. Nosotros
+      las buscamos y las quitamos.
     items:
       - text: >-
-          Primero decidir qué merece la pena automatizar — buena parte de ello
-          no lo merece.
+          Primero vemos qué compensa automatizar. Bastantes cosas no compensan.
       - text: >-
-          Agentes conectados a las herramientas que ya pagáis: correo, hojas de
-          cálculo, facturación, vuestra tienda, vuestros servidores.
+          Agentes conectados a las herramientas que ya pagas: correo, hojas de
+          cálculo, facturación, tu tienda, tus servidores.
       - text: >-
-          Tareas programadas que hacen la pasada aburrida y solo avisan cuando
-          algo no cuadra.
+          Tareas programadas que se encargan de la parte aburrida y solo avisan
+          cuando algo no cuadra.
       - text: >-
-          Entrega: vive en vuestro repositorio, documentado, y sigue funcionando
-          aunque no volváis a llamarnos.
+          Entrega: queda en tu repositorio, documentado, y sigue funcionando
+          aunque no vuelvas a llamarnos.
     example: >-
       Cada lunes por la mañana llega la lista de precios del proveedor en PDF.
-      Nadie debería estar copiándola a mano en la tienda.
+      Nadie debería estar pasándola a mano a la tienda.
   price:
     unit: / hora
     vat: IVA no incluido
     terms:
       - En remoto, o presencial en Eslovaquia, Chequia, Polonia, Estonia y Paraguay.
-      - Las sesiones parten de una hora. Un primer taller útil suele durar media jornada.
-      - Impartida en español, inglés o eslovaco.
-      - Empresa estonia — a empresas de la UE se factura con inversión del sujeto pasivo.
+      - Desde una hora. Un primer taller que sirva de algo suele ocupar media jornada.
+      - En español, inglés o eslovaco.
+      - Empresa estonia. A empresas de la UE se factura con inversión del sujeto pasivo.
     cta: Reservar una sesión
 
 portfolio:
   heading: Proyectos
   subheading: >-
-    Casi todo lo que construimos vive dentro de otras empresas y ahí se queda.
-    Esto es lo que podemos enseñar.
+    Casi todo lo que construimos funciona dentro de otras empresas y ahí se
+    queda. Esto es lo que podemos enseñar.
   label_client: Cliente
   label_date: Fecha
   label_service: Servicio
   label_stack: Construido con
   visit: Visitar la web
-  archived_note: Archivado — captura de la web tal y como la entregamos
+  archived_note: Archivado, captura de la web tal y como la entregamos
   close: Cerrar
 
 contact:
@@ -133,28 +131,27 @@ contact:
   email: Tu email *
   phone: Tu teléfono *
   message: Tu mensaje *
-  err_name: Introduce tu nombre, por favor.
-  err_email: Introduce tu dirección de email, por favor.
-  err_phone: Introduce tu número de teléfono, por favor.
+  err_name: Escribe tu nombre, por favor.
+  err_email: Escribe tu dirección de email, por favor.
+  err_phone: Escribe tu número de teléfono, por favor.
   err_message: Escribe un mensaje, por favor.
   submit: Enviar mensaje
-  js_success: Gracias — tu mensaje se ha enviado.
+  js_success: Gracias, tu mensaje se ha enviado.
   js_invalid_lead: No hemos podido enviarlo.
   js_invalid_advice: >-
-    Revisa tus datos — en particular la dirección de email — e inténtalo de
-    nuevo.
+    Revisa tus datos, sobre todo la dirección de email, e inténtalo otra vez.
   js_fail_lead: Lo sentimos, tu mensaje no se ha podido enviar.
-  js_fail_advice: Inténtalo de nuevo en unos minutos.
+  js_fail_advice: Inténtalo otra vez en unos minutos.
   js_offline_lead: Lo sentimos, nuestro servidor de correo no responde ahora mismo.
-  js_offline_advice: Inténtalo de nuevo en unos minutos.
+  js_offline_advice: Inténtalo otra vez en unos minutos.
 # Proyectos. La clave es el `modal-id` de la entrada. Título, imágenes, cliente,
-# stack y fechas quedan en el front matter — solo se traduce el texto.
+# stack y fechas quedan en el front matter, solo se traduce el texto.
 work:
   "1":
     subtitle: E-commerce para un proveedor de piedra natural
     category: E-commerce
     description: >-
-      Una tienda online para un proveedor de piedra natural — travertino,
+      Una tienda online para un proveedor de piedra natural: travertino,
       mármol, andesita, arenisca, adoquines. El catálogo se alimenta de una
       importación automática del feed del proveedor, así que cientos de
       productos y sus variantes se mantienen al día sin que nadie recopie una
@@ -168,8 +165,8 @@ work:
     description: >-
       Un sitio de presentación de apartamentos nuevos en el complejo Gino
       Paradise de Bešeňová, dirigido a compradores que los valoraban como
-      inversión y no como vivienda. Construido en torno a una calculadora de
-      rentabilidad que convertía la oferta — rentabilidad garantizada, días de
-      estancia del propietario, duración del contrato — en una cifra que un
-      inversor podía comparar de verdad. Entregado en 2019; el cliente ha
-      sustituido el sitio desde entonces.
+      inversión y no como vivienda. El centro de la página era una calculadora
+      de rentabilidad que convertía la oferta (rentabilidad garantizada, días
+      de estancia del propietario, duración del contrato) en una cifra con la
+      que un inversor podía echar cuentas de verdad. Entregado en 2019, el
+      cliente ha sustituido el sitio desde entonces.
