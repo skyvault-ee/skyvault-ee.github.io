@@ -1,5 +1,6 @@
-# Slovenčina. Píšeme po slovensky, nie prekladáme z angličtiny — vyhýbame sa
-# kalkom ("žije v repozitári", "nudný prechod") aj pomlčkám v strede vety.
+# Slovenčina. Píšeme po slovensky, nie prekladáme z angličtiny: vyhýbame sa
+# kalkom ("nudný prechod") aj pomlčkám v strede vety. Zákazníkom hovoríme
+# "projekt", nie "repozitár" - je to zrozumiteľnejšie pre nevývojárov.
 # Vykanie, konzistentne. Kľúče musia zodpovedať _data/i18n/en.yml.
 
 meta:
@@ -60,7 +61,7 @@ training:
   block1:
     title: Školenie vášho tímu
     lead: >-
-      Praktické školenie priamo na vašom repozitári a vašich úlohách. Žiadna
+      Praktické školenie priamo na vašom projekte a vašich úlohách. Žiadna
       prezentácia o budúcnosti AI.
     items:
       - strong: Claude a Claude Code
@@ -70,7 +71,7 @@ training:
       - strong: Codex a OpenCode
         text: v čom je ktorý dobrý a kedy sa oplatí prepnúť.
       - strong: Prompty, inštrukcie k projektu a kontext
-        text: napísané tak, aby fungovali aj v poriadne neporiadnom repozitári.
+        text: napísané tak, aby vydržali aj tam, kde je v kóde poriadny neporiadok.
       - strong: Kontrola toho, čo agent napísal
         text: >-
           čo si overiť predtým, než sa to zlúči, nasadí alebo pošle zákazníkovi.
@@ -92,7 +93,7 @@ training:
           Naplánované úlohy, ktoré odrobia tú nudnú časť a ozvú sa, len keď
           niečo nesedí.
       - text: >-
-          Odovzdanie: všetko je vo vašom repozitári, zdokumentované, a beží
+          Odovzdanie: všetko ostáva vo vašom projekte, zdokumentované, a beží
           ďalej, aj keby ste nám už nikdy nezavolali.
     example: >-
       Každý pondelok ráno príde od dodávateľa cenník v PDF. Nikto by ho nemal
