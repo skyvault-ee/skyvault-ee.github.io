@@ -1,32 +1,28 @@
-<section id="portfolio" class="site-shell pb-20 md:pb-28" aria-labelledby="work-heading">
-  <div class="section-rule">
-    <h2 id="work-heading" class="text-xl font-semibold">{{ t.portfolio.heading }}</h2>
-    <span class="font-mono text-xs text-muted" aria-hidden="true">01 /</span>
+<section id="portfolio" class="site-shell section-space" aria-labelledby="work-heading">
+  <div class="section-intro">
+    <h2 id="work-heading" class="section-heading">{{ t.portfolio.heading }}</h2>
+    <p class="max-w-xl text-base leading-relaxed text-muted">{{ t.portfolio.subheading }}</p>
   </div>
-  <p class="mt-4 mb-8 max-w-lg text-sm leading-relaxed text-muted">{{ t.portfolio.subheading }}</p>
-  <div class="grid items-start gap-x-10 gap-y-12 lg:grid-cols-12">
+  <div class="mt-8">
     {% for post in site.posts %}
     {% assign mid = post.modal-id | append: '' %}
     {% assign w = t.work[mid] %}
-    <details id="portfolioModal{{ post.modal-id }}" class="portfolio-item group {% if forloop.first %}lg:col-span-7{% else %}lg:col-span-5 lg:mt-24{% endif %}">
+    <details id="portfolioModal{{ post.modal-id }}" class="portfolio-item">
       <summary class="project-summary">
-        <span class="project-image {% if post.archived %}bg-archive{% else %}bg-stone{% endif %}">
-          <img src="{{ site.baseurl }}/img/portfolio/{{ post.img }}" alt="{{ w.subtitle | escape }}" width="1200" height="{% if post.archived %}1348{% else %}1106{% endif %}" loading="lazy" decoding="async" class="w-full transition-transform duration-500 motion-reduce:transition-none group-hover:-translate-y-1">
+        <span class="project-image">
+          <img src="{{ site.baseurl }}/img/portfolio/{{ post.thumbnail }}" alt="{{ w.subtitle | escape }}" width="800" height="600" loading="lazy" decoding="async">
         </span>
-        <span class="mt-5 flex items-start justify-between gap-5">
-          <span>
-            <span class="block text-2xl font-semibold tracking-tight md:text-3xl">{{ post.title }}</span>
-            <span class="mt-2 block text-sm leading-relaxed text-muted">{{ w.subtitle }}</span>
+        <span class="project-caption">
+          <span class="block text-sm text-muted">{{ w.category }} · {{ post.date | date: '%Y' }}{% if post.archived %} · {{ t.ui.archive }}{% endif %}</span>
+          <span class="mt-3 block text-2xl font-semibold">{{ post.title }}</span>
+          <span class="mt-3 block text-base leading-relaxed text-muted">{{ w.subtitle }}</span>
+          <span class="mt-5 block text-sm leading-relaxed text-muted">{{ post.stack }}</span>
+          <span class="project-toggle mt-6 inline-flex min-h-11 items-center gap-3 text-sm font-medium text-brand">
+            {{ t.ui.project_details }} <span class="disclosure-plus" aria-hidden="true">+</span>
           </span>
-          <span class="project-toggle flex size-11 shrink-0 items-center justify-center rounded-full border border-line" aria-hidden="true">{% include arrow.html %}</span>
         </span>
-        <span class="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-3 text-xs text-muted">
-          <span>{{ w.category }}</span>
-          <span class="font-mono">{{ post.date | date: '%Y' }}{% if post.archived %} · {{ t.ui.archive }}{% endif %}</span>
-        </span>
-        <span class="sr-only">{{ t.ui.project_details }}</span>
       </summary>
-      <div class="project-copy mt-6 border-t border-line pt-6">
+      <div class="project-copy">
         <h3 class="sr-only">{{ post.title }}</h3>
         <p class="text-base leading-relaxed text-muted">{{ w.description }}</p>
         <dl class="mt-6 grid gap-4 text-sm sm:grid-cols-2">
@@ -34,7 +30,7 @@
           <div><dt class="text-muted">{{ t.portfolio.label_stack }}</dt><dd class="mt-1 font-medium">{{ post.stack }}</dd></div>
         </dl>
         {% if post.site_url %}
-        <a href="{{ post.site_url }}" target="_blank" rel="noopener noreferrer" class="text-link mt-6">{{ t.portfolio.visit }} {% include arrow.html %}</a>
+        <a href="{{ post.site_url }}" target="_blank" rel="noopener noreferrer" class="text-link mt-6">{{ t.portfolio.visit }}</a>
         {% elsif post.archived %}
         <p class="mt-6 border-l-2 border-brand pl-4 text-sm leading-relaxed text-muted">{{ t.portfolio.archived_note }}</p>
         {% endif %}

@@ -21,6 +21,7 @@ ui:
 
 nav:
   services: Servicios
+  automation: Automatización
   training: Formación en IA
   portfolio: Proyectos
   contact: Contacto

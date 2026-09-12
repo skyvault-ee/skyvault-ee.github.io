@@ -3,7 +3,7 @@ Skyvault website
 
 https://www.skyvault.ee
 
-A static Jekyll site with compiled Tailwind CSS 4, self-hosted Manrope fonts,
+A static Jekyll site with compiled Tailwind CSS 4, self-hosted IBM Plex Sans fonts,
 and small vanilla JavaScript enhancements. English, Slovak, Spanish and Estonian
 share one set of templates. There is no frontend framework or runtime CSS CDN.
 
@@ -51,10 +51,12 @@ Editing
 - Project screenshots: img/portfolio/.
 - Self-hosted font files and their SIL Open Font License: assets/fonts/.
 
-Projects and training sections use native details/summary disclosures, so the
-content remains available without JavaScript. Archived projects deliberately
-have no outbound link. The unlinked /send_cv/ legacy form retains its separate
-Bootstrap assets and is not part of the marketing homepage.
+Keep the original logo at img/logos/skyvault.png unchanged. Desktop navigation
+uses a side masthead; mobile uses a compact header. Automation and training are
+separate, permanently visible sections, not collapsed disclosures. Project
+details use native details/summary and also work without JavaScript. Archived
+projects deliberately have no outbound link. The unlinked /send_cv/ legacy form
+retains its separate Bootstrap assets and is not part of the marketing homepage.
 
 Contact service
 ---------------

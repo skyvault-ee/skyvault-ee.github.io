@@ -1,20 +1,21 @@
-<header class="site-shell pt-10 pb-12 md:pt-14 md:pb-14 lg:pt-16">
-  <div class="mb-8 flex items-center justify-between gap-6">
-    <p class="flex items-center gap-3 text-sm font-medium">
-      <span class="h-2 w-2 rounded-full bg-brand" aria-hidden="true"></span>
-      {{ t.hero.kicker }}
-    </p>
-
-  </div>
-  <h1 class="hero-heading font-medium tracking-tight">
-    {{ t.hero.heading_line1 }}<br>
-    <span class="text-brand">{{ t.hero.heading_line2 }}.</span>
-  </h1>
-  <div class="mt-8 grid items-end gap-8 lg:grid-cols-12 lg:gap-12">
-    <p class="max-w-2xl text-base leading-relaxed text-muted md:text-lg lg:col-span-7">{{ t.hero.sub }}</p>
-    <div class="flex flex-wrap items-center gap-x-7 gap-y-4 lg:col-span-5 lg:justify-end">
-      <a href="#contact" class="button-primary">{{ t.hero.cta_contact }} {% include arrow.html %}</a>
-      <a href="#portfolio" class="text-link">{{ t.hero.cta_work }} <span aria-hidden="true">↓</span></a>
+{% assign featured = site.posts | first %}
+{% assign featured_id = featured.modal-id | append: '' %}
+<header class="intro">
+  <div class="hero-copy">
+    <h1 class="hero-heading">{{ t.hero.heading_line1 }} {{ t.hero.heading_line2 }}.</h1>
+    <p class="mt-6 text-base leading-relaxed text-white/90">{{ t.hero.sub }}</p>
+    <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+      <a href="#contact" class="button-light">{{ t.hero.cta_contact }}</a>
+      <a href="#portfolio" class="hero-work-link">{{ t.hero.cta_work }}</a>
     </div>
   </div>
+  <figure class="hero-project">
+    <a href="#portfolioModal{{ featured.modal-id }}" class="hero-screen" aria-label="{{ featured.title }}: {{ t.ui.project_details }}">
+      <img src="{{ site.baseurl }}/img/portfolio/{{ featured.img }}" alt="{{ t.work[featured_id].subtitle | escape }}" width="1200" height="1106" fetchpriority="high">
+    </a>
+    <figcaption class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 bg-white px-5 py-4 text-ink">
+      <span class="font-semibold">{{ featured.title }}</span>
+      <span class="text-sm text-muted">{{ t.work[featured_id].subtitle }}</span>
+    </figcaption>
+  </figure>
 </header>

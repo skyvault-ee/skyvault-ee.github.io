@@ -1,12 +1,10 @@
-<section id="contact" class="site-shell py-16 md:py-24" aria-labelledby="contact-heading">
-  <div class="grid gap-10 lg:grid-cols-12 lg:gap-16">
-    <div class="lg:col-span-5">
-      <span class="font-mono text-xs text-muted" aria-hidden="true">04 /</span>
-      <h2 id="contact-heading" class="section-heading mt-6">{{ t.contact.heading }}.</h2>
+<section id="contact" class="site-shell section-space" aria-labelledby="contact-heading">
+  <div class="grid grid-cols-1 gap-8 xl:grid-cols-12 xl:gap-12">
+    <div class="xl:col-span-4">
+      <h2 id="contact-heading" class="section-heading">{{ t.contact.heading }}</h2>
       <p class="mt-6 max-w-sm text-base leading-relaxed text-muted">{{ t.contact.subheading }}</p>
-      <svg class="mt-10 hidden h-20 w-20 text-brand lg:block" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M10 12L52 54M12 54h40V14" stroke="currentColor" stroke-width="2"/></svg>
     </div>
-    <form name="sentMessage" id="contactForm" class="lg:col-span-7" action="https://skyvault.dopice.sk/contact_me.php" method="post"
+    <form name="sentMessage" id="contactForm" class="xl:col-span-8" action="https://skyvault.dopice.sk/contact_me.php" method="post"
           data-msg-success="{{ t.contact.js_success | escape }}"
           data-msg-invalid-lead="{{ t.contact.js_invalid_lead | escape }}"
           data-msg-invalid-advice="{{ t.contact.js_invalid_advice | escape }}"
@@ -24,7 +22,7 @@
       <div id="success" class="form-status" role="status" aria-live="polite" aria-atomic="true"></div>
       <div class="mt-7 flex flex-wrap items-center justify-between gap-5">
         <p class="text-xs text-muted">{{ t.ui.required }}</p>
-        <button type="submit" class="button-primary"><span data-submit-label>{{ t.contact.submit }}</span>{% include arrow.html %}</button>
+        <button type="submit" class="button-primary"><span data-submit-label>{{ t.contact.submit }}</span></button>
       </div>
     </form>
   </div>

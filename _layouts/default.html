@@ -18,14 +18,17 @@
     <body id="page-top" class="bg-paper text-ink antialiased">
     <a class="skip-link" href="#main-content">{{ t.ui.skip }}</a>
     {% include nav.html %}
+    <div class="page-body">
     <main id="main-content" tabindex="-1">
       {% include header.html %}
-      {% include portfolio_grid.html %}
       {% include services.html %}
+      {% include automation.html %}
+      {% include portfolio_grid.html %}
       {% include training.html %}
       {% include contact.html %}
     </main>
     {% include footer.html %}
+    </div>
     {% include js.html %}
 
     </body>

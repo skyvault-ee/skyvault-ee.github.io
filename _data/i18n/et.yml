@@ -21,6 +21,7 @@ ui:
 
 nav:
   services: Teenused
+  automation: Automatiseerimine
   training: AI-koolitus
   portfolio: Tehtud tööd
   contact: Kontakt

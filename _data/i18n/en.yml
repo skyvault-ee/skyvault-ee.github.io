@@ -20,6 +20,7 @@ ui:
 
 nav:
   services: Services
+  automation: Automation
   training: AI training
   portfolio: Recent work
   contact: Contact
