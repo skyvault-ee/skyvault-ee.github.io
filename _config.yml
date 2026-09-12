@@ -46,6 +46,15 @@ exclude:
   - README.md
   - LICENSE
   - .hermes
+  - node_modules
+  - package.json
+  - package-lock.json
+  - playwright.config.cjs
+  - tests
+  - test-results
+  - playwright-report
+  - scripts
+  - assets/css/source.css
   # Untracked draft: placeholder specialists and a 2019 job offer. Not for production.
   - specialists.markdown
   - _layouts/outsourcing.html

@@ -1,0 +1,29 @@
+<div class="site-nav sticky top-0 z-30 border-b border-line bg-paper text-ink">
+  <div class="site-shell flex min-h-20 items-center justify-between gap-4 md:min-h-24">
+    <a href="{{ lang_home }}" class="wordmark inline-flex min-h-11 items-center gap-3" aria-label="Skyvault">
+      <svg class="hidden h-7 w-9 text-brand sm:block" viewBox="0 0 40 32" fill="none" aria-hidden="true"><path d="M3 27V20a17 17 0 0 1 34 0v7M11 27V20a9 9 0 0 1 18 0v7M3 27h34" stroke="currentColor" stroke-width="2.5"/><path d="M20 11v16" stroke="currentColor" stroke-width="2.5"/></svg>
+      <span class="text-2xl font-semibold tracking-tight sm:text-3xl">skyvault<span class="text-brand">.</span></span>
+    </a>
+    <nav class="hidden items-center gap-8 text-sm lg:flex" aria-label="{{ t.ui.menu }}">
+      {% include nav_links.html %}
+    </nav>
+    <div class="flex items-center gap-2 sm:gap-4">
+      <details class="nav-disclosure language-menu relative">
+        <summary class="flex min-h-11 min-w-11 items-center justify-center gap-2 text-sm font-medium" aria-label="{{ t.nav.language }}: {{ lang_entry.label }}">
+          {{ lang_entry.short }} <span class="text-xs" aria-hidden="true">⌄</span>
+        </summary>
+        <nav class="absolute top-full right-0 mt-4 w-44 border border-line bg-paper p-2 shadow-sm" aria-label="{{ t.nav.language }}">
+          {% for l in site.data.languages %}
+          <a class="flex min-h-11 items-center justify-between gap-3 px-3 text-sm hover:bg-mist{% if l.code == lang_code %} font-semibold{% endif %}" href="{{ l.url | relative_url }}" lang="{{ l.hreflang }}" hreflang="{{ l.hreflang }}"{% if l.code == lang_code %} aria-current="page"{% endif %}>{{ l.label }}{% if l.code == lang_code %}<span aria-hidden="true">✓</span>{% endif %}</a>
+          {% endfor %}
+        </nav>
+      </details>
+      <details class="nav-disclosure mobile-menu lg:hidden">
+        <summary class="flex min-h-11 items-center gap-2 border-l border-line pl-4 text-sm font-medium">{{ t.ui.menu }} <span class="disclosure-plus" aria-hidden="true">+</span></summary>
+        <nav class="absolute top-full right-0 left-0 border-b border-line bg-paper px-6 py-5 shadow-sm" aria-label="{{ t.ui.menu }}">
+          {% include nav_links.html %}
+        </nav>
+      </details>
+    </div>
+  </div>
+</div>

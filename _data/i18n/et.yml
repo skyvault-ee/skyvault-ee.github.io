@@ -10,6 +10,15 @@ meta:
     meeskondi AI-agentide kasutamises ja automatiseerime korduvat tööd. Eesti
     ettevõte, tiim EL-is.
 
+ui:
+  skip: Liigu sisu juurde
+  menu: Menüü
+  archive: Arhiiv
+  project_details: Projekti üksikasjad
+  back_top: Tagasi üles
+  required: '* Kohustuslikud väljad'
+  sending: Saadan…
+
 nav:
   services: Teenused
   training: AI-koolitus

@@ -1,74 +1,20 @@
-<!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- <a class="navbar-brand page-scroll" href="#page-top">{{site.title}}</a> -->
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <img id="logo" src="/img/logos/skyvault.png" style="height: 50px; position:absolute;"  alt="">
-                </a>
+<header class="site-shell pt-10 pb-12 md:pt-14 md:pb-14 lg:pt-16">
+  <div class="mb-8 flex items-center justify-between gap-6">
+    <p class="flex items-center gap-3 text-sm font-medium">
+      <span class="h-2 w-2 rounded-full bg-brand" aria-hidden="true"></span>
+      {{ t.hero.kicker }}
+    </p>
 
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">{{ t.nav.services }}</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#training">{{ t.nav.training }}</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">{{ t.nav.portfolio }}</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">{{ t.nav.contact }}</a>
-                    </li>
-                    <li class="dropdown lang-switch">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" aria-label="{{ t.nav.language }}">
-                            <i class="fa fa-globe"></i> {{ lang_entry.short }} <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            {%- comment -%}
-                              Marked with `lang-current`, not `active`: Bootstrap's
-                              scrollspy owns the `active` class on every .nav li and
-                              strips it on the first scroll event.
-                            {%- endcomment -%}
-                            {% for l in site.data.languages %}
-                            <li{% if l.code == lang_code %} class="lang-current"{% endif %}>
-                                <a href="{{ l.url | prepend: site.baseurl }}" hreflang="{{ l.hreflang }}" lang="{{ l.hreflang }}">{{ l.label }}</a>
-                            </li>
-                            {% endfor %}
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-kicker">{{ t.hero.kicker }}</div>
-                <div class="intro-heading">{{ t.hero.heading_line1 }}<br class="hidden-xs"> {{ t.hero.heading_line2 }}</div>
-                <p class="intro-sub">{{ t.hero.sub }}</p>
-                <div class="intro-actions">
-                    <a href="#portfolio" class="page-scroll btn btn-xl">{{ t.hero.cta_work }}</a>
-                    <a href="#contact" class="page-scroll btn-ghost">{{ t.hero.cta_contact }} <i class="fa fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </header>
+  </div>
+  <h1 class="hero-heading font-medium tracking-tight">
+    {{ t.hero.heading_line1 }}<br>
+    <span class="text-brand">{{ t.hero.heading_line2 }}.</span>
+  </h1>
+  <div class="mt-8 grid items-end gap-8 lg:grid-cols-12 lg:gap-12">
+    <p class="max-w-2xl text-base leading-relaxed text-muted md:text-lg lg:col-span-7">{{ t.hero.sub }}</p>
+    <div class="flex flex-wrap items-center gap-x-7 gap-y-4 lg:col-span-5 lg:justify-end">
+      <a href="#contact" class="button-primary">{{ t.hero.cta_contact }} {% include arrow.html %}</a>
+      <a href="#portfolio" class="text-link">{{ t.hero.cta_work }} <span aria-hidden="true">↓</span></a>
+    </div>
+  </div>
+</header>

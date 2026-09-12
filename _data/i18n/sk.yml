@@ -10,6 +10,15 @@ meta:
     aplikácie na mieru a servery pod nimi. Školíme tímy v práci s AI agentmi a
     automatizujeme opakovanú prácu. Estónska firma, tím v EÚ.
 
+ui:
+  skip: Preskočiť na obsah
+  menu: Menu
+  archive: Archív
+  project_details: Podrobnosti projektu
+  back_top: Späť hore
+  required: '* Povinné údaje'
+  sending: Odosiela sa…
+
 nav:
   services: Služby
   training: AI školenia

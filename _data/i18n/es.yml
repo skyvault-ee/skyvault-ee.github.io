@@ -10,6 +10,15 @@ meta:
     debajo. También formamos equipos en el uso de agentes de IA y automatizamos
     trabajo repetitivo. Empresa estonia, equipo en la UE.
 
+ui:
+  skip: Saltar al contenido
+  menu: Menú
+  archive: Archivo
+  project_details: Detalles del proyecto
+  back_top: Volver arriba
+  required: '* Campos obligatorios'
+  sending: Enviando…
+
 nav:
   services: Servicios
   training: Formación en IA

@@ -1,4 +1,8 @@
 _site
+node_modules/
+test-results/
+playwright-report/
+.jekyll-cache/
 
 # Windows image file caches
 Thumbs.db

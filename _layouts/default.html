@@ -15,18 +15,17 @@
   {% include head.html %}
 
 
-    <body id="page-top" class="index">
-
-    {% include header.html %}
-    {% include services.html %}
-    {% include training.html %}
-    {% include portfolio_grid.html %}
-    {% comment %}
-      {% include team.html %}
-    {% endcomment %}
-    {% include contact.html %}
+    <body id="page-top" class="bg-paper text-ink antialiased">
+    <a class="skip-link" href="#main-content">{{ t.ui.skip }}</a>
+    {% include nav.html %}
+    <main id="main-content" tabindex="-1">
+      {% include header.html %}
+      {% include portfolio_grid.html %}
+      {% include services.html %}
+      {% include training.html %}
+      {% include contact.html %}
+    </main>
     {% include footer.html %}
-    {% include modals.html %}
     {% include js.html %}
 
     </body>

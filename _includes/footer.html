@@ -1,17 +1,12 @@
-  <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <span class="copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.title }} O&Uuml;</span>
-                </div>
-                <div class="col-md-6">
-                    <ul class="list-inline social-buttons">
-                        {% for network in site.social %}
-                        <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+<footer class="site-shell border-t border-line pt-8 pb-6">
+  <div class="flex flex-wrap items-center justify-between gap-x-8 gap-y-5 text-sm">
+    <p class="text-muted">&copy; {{ 'now' | date: '%Y' }} {{ site.title }} OÜ</p>
+    <nav class="flex flex-wrap gap-x-5" aria-label="{{ t.nav.language }}">
+      {% for l in site.data.languages %}
+      <a class="inline-flex min-h-11 items-center hover:text-brand{% if l.code == lang_code %} font-semibold underline underline-offset-4{% endif %}" href="{{ l.url | relative_url }}" lang="{{ l.hreflang }}" hreflang="{{ l.hreflang }}"{% if l.code == lang_code %} aria-current="page"{% endif %}>{{ l.label }}</a>
+      {% endfor %}
+    </nav>
+    <a href="#page-top" class="text-link">{{ t.ui.back_top }} <span aria-hidden="true">↑</span></a>
+  </div>
+  <div class="footer-wordmark mt-6 text-brand" aria-hidden="true">skyvault<span class="text-ink">.</span></div>
+</footer>

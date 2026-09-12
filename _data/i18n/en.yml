@@ -9,6 +9,15 @@ meta:
     train teams to use AI coding agents and automate repetitive work. Estonian
     company, EU-based team.
 
+ui:
+  skip: Skip to content
+  menu: Menu
+  archive: Archive
+  project_details: Project details
+  back_top: Back to top
+  required: '* Required fields'
+  sending: Sending…
+
 nav:
   services: Services
   training: AI training
