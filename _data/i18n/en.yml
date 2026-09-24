@@ -2,12 +2,12 @@
 # the keys here; a missing key renders as an empty string, not a fallback.
 
 meta:
-  title: Software development, e-commerce and DevOps
+  title: Company websites, branding & AI marketing
   description: >-
-    Skyvault builds and runs the software a business depends on day to day:
-    online shops, custom applications and the servers underneath them. We also
-    train teams to use AI coding agents and automate repetitive work. Estonian
-    company, EU-based team.
+    Skyvault builds company websites and online shops, designs logos and brand
+    identities, runs SEO audits, and automates marketing with AI. We also build
+    custom software and keep the systems behind a business running. Estonian
+    company, serving EU clients.
 
 ui:
   skip: Skip to content
@@ -20,34 +20,47 @@ ui:
 
 nav:
   services: Services
-  automation: Automation
+  automation: AI marketing
   training: AI training
   portfolio: Recent work
   contact: Contact
   language: Language
 
 hero:
-  kicker: Software company · Estonia
-  heading_line1: Software that has to
+  kicker: Websites, software & marketing automation · Estonia
+  heading_line1: Websites and systems
   heading_line2: work on Monday
   sub: >-
-    We build and run the systems a business depends on day to day: online
-    shops, internal tools, and the servers underneath them. Small team, no
-    account managers, no ticket queue.
+    We make company websites, logos and brand identities. Then we help marketing
+    keep moving with SEO audits, AI-assisted workflows and automatic publishing
+    to Instagram and Facebook. Small team, no account managers, no ticket queue.
   cta_work: See our work
   cta_contact: Start a conversation
 
 services:
-  heading: What we do
+  heading: Websites, design & the systems behind them
   subheading: >-
-    Small team, no account managers. You talk to the people who write the code.
+    One team for the website customers see, the identity it carries, and the work
+    that happens after launch.
   items:
     - icon: fa-shopping-cart
-      title: Web &amp; e-commerce
+      title: Company websites &amp; online shops
       text: >-
-        Shops and business sites that have to work for real: product catalogs,
-        supplier feeds, orders, invoices, transactional mail that lands in the
-        inbox instead of the spam folder.
+        Company websites and online shops built around how your business works:
+        clear service pages, useful product catalogs, supplier feeds, orders,
+        invoices, and transactional email that reaches the inbox.
+    - icon: fa-code
+      title: Logos &amp; brand identity
+      text: >-
+        Logo design, visual identity and practical design assets for your website
+        and social channels. A consistent look, with guidance on how to use it,
+        rather than a logo file on its own.
+    - icon: fa-search
+      title: SEO audits
+      text: >-
+        We check technical SEO, on-page content, search snippets and the pages
+        visitors land on. You get a prioritized list of fixes, not a promise of
+        overnight rankings.
     - icon: fa-code
       title: Custom software
       text: >-
@@ -60,6 +73,12 @@ services:
         Deployments, server configs, database migrations, the mail that stopped
         sending. The unglamorous half that decides whether everything else stays
         up.
+    - icon: fa-share-alt
+      title: AI marketing &amp; social publishing
+      text: >-
+        AI-assisted marketing workflows and automatic publishing to Instagram
+        and Facebook. Prepare, review and schedule supported videos, Stories and
+        posts from one content workflow.
 
 training:
   heading: AI training &amp; automation
@@ -87,11 +106,11 @@ training:
       - strong: Running models on your own hardware
         text: for when the data is not allowed to leave the building.
   block2:
-    title: Automating the repetitive work
+    title: AI marketing and the work around it
     lead: >-
-      Almost every company has a handful of tasks somebody redoes every week,
-      only because nobody has ever sat down and got rid of them. We find those
-      and get rid of them.
+      AI can help with marketing, but content still needs a reliable path from
+      draft to approval to publishing. We set up that workflow and take repetitive
+      work off your team's plate.
     items:
       - text: >-
           Working out what is actually worth automating first. A fair amount of
@@ -103,6 +122,12 @@ training:
           Scheduled jobs that do the boring pass and only speak up when
           something looks wrong.
       - text: >-
+          AI-assisted content workflows that help prepare and adapt copy, with a
+          human review before it goes out.
+      - text: >-
+          Automatically publish supported videos, Stories and posts to Instagram
+          and Facebook. We check account and format requirements before setup.
+      - text: >-
           Handover: it lives in your repository, documented, and it keeps
           working if you never call us again.
     example: >-
@@ -110,12 +135,10 @@ training:
       be retyping it into the shop.
   price:
     unit: / hour
-    vat: Excl. VAT
     terms:
       - Remote, or on-site in Slovakia, the Czech Republic, Poland, Estonia and Paraguay.
       - From one hour. A first workshop worth doing usually takes half a day.
       - Delivered in English or Slovak.
-      - Estonian company. EU businesses are invoiced under reverse charge.
     cta: Book a session
 
 portfolio:

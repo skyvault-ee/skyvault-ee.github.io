@@ -11,8 +11,7 @@
         {% endfor %}
       </ul>
       <aside class="training-rate xl:col-span-5" aria-label="{{ t.training.price.cta }}">
-        <p class="flex flex-wrap items-baseline gap-x-2"><span class="text-5xl font-semibold">€150</span><span>{{ t.training.price.unit }}</span></p>
-        <p class="mt-1 text-sm text-muted">{{ t.training.price.vat }}</p>
+        <p class="flex flex-wrap items-baseline gap-x-2"><span class="text-5xl font-semibold">€100</span><span>{{ t.training.price.unit }}</span></p>
         <ul class="mt-6 space-y-4 text-sm leading-relaxed text-muted">
           {% for term in t.training.price.terms %}<li>{{ term }}</li>{% endfor %}
         </ul>

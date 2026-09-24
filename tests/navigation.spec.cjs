@@ -24,7 +24,7 @@ test('language navigation closes on outside click and changes language', async (
   await menu.locator('summary').click();
   await menu.locator('a[hreflang="sk"]').click();
   await expect(page).toHaveURL(/\/sk\/$/);
-  await expect(page.locator('h1')).toContainText('Softvér, ktorý musí');
+  await expect(page.locator('h1')).toContainText('Firemné weby a systémy');
 });
 
 test('project details preserve direct links and archive attribution', async ({ page }) => {

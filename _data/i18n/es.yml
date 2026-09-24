@@ -3,12 +3,12 @@
 # texto original, no como inglés traducido. Claves iguales a _data/i18n/en.yml.
 
 meta:
-  title: Desarrollo de software, e-commerce y DevOps
+  title: Webs para empresas, marca y marketing con IA
   description: >-
-    Skyvault construye y mantiene el software del que dependen las empresas a
-    diario: tiendas online, aplicaciones a medida y los servidores que hay
-    debajo. También formamos equipos en el uso de agentes de IA y automatizamos
-    trabajo repetitivo. Empresa estonia, equipo en la UE.
+    Skyvault crea webs para empresas, diseña logotipos e identidad visual, hace
+    auditorías SEO y automatiza el marketing con IA. También desarrolla tiendas
+    online y software a medida, y mantiene los sistemas que hay detrás. Empresa
+    estonia, al servicio de clientes de la UE.
 
 ui:
   skip: Saltar al contenido
@@ -21,35 +21,48 @@ ui:
 
 nav:
   services: Servicios
-  automation: Automatización
+  automation: Marketing con IA
   training: Formación en IA
   portfolio: Proyectos
   contact: Contacto
   language: Idioma
 
 hero:
-  kicker: Empresa de software · Estonia
-  heading_line1: Software que tiene que
-  heading_line2: funcionar el lunes
+  kicker: Webs, software y automatización de marketing · Estonia
+  heading_line1: Webs y sistemas que
+  heading_line2: funcionan el lunes
   sub: >-
-    Construimos y mantenemos los sistemas de los que depende el día a día de
-    una empresa: tiendas online, herramientas internas y los servidores que hay
-    debajo. Equipo pequeño, sin gestores de cuenta, sin colas de tickets.
+    Creamos webs para empresas, logotipos e identidad visual. También ayudamos
+    a que el marketing siga en marcha con auditorías SEO, flujos con IA y
+    publicación automática en Instagram y Facebook. Equipo pequeño, sin gestores
+    de cuenta, sin colas de tickets.
   cta_work: Ver nuestro trabajo
   cta_contact: Hablemos
 
 services:
-  heading: Qué hacemos
+  heading: Web, diseño y sistemas para empresas
   subheading: >-
-    Equipo pequeño, sin gestores de cuenta. Hablas directamente con quienes
-    escriben el código.
+    Un mismo equipo para la web que ven tus clientes, la identidad de tu marca y
+    el trabajo que viene después del lanzamiento.
   items:
     - icon: fa-shopping-cart
-      title: Web y e-commerce
+      title: Webs para empresas y tiendas online
       text: >-
-        Tiendas y webs corporativas que tienen que funcionar de verdad:
-        catálogos de producto, importación de listas de proveedores, pedidos,
-        facturas y correo que llega a la bandeja de entrada y no al spam.
+        Webs corporativas y tiendas online pensadas para cómo trabaja tu empresa:
+        servicios claros, catálogos útiles, listas de proveedores, pedidos,
+        facturas y correos que llegan a la bandeja de entrada.
+    - icon: fa-code
+      title: Logotipos e identidad visual
+      text: >-
+        Diseño de logotipo, identidad visual y recursos prácticos para tu web y
+        tus redes. Una imagen coherente y pautas para usarla, no solo un archivo
+        con el logo.
+    - icon: fa-search
+      title: Auditorías SEO
+      text: >-
+        Revisamos el SEO técnico, el contenido de las páginas, los resultados de
+        búsqueda y las páginas de entrada. Recibes una lista de mejoras por
+        prioridad, no una promesa de aparecer primero.
     - icon: fa-code
       title: Software a medida
       text: >-
@@ -62,6 +75,12 @@ services:
         Despliegues, configuración de servidores, migraciones de base de datos y
         el correo que dejó de enviarse. La mitad ingrata de la que depende que
         todo lo demás siga en pie.
+    - icon: fa-share-alt
+      title: Marketing con IA y publicación en redes
+      text: >-
+        Flujos de marketing con ayuda de IA y publicación automática en Instagram
+        y Facebook. Prepara, revisa y programa vídeos, Stories y publicaciones
+        desde un mismo flujo de contenido.
 
 training:
   heading: Formación en IA y automatización
@@ -72,28 +91,28 @@ training:
   block1:
     title: Formar a tu equipo
     lead: >-
-      Sesiones prácticas sobre tu propio repositorio y tus propias tareas. Nada
+      Sesiones prácticas sobre tu propio proyecto y tus propias tareas. Nada
       de diapositivas sobre el futuro de la IA.
     items:
       - strong: Claude y Claude Code
         text: >-
-          cómo sacarle trabajo real sobre código real, y no solo respuestas a
-          preguntas.
+          cómo sacar adelante tareas reales en un proyecto real, y no solo
+          obtener respuestas a preguntas.
       - strong: Codex y OpenCode
         text: en qué es bueno cada uno y cuándo compensa cambiar.
       - strong: Prompts, instrucciones de proyecto y contexto
-        text: escritos para que aguanten en un repositorio hecho un desastre.
+        text: escritos para que funcionen incluso en un proyecto desordenado.
       - strong: Revisar lo que ha hecho el agente
         text: >-
           qué comprobar antes de fusionar, desplegar o mandárselo a un cliente.
       - strong: Modelos en tu propio hardware
         text: para cuando los datos no pueden salir de la empresa.
   block2:
-    title: Automatizar el trabajo repetitivo
+    title: Marketing con IA y el trabajo que lo rodea
     lead: >-
-      Casi toda empresa tiene un puñado de tareas que alguien rehace cada
-      semana solo porque nadie se ha parado a quitarlas de en medio. Nosotros
-      las buscamos y las quitamos.
+      La IA puede ayudar con el marketing, pero el contenido necesita un camino
+      fiable desde el borrador hasta la aprobación y la publicación. Montamos
+      ese flujo y quitamos trabajo repetitivo de encima a tu equipo.
     items:
       - text: >-
           Primero vemos qué compensa automatizar. Bastantes cosas no compensan.
@@ -104,19 +123,24 @@ training:
           Tareas programadas que se encargan de la parte aburrida y solo avisan
           cuando algo no cuadra.
       - text: >-
-          Entrega: queda en tu repositorio, documentado, y sigue funcionando
+          Flujos con IA que ayudan a preparar y adaptar textos, con revisión
+          humana antes de publicarlos.
+      - text: >-
+          Publica automáticamente vídeos, Stories y publicaciones compatibles en
+          Instagram y Facebook. Antes comprobamos los requisitos de la cuenta y
+          del formato.
+      - text: >-
+          Entrega: queda en tu proyecto, documentado, y sigue funcionando
           aunque no vuelvas a llamarnos.
     example: >-
       Cada lunes por la mañana llega la lista de precios del proveedor en PDF.
       Nadie debería estar pasándola a mano a la tienda.
   price:
     unit: / hora
-    vat: IVA no incluido
     terms:
       - En remoto, o presencial en Eslovaquia, Chequia, Polonia, Estonia y Paraguay.
       - Desde una hora. Un primer taller que sirva de algo suele ocupar media jornada.
       - En español, inglés o eslovaco.
-      - Empresa estonia. A empresas de la UE se factura con inversión del sujeto pasivo.
     cta: Reservar una sesión
 
 portfolio:

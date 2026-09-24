@@ -1,10 +1,10 @@
 const { test, expect } = require('@playwright/test');
 
 const locales = [
-  ['/', 'en', 'Software that has to'],
-  ['/sk/', 'sk', 'Softvér, ktorý musí'],
-  ['/es/', 'es', 'Software que tiene que'],
-  ['/et/', 'et', 'Tarkvara, mis peab'],
+  ['/', 'en', 'Websites and systems'],
+  ['/sk/', 'sk', 'Firemné weby a systémy'],
+  ['/es/', 'es', 'Webs y sistemas'],
+  ['/et/', 'et', 'Veebilehed ja süsteemid'],
 ];
 
 for (const [path, lang, heading] of locales) {

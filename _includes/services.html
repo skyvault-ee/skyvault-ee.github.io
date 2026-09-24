@@ -3,7 +3,7 @@
     <h2 id="services-heading" class="section-heading">{{ t.services.heading }}</h2>
     <p class="max-w-xl text-base leading-relaxed text-muted">{{ t.services.subheading }}</p>
   </div>
-  <div class="service-table mt-8 grid grid-cols-1 md:grid-cols-3">
+  <div class="service-table mt-8 grid grid-cols-1 gap-x-8 gap-y-2 md:grid-cols-2 xl:grid-cols-3">
     {% for item in t.services.items %}
     <article class="service-column">
       <h3 class="text-xl font-semibold">{{ item.title }}</h3>

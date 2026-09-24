@@ -4,11 +4,11 @@
 # Vykanie, konzistentne. Kľúče musia zodpovedať _data/i18n/en.yml.
 
 meta:
-  title: Vývoj softvéru, e-commerce a DevOps
+  title: Firemné weby, značka a AI marketing
   description: >-
-    Skyvault stavia a prevádzkuje softvér, ktorý firmám beží naostro: e-shopy,
-    aplikácie na mieru a servery pod nimi. Školíme tímy v práci s AI agentmi a
-    automatizujeme opakovanú prácu. Estónska firma, tím v EÚ.
+    Skyvault tvorí firemné weby, logá a vizuálnu identitu, robí SEO audity a
+    automatizuje marketing pomocou AI. Stavia aj e-shopy, softvér na mieru a
+    systémy, ktoré firmy potrebujú v prevádzke. Estónska firma, pôsobí v EÚ.
 
 ui:
   skip: Preskočiť na obsah
@@ -21,35 +21,47 @@ ui:
 
 nav:
   services: Služby
-  automation: Automatizácia
+  automation: AI marketing
   training: AI školenia
   portfolio: Referencie
   contact: Kontakt
   language: Jazyk
 
 hero:
-  kicker: Softvérová firma · Estónsko
-  heading_line1: Softvér, ktorý musí
-  heading_line2: fungovať v pondelok
+  kicker: Weby, softvér a marketingová automatizácia · Estónsko
+  heading_line1: Firemné weby a systémy,
+  heading_line2: ktoré fungujú v pondelok
   sub: >-
-    Staviame a prevádzkujeme systémy, na ktorých firmám stojí každodenná
-    prevádzka: e-shopy, interné nástroje a servery pod nimi. Malý tím, žiadni
-    account manažéri, žiadne tikety.
+    Tvoríme firemné weby, logá a vizuálnu identitu. Marketingu pomáhame bežať
+    bez týždenného naháňania: SEO audity, AI automatizácia a automatické
+    publikovanie na Instagrame a Facebooku. Malý tím, žiadni account manažéri,
+    žiadne tikety.
   cta_work: Pozrite si našu prácu
   cta_contact: Napíšte nám
 
 services:
-  heading: Čo robíme
+  heading: Weby, dizajn a systémy pre firmy
   subheading: >-
-    Malý tím, žiadni account manažéri. Rozprávate sa priamo s ľuďmi, ktorí píšu
-    kód.
+    Jeden tím pre web, ktorý vidia vaši zákazníci, značku, ktorú nesie, aj prácu
+    po jeho spustení.
   items:
     - icon: fa-shopping-cart
-      title: Web a e-commerce
+      title: Firemné weby a e-shopy
       text: >-
-        E-shopy a firemné weby, ktoré musia fungovať naostro: katalógy
-        produktov, importy od dodávateľov, objednávky, faktúry a e-maily, ktoré
-        prídu do schránky a nie do spamu.
+        Firemné weby a e-shopy postavené podľa toho, ako vaša firma funguje:
+        zrozumiteľné stránky služieb, užitočné katalógy, importy od dodávateľov,
+        objednávky, faktúry a e-maily, ktoré dorazia do schránky.
+    - icon: fa-code
+      title: Logá a vizuálna identita
+      text: >-
+        Návrh loga, vizuálnej identity a podkladov pre web aj sociálne siete.
+        Jednotný vzhľad a pravidlá používania, nie iba súbor s logom.
+    - icon: fa-search
+      title: SEO audity
+      text: >-
+        Skontrolujeme technické SEO, obsah stránok, zobrazenie vo výsledkoch
+        vyhľadávania aj stránky, na ktoré ľudia prichádzajú. Dostanete zoznam
+        úprav podľa prínosu, nie sľub prvej pozície.
     - icon: fa-code
       title: Softvér na mieru
       text: >-
@@ -62,6 +74,12 @@ services:
         Nasadenia, konfigurácie serverov, migrácie databáz a pošta, ktorá
         prestala odchádzať. Nevďačná polovica, od ktorej závisí, či všetko
         ostatné beží.
+    - icon: fa-share-alt
+      title: AI marketing a publikovanie na sociálne siete
+      text: >-
+        Marketingové postupy s podporou AI a automatické publikovanie na
+        Instagrame a Facebooku. Videá, príbehy a príspevky pripravíte, skontrolujete
+        a naplánujete v jednom procese.
 
 training:
   heading: AI školenia a automatizácia
@@ -88,10 +106,11 @@ training:
       - strong: Modely na vlastnom hardvéri
         text: pre prípady, keď dáta nesmú opustiť firmu.
   block2:
-    title: Automatizácia opakovanej práce
+    title: AI marketing a práca okolo neho
     lead: >-
-      Skoro v každej firme sa nájde pár úloh, ktoré niekto každý týždeň robí
-      odznova len preto, že to doteraz nikto neriešil. Tie nájdeme a zrušíme.
+      AI môže pomôcť s marketingom, no obsah stále potrebuje spoľahlivú cestu od
+      návrhu cez schválenie až po publikovanie. Nastavíme ju a odbremeníme tím od
+      opakovanej práce.
     items:
       - text: >-
           Najskôr zistíme, čo sa vôbec oplatí automatizovať. Dosť veľa vecí sa
@@ -103,6 +122,12 @@ training:
           Naplánované úlohy, ktoré odrobia tú nudnú časť a ozvú sa, len keď
           niečo nesedí.
       - text: >-
+          Postupy s podporou AI pomôžu pripraviť a upraviť texty, ktoré pred
+          zverejnením skontroluje človek.
+      - text: >-
+          Automatické publikovanie podporovaných videí, príbehov a príspevkov na
+          Instagram a Facebook. Vopred overíme podmienky účtu a formátu.
+      - text: >-
           Odovzdanie: všetko ostáva vo vašom projekte, zdokumentované, a beží
           ďalej, aj keby ste nám už nikdy nezavolali.
     example: >-
@@ -110,12 +135,10 @@ training:
       ručne prepisovať do e-shopu.
   price:
     unit: / hodina
-    vat: Bez DPH
     terms:
       - Online, alebo osobne na Slovensku, v Česku, Poľsku, Estónsku a Paraguaji.
       - Školenie od jednej hodiny. Prvý workshop má zmysel aspoň na pol dňa.
       - Vedieme ich po slovensky alebo po anglicky.
-      - Estónska firma. Firmám z EÚ fakturujeme v režime prenesenej daňovej povinnosti.
     cta: Objednať školenie
 
 portfolio:
