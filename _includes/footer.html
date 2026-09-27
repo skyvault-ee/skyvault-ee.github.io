@@ -3,9 +3,10 @@
     <p class="text-muted">&copy; {{ 'now' | date: '%Y' }} {{ site.title }} OÜ</p>
     <nav class="flex flex-wrap gap-x-5" aria-label="{{ t.nav.language }}">
       {% for l in site.data.languages %}
-      <a class="inline-flex min-h-11 items-center hover:text-brand{% if l.code == lang_code %} font-semibold underline underline-offset-4{% endif %}" href="{{ l.url | relative_url }}" lang="{{ l.hreflang }}" hreflang="{{ l.hreflang }}"{% if l.code == lang_code %} aria-current="page"{% endif %}>{{ l.label }}</a>
+      <a class="inline-flex min-h-11 items-center hover:text-brand{% if l.code == lang_code %} font-semibold underline underline-offset-4{% endif %}" href="{{ l.url | relative_url }}" lang="{{ l.hreflang }}" hreflang="{{ l.hreflang }}"{% if page.url == l.url %} aria-current="page"{% endif %}>{{ l.label }}</a>
       {% endfor %}
     </nav>
+    {% if lang_code == 'sk' %}<a class="inline-flex min-h-11 items-center hover:text-brand" href="/sk/ochrana-udajov/">{{ site.data.offers['managed-web-sk'].site.privacy_link }}</a>{% endif %}
     <a href="#page-top" class="text-link">{{ t.ui.back_top }} <span aria-hidden="true">↑</span></a>
   </div>
 

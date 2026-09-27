@@ -1,5 +1,28 @@
-<a href="#services" class="nav-link">{{ t.nav.services }}</a>
-<a href="#automation" class="nav-link">{{ t.nav.automation }}</a>
-<a href="#portfolio" class="nav-link">{{ t.nav.portfolio }}</a>
-<a href="#training" class="nav-link">{{ t.nav.training }}</a>
-<a href="#contact" class="nav-link">{{ t.nav.contact }}</a>
+{%- comment -%}
+  Same global menu on every page of a locale. On the homepage the section links
+  stay fragment-only (no reload); elsewhere they point at the locale homepage.
+  The current page's own sections nest under its menu item. Kontakt leads to
+  the page's own form unless the page opts out with `contact: false`.
+{%- endcomment -%}
+{% if page.url == lang_entry.url %}{% assign home = '' %}{% else %}{% assign home = lang_home %}{% endif %}
+{% if page.contact == false %}{% assign contact_href = lang_home | append: '#contact' %}{% else %}{% assign contact_href = '#contact' %}{% endif %}
+<ul class="nav-list">
+  <li><a href="{{ home }}#services" class="nav-link">{{ t.nav.services }}</a>
+    {%- if lang_code == 'sk' %}{% assign managed = site.data.offers['managed-web-sk'] %}
+    <ul class="nav-sublist">
+      <li><a href="{{ managed.url }}" class="nav-link"{% if page.url == managed.url %} aria-current="page"{% endif %}>{{ managed.site.entry_nav }}</a>
+        {%- if page.url == managed.url %}
+        <ul class="nav-sections" aria-label="{{ managed.nav_label }}">
+          {% for item in managed.nav %}<li><a href="{{ item.href }}" class="nav-link">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+        {%- endif %}
+      </li>
+    </ul>
+    {%- endif %}
+  </li>
+  <li><a href="{{ home }}#automation" class="nav-link">{{ t.nav.automation }}</a></li>
+  <li><a href="{{ home }}#portfolio" class="nav-link">{{ t.nav.portfolio }}</a></li>
+  <li><a href="{{ home }}#training" class="nav-link">{{ t.nav.training }}</a></li>
+  <li><a href="{{ contact_href }}" class="nav-link nav-contact">{{ t.nav.contact }}</a></li>
+</ul>

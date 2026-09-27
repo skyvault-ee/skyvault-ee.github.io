@@ -38,6 +38,14 @@ navigation, project details, metadata, images and contact-form responses.
 Every automated contact POST is intercepted locally; tests never send email.
 Set SITE_URL to run the same checks against another deployment.
 
+If installed Chrome closes between contexts on macOS (`browser.newContext:
+Target page, context or browser has been closed`), use the optional managed
+Chromium runner. This runs the same complete suite without retries or weakened
+assertions; it does not alter the normal Chrome configuration:
+
+    npx playwright install chromium --only-shell
+    npx playwright test --config scripts/playwright-headless.config.cjs --workers=1
+
 Editing
 -------
 
@@ -87,3 +95,62 @@ after pushing; a successful push alone does not prove deployment.
 Never publish node_modules, test reports, local .hermes notes, or the unrelated
 specialists.markdown and _layouts/outsourcing.html drafts. They are excluded in
 _config.yml. The legacy theme remains in the repository only for /send_cv/.
+
+Managed website offer (Slovak only)
+-----------------------------------
+
+- Offer page: /sk/web-so-spravou/ (sk/web-so-spravou/index.html, _layouts/landing.html).
+  Price, scope, FAQ and navigation live in _data/offers/managed-web-sk.yml; change
+  them only together with the written offer.
+- Proof card: U Bronďaka, explicitly a pre-launch preview, links to
+  https://mac-studio.tail26a69.ts.net/ubrondaka/ at the owner's request.
+  Screenshot: img/portfolio/ubrondaka-preview.jpg. Do not relabel as live or
+  switch to the restaurant's production domain until deployment is verified.
+- Original illustrative sample (no longer linked from the offer):
+  /sk/ukazky/remeselnik/. Fictional brand, noindex, excluded
+  from the sitemap. Its enquiry form is a local simulation (assets/js/managed-demo.js)
+  with no action, method, fetch or storage; without JavaScript both fields and
+  the button stay disabled. Input is enabled only after the no-send handler is installed.
+- The global menu keeps the same labels and order on the SK homepage, offer and
+  privacy notice. Web so správou is an always-visible child of Služby; only the
+  current page link receives aria-current="page", and that page's own sections
+  (offer `nav` in the YAML) nest under it. Kontakt, the last item, targets the
+  page's own #contact form unless the page sets `contact: false`, then the
+  locale homepage form. AI marketing is promoted by colour only.
+- Desktop sidebar: only the link list scrolls; logo and language control stay
+  on screen, the language dropdown opens upward. Below 50rem viewport height
+  the caption hides and the logo shrinks. Mobile panels scroll within short
+  viewports and retain native no-JS disclosure.
+- /sk/ochrana-udajov/ uses the landing shell with `contact: false`,
+  `robots: noindex` (injected by landing.html) and `sitemap: false`; its notice
+  text lives unchanged inside `.legal-prose`.
+  The first service card also links the offer. Other locales retain their own
+  global menu and must not link the SK offer as a translation.
+- head.html prints hreflang alternates only on the four language homepages.
+- The landing page reuses the existing contact form, endpoint and four fields.
+- Tests: tests/managed-web.spec.cjs and tests/managed-demo.spec.cjs. They write
+  review screenshots to test-results/managed-*.png.
+
+### Managed website release gates
+
+The page is implemented for private preview. Before publishing it:
+
+- [ ] Commercial: written offer and terms that state page/section scope,
+      launch schedule, extra-work price, cancellation/notice and file handover
+      match the FAQ on the page.
+- [ ] Price: confirm 199 € + 29 €/month, tax treatment and domain charging with
+      the approved commercial document (weby pilot scope).
+- [ ] Operations: production hosting, HTTPS, deploy and recovery for customer
+      sites demonstrated; "Štandardné spustenie na dohodnutej doméne" is an
+      acceptance commitment, not yet evidenced.
+- [ ] Contact delivery: authorized, labelled inbox test of the real
+      contact_me.php endpoint from the production origin (tests only mock it).
+      Phone stays required until the endpoint is verified to accept it empty.
+- [ ] Privacy: legal review of the general contact-form paragraph added to
+      /sk/ochrana-udajov/ (processor, retention, recipients). The notice is not
+      certified compliant; a separate general privacy policy/terms page may be needed.
+- [ ] Human copy review of the Slovak text and visual review of the screenshots.
+- [ ] Do not add Offer/Review JSON-LD until price and availability are approved.
+- [ ] Do not expose unapproved prospect previews or bearer URLs. U Bronďaka's
+      non-token Tailscale preview is explicitly approved for this review page;
+      reassess preview availability and publication permission before public launch.

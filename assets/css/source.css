@@ -1,6 +1,9 @@
 @import "tailwindcss" source(none);
 @source "../../_includes/*.html";
 @source "../../_layouts/default.html";
+@source "../../_layouts/landing.html";
+@source "../../sk/web-so-spravou/*.html";
+@source "../../sk/ukazky/**/*.html";
 @source "../js/*.js";
 
 @font-face {
@@ -67,11 +70,32 @@
   .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .75rem 1.5rem; }
   .brand-home { flex-shrink: 0; display: block; }
   .brand-logo { width: 112px; height: auto; }
-  .brand-caption { margin-top: 1.5rem; max-width: 10rem; font-size: .875rem; line-height: 1.6; color: var(--color-muted); }
+  .brand-caption { display: none; margin-top: 1.5rem; max-width: 10rem; font-size: .875rem; line-height: 1.6; color: var(--color-muted); }
   .nav-link { @apply inline-flex min-h-11 items-center text-base transition-colors hover:text-brand; }
-  .nav-link[href="#automation"] { color: var(--color-grass); font-weight: 600; }
+  /* Promoted by colour only; weight is reserved for the current page. */
+  .nav-link[href$="#automation"] { color: var(--color-grass); }
+  .nav-list, .nav-sections { display: flex; flex-direction: column; gap: .25rem; }
+  .nav-sublist { margin: .125rem 0 .25rem .25rem; padding-left: .875rem; border-left: 2px solid var(--color-line); }
+  .nav-sublist .nav-link { font-size: .9375rem; }
+  .nav-link[aria-current="page"] { font-weight: 600; color: var(--color-navy); }
+  .nav-sublist .nav-link[aria-current="page"] { margin-left: calc(-.875rem - 2px); padding-left: .875rem; border-left: 2px solid var(--color-brand); }
+  .nav-sections { gap: 0; margin: 0 0 .25rem .875rem; }
+  .nav-sections .nav-link { font-size: .875rem; color: var(--color-muted); }
+  .nav-sections .nav-link:hover { color: var(--color-brand); }
+  /* 100% = sticky header height, keeping the panel within the viewport. */
+  .mobile-panel { max-height: calc(100vh - 100%); max-height: calc(100dvh - 100%); overflow-y: auto; overscroll-behavior: contain; }
+  .mobile-menu .nav-list, .mobile-menu .nav-sections { gap: 0; }
   .mobile-menu .nav-link { display: flex; min-height: 3rem; border-bottom: 1px solid var(--color-line); }
-  .mobile-menu .nav-link:last-child { border: 0; }
+  .nav-link.nav-contact { justify-content: center; margin-top: .75rem; padding-inline: 1rem; border: 1px solid var(--color-brand); border-radius: .125rem; color: var(--color-brand); font-weight: 500; }
+  .nav-link.nav-contact:hover { background: var(--color-brand); color: white; }
+  .legal-prose { font-size: 1rem; line-height: 1.65; }
+  .legal-prose > * { max-width: 45rem; }
+  .legal-prose h1 { font-size: clamp(1.875rem, 1.5rem + 1vw, 2.25rem); font-weight: 600; line-height: 1.2; margin-bottom: .5rem; }
+  .legal-prose h2 { font-size: 1.25rem; font-weight: 600; margin: 2rem 0 .5rem; }
+  .legal-prose p, .legal-prose li { margin-bottom: .75rem; }
+  .legal-prose ul { padding-left: 1.25rem; list-style: disc; }
+  .legal-prose a { color: var(--color-brand); text-decoration: underline; text-underline-offset: 4px; }
+  .legal-prose .meta { color: var(--color-muted); font-size: .9rem; margin-bottom: 1.75rem; }
   .skip-link { @apply fixed top-3 left-3 z-50 -translate-y-24 bg-ink px-5 py-3 font-semibold text-white focus:translate-y-0; }
   .intro { display: grid; grid-template-columns: minmax(0, 1fr); align-items: center; background: var(--color-navy); color: white; }
   .hero-copy { padding: 2.5rem 1.5rem; }
@@ -107,6 +131,50 @@
   .form-status:not(:empty) { margin-top: 1.5rem; padding: 1rem; border-left: 3px solid currentColor; font-size: .875rem; line-height: 1.6; }
   .form-status[data-state="success"] { background: #e6f0e7; color: #245331; }
   .form-status[data-state="error"] { background: #f7e7e3; color: #8e2821; }
+  /* Managed-website landing (/sk/web-so-spravou/) */
+  .offer-price { margin: 0 1.5rem 1.5rem; padding: 1.5rem; background: white; color: var(--color-ink); border-top: 4px solid var(--color-brand); }
+  .offer-panel { padding: 1.5rem; border: 1px solid var(--color-line); }
+  .offer-checks li, .offer-dashes li { position: relative; padding-left: 1.5rem; }
+  .offer-checks li::before { content: "✓"; position: absolute; left: 0; color: var(--color-brand); font-weight: 600; }
+  .offer-dashes li::before { content: "–"; position: absolute; left: .25rem; color: var(--color-muted); }
+  .offer-row { display: grid; gap: 1.5rem; padding-block: 2rem; border-top: 2px solid var(--color-brand); }
+  .offer-row + .offer-row { border-top-width: 1px; border-top-color: var(--color-line); }
+  .offer-amount { font-size: 2rem; font-weight: 600; line-height: 1.1; color: var(--color-navy); }
+  .offer-numbered { counter-reset: launch; display: grid; gap: .75rem; }
+  .offer-numbered li { counter-increment: launch; display: grid; grid-template-columns: 2rem minmax(0, 1fr); padding-bottom: .75rem; border-bottom: 1px solid var(--color-line); }
+  .offer-numbered li::before { content: counter(launch); color: var(--color-brand); font-weight: 600; }
+  .offer-limit { padding: 1rem 1.25rem; background: var(--color-mist); border-left: 3px solid var(--color-brand); font-size: 1rem; line-height: 1.6; }
+  .proof-card { display: flex; flex-direction: column; background: white; border: 1px solid var(--color-line); }
+  .proof-image { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-bottom: 1px solid var(--color-line); }
+  .proof-tag { display: inline-block; padding: .25rem .5rem; font-size: .8125rem; font-weight: 600; background: var(--color-mist); color: var(--color-navy); }
+  .proof-tag-sample { background: #fff4d6; color: #5b4300; }
+  .sample-mini { display: grid; gap: .75rem; aspect-ratio: 16 / 10; padding: 1.25rem; background: var(--color-navy); border-bottom: 1px solid var(--color-line); align-content: start; }
+  .sample-mini-bar { display: block; height: .5rem; width: 40%; background: rgb(255 255 255 / .7); }
+  .sample-mini-title { color: white; font-size: 1.25rem; font-weight: 500; }
+  .sample-mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .5rem; }
+  .sample-mini-grid span { display: block; height: 2.25rem; background: rgb(255 255 255 / .12); border: 1px solid rgb(255 255 255 / .3); }
+  .sample-mini-flow { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .sample-mini-flow span { padding: .25rem .5rem; font-size: .75rem; color: var(--color-navy); background: white; }
+  .step-list { counter-reset: step; }
+  .step-list li { counter-increment: step; padding-top: 1rem; border-top: 2px solid var(--color-brand); }
+  .step-list li::before { content: counter(step); display: block; margin-bottom: .5rem; font-size: 1.5rem; font-weight: 600; color: var(--color-brand); }
+  .faq-item { border-bottom: 1px solid var(--color-line); }
+  .faq-item:first-child { border-top: 2px solid var(--color-brand); }
+  /* Illustrative trades sample (/sk/ukazky/remeselnik/) */
+  .sample-banner { position: sticky; top: 0; z-index: 30; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .25rem 1.5rem; padding: .5rem 1.5rem; background: #fff4d6; color: #3d2d00; border-bottom: 1px solid #e3c870; font-size: .875rem; }
+  .sample-banner a { display: inline-flex; min-height: 2.75rem; align-items: center; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+  .sample-brand { display: flex; align-items: center; gap: .625rem; font-size: 1.25rem; font-weight: 600; }
+  .sample-brand-mark { width: 1.5rem; height: 1.5rem; background: linear-gradient(90deg, var(--color-brand) 50%, var(--color-navy) 50%); }
+  .sample-hero { background: var(--color-navy); color: white; }
+  .sample-hero a:focus-visible { outline-color: white; }
+  .tile-diagram { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 4px; max-width: 24rem; width: 100%; justify-self: center; }
+  .tile-diagram span { aspect-ratio: 1; background: rgb(255 255 255 / .1); border: 1px solid rgb(255 255 255 / .35); }
+  .tile-diagram span:nth-child(5n + 2), .tile-diagram span:nth-child(7n) { background: rgb(255 255 255 / .85); }
+  .flow-diagram { display: grid; gap: 1rem; }
+  .flow-diagram li { display: grid; grid-template-columns: 2.5rem minmax(0, 1fr); column-gap: 1rem; padding: 1rem; background: white; border: 1px solid var(--color-line); }
+  .flow-diagram li > :not(.flow-step) { grid-column: 2; }
+  .flow-step { grid-row: span 2; display: flex; width: 2.5rem; height: 2.5rem; align-items: center; justify-content: center; border: 2px solid var(--color-brand); color: var(--color-brand); font-weight: 600; }
+  select.form-field { appearance: auto; }
   @media (width >= 48rem) {
     .site-shell { width: min(100% - 5rem, 72rem); }
     .section-space { padding-block: 3.5rem; }
@@ -118,16 +186,30 @@
     .section-intro { flex-direction: row; align-items: start; justify-content: space-between; gap: 2rem; }
     .section-intro > h2 { flex: 1; }
     .section-intro > p { flex: 1; }
+    .offer-row { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 3rem; }
+    .offer-price { margin-inline: 2.5rem; margin-bottom: 2.5rem; }
+    .flow-diagram { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (width >= 64rem) {
     html { scroll-padding-top: 2rem; }
     .page-body { margin-left: 13.5rem; }
-    .site-nav { position: fixed; inset: 0 auto 0 0; width: 13.5rem; border-bottom: 0; border-right: 1px solid var(--color-line); overflow-y: auto; }
-    .nav-inner { display: block; padding: 2rem 1.75rem; }
+    .site-nav { position: fixed; inset: 0 auto 0 0; width: 13.5rem; border-bottom: 0; border-right: 1px solid var(--color-line); }
+    /* Only the link list scrolls, so the language control never leaves the
+       screen; its dropdown opens upward and is not clipped by that overflow. */
+    .nav-inner { display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start; gap: 0; height: 100%; padding: 2rem 1.75rem 1.5rem; }
+    .nav-inner > * { flex-shrink: 0; }
     .brand-logo { width: 150px; }
-    .desktop-menu { flex-direction: column; margin-top: 2.5rem; gap: .25rem; }
-    .nav-controls { margin-top: 2rem; }
-    .language-options { right: auto; left: 0; }
+    .brand-caption { display: block; }
+    .desktop-menu { flex-direction: column; flex-shrink: 1; min-height: 0; overflow-y: auto; overscroll-behavior: contain; margin: 2.5rem -.25rem 0; padding-inline: .25rem; gap: .25rem; }
+    .desktop-menu .nav-sections .nav-link { min-height: 2.25rem; }
+    .nav-controls { margin-top: 1.5rem; }
+    .language-options { right: auto; left: 0; margin-bottom: .25rem; }
+  }
+  @media (width >= 64rem) and (height < 50rem) {
+    .nav-inner { padding-top: 1.5rem; }
+    .brand-logo { width: 112px; }
+    .brand-caption { display: none; }
+    .desktop-menu { margin-top: 1.5rem; }
   }
   @media (width >= 80rem) {
     .intro { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
@@ -135,5 +217,7 @@
     .hero-heading { max-width: 14ch; }
     .hero-project { margin: 2rem 2rem 2rem 0; }
     .hero-screen { aspect-ratio: 4 / 3; }
+    .offer-price { margin: 2rem 2.5rem 2rem 0; }
+    .flow-diagram { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   }
 }

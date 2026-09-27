@@ -1,0 +1,150 @@
+---
+layout: landing
+lang: sk_SK
+offer: managed-web-sk
+permalink: /sk/web-so-spravou/
+title: Web so správou pre menšie firmy
+description: >-
+  Jednoduchý firemný web v jednom jazyku so spustením a mesačnou správou.
+  Orientačne 199 € za spustenie + 29 € mesačne. Rozsah, termín a podmienky
+  potvrdíme v písomnej ponuke pred objednávkou.
+image: /img/og-image.png
+---
+{% assign offer = site.data.offers[page.offer] %}
+<header class="intro offer-intro">
+  <div class="hero-copy">
+    <p class="text-sm font-medium tracking-wide text-white/80">{{ offer.hero.kicker }}</p>
+    <h1 class="hero-heading mt-4">{{ offer.hero.heading }}</h1>
+    <p class="mt-6 max-w-xl text-base leading-relaxed text-white/90">{{ offer.hero.body }}</p>
+    <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+      <a href="#contact" class="button-light">{{ offer.hero.cta }}</a>
+      <a href="#rozsah" class="hero-work-link">{{ offer.hero.secondary }}</a>
+    </div>
+    <p class="mt-4 text-sm text-white/80">{{ offer.hero.note }}</p>
+  </div>
+  <div class="offer-price">
+    <p class="text-sm text-muted">{{ offer.price.label }}</p>
+    <p class="mt-2 text-2xl leading-snug font-semibold text-navy" data-offer-price>{{ offer.price.line | replace: ' €', '&nbsp;€' }}</p>
+    <p class="mt-4 text-sm leading-relaxed text-muted">{{ offer.price.qualification }}</p>
+    <ul class="offer-checks mt-6 space-y-3 border-t border-line pt-5 text-base">
+      {% for item in offer.price.summary %}<li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</header>
+
+<section id="rozsah" class="site-shell section-space" aria-labelledby="scope-heading">
+  <h2 id="scope-heading" class="section-heading">Čo je v cene</h2>
+  <div class="mt-8 grid gap-8 md:grid-cols-2">
+    <div class="offer-panel">
+      <h3 class="text-xl font-semibold">{{ offer.fit.good_title }}</h3>
+      <ul class="offer-checks mt-4 space-y-2 text-base leading-relaxed">
+        {% for item in offer.fit.good %}<li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="offer-panel bg-mist">
+      <h3 class="text-xl font-semibold">{{ offer.fit.other_title }}</h3>
+      <ul class="offer-dashes mt-4 space-y-2 text-base leading-relaxed">
+        {% for item in offer.fit.other %}<li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      <p class="mt-4 text-base text-muted">{{ offer.fit.other_note }} <a class="text-link" href="/sk/#services">Služby Skyvault</a></p>
+    </div>
+  </div>
+
+  <div class="offer-row mt-12">
+    <div>
+      <p class="offer-amount">199 €</p>
+      <h3 class="mt-2 text-xl font-semibold">{{ offer.launch.title }}</h3>
+      <p class="mt-3 text-base leading-relaxed text-muted">{{ offer.launch.intro }}</p>
+    </div>
+    <ol class="offer-numbered text-base leading-relaxed">
+      {% for item in offer.launch.items %}<li>{{ item }}</li>
+      {% endfor %}
+    </ol>
+  </div>
+
+  <div class="offer-row">
+    <div>
+      <p class="offer-amount">29 € <span class="text-base font-normal text-muted">mesačne</span></p>
+      <h3 class="mt-2 text-xl font-semibold">{{ offer.care.title }}</h3>
+      <p class="mt-3 text-base leading-relaxed text-muted">{{ offer.care.body }}</p>
+    </div>
+    <div>
+      <p class="offer-limit">{{ offer.care.limit }}</p>
+      <h4 class="mt-6 font-semibold">{{ offer.care.examples_title }}</h4>
+      <ul class="offer-checks mt-3 space-y-2 text-base leading-relaxed">
+        {% for item in offer.care.examples %}<li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      <h4 class="mt-6 font-semibold">{{ offer.care.extra_title }}</h4>
+      <ul class="offer-dashes mt-3 space-y-2 text-base leading-relaxed">
+        {% for item in offer.care.extra %}<li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+      <p class="mt-3 text-base text-muted">{{ offer.care.extra_note }}</p>
+    </div>
+  </div>
+
+  <div class="offer-panel mt-12 border-brand" data-written-offer>
+    <h3 class="text-xl font-semibold">{{ offer.written_offer.title }}</h3>
+    <ul class="offer-checks mt-4 grid gap-x-8 gap-y-2 text-base leading-relaxed md:grid-cols-2">
+      {% for item in offer.written_offer.items %}<li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section id="ukazky" class="training-section" aria-labelledby="proof-heading">
+  <div class="site-shell section-space">
+    <div class="section-intro">
+      <h2 id="proof-heading" class="section-heading">{{ offer.proof.heading }}</h2>
+      <p class="max-w-xl text-base leading-relaxed text-muted">{{ offer.proof.intro }}</p>
+    </div>
+    <div class="mt-8 grid gap-8 lg:grid-cols-2">
+      <article class="proof-card">
+        <img src="/img/portfolio/travertin.jpg" alt="Titulná stránka e-shopu Travertin.at" width="1200" height="1106" loading="lazy" decoding="async" class="proof-image">
+        <div class="p-6">
+          <p class="proof-tag">{{ offer.proof.delivered_tag }}</p>
+          <h3 class="mt-3 text-xl font-semibold">{{ offer.proof.delivered_title }}</h3>
+          <p class="mt-3 text-base leading-relaxed text-muted">{{ offer.proof.delivered_text }}</p>
+          <a class="text-link mt-3" href="/sk/#portfolioModal1">{{ offer.proof.delivered_link }}</a>
+        </div>
+      </article>
+      <article class="proof-card">
+        <img src="/img/portfolio/ubrondaka-preview.jpg" alt="Náhľad pripravovaného webu reštaurácie U Bronďaka" width="1440" height="1000" loading="lazy" decoding="async" class="proof-image">
+        <div class="p-6">
+          <p class="proof-tag proof-tag-sample">{{ offer.proof.sample_tag }}</p>
+          <h3 class="mt-3 text-xl font-semibold">{{ offer.proof.sample_title }}</h3>
+          <p class="mt-3 text-base leading-relaxed text-muted">{{ offer.proof.sample_text }}</p>
+          <a class="text-link mt-3" href="{{ offer.sample_url }}" rel="noreferrer">{{ offer.proof.sample_link }} <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="postup" class="site-shell section-space" aria-labelledby="steps-heading">
+  <h2 id="steps-heading" class="section-heading">{{ offer.steps.heading }}</h2>
+  <ol class="step-list mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+    {% for step in offer.steps.items %}
+    <li>
+      <h3 class="text-lg font-semibold">{{ step.title }}</h3>
+      <p class="mt-2 text-base leading-relaxed text-muted">{{ step.text }}</p>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+<section id="otazky" class="site-shell section-space border-t border-line" aria-labelledby="faq-heading">
+  <h2 id="faq-heading" class="section-heading">{{ offer.faq.heading }}</h2>
+  <div class="mt-8 max-w-3xl">
+    {% for item in offer.faq.items %}
+    <details class="faq-item">
+      <summary class="flex min-h-12 items-center justify-between gap-4 py-3 text-lg font-medium">{{ item.q }} <span class="disclosure-plus text-brand" aria-hidden="true">+</span></summary>
+      <p class="pb-5 text-base leading-relaxed text-muted">{{ item.a }}</p>
+    </details>
+    {% endfor %}
+  </div>
+</section>

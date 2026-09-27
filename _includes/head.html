@@ -2,15 +2,21 @@
     <meta charset="utf-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.robots %}<meta name="robots" content="{{ page.robots | escape }}">{% endif %}
 
     {% seo %}
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- One page per language, cross-linked. x-default points at English. -->
+    <!-- One homepage per language, cross-linked. x-default points at English.
+         Only the homepages are translations of each other; single-language
+         pages (e.g. /sk/web-so-spravou/) must not claim them as alternates. -->
+    {% assign language_home = site.data.languages | where: 'url', page.url | first %}
+    {% if language_home %}
     {% for l in site.data.languages %}
     <link rel="alternate" hreflang="{{ l.hreflang }}" href="{{ site.url }}{{ l.url | prepend: site.baseurl }}">
     {% endfor %}
     <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ site.baseurl }}/">
+    {% endif %}
 
     {% if page.layout == 'send_cv' %}
     <!-- Keep the unlinked legacy application form independent of the homepage. -->
@@ -19,7 +25,7 @@
     <link rel="stylesheet" href="{{ '/css/font-awesome/css/font-awesome.min.css' | relative_url }}">
     {% else %}
     <link rel="preload" href="{{ '/assets/fonts/ibm-plex-sans-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v=20260912b">
+    <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v=20260927-nav3">
     {% endif %}
 
     <!-- favicon -->

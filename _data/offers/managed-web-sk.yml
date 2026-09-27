@@ -1,0 +1,198 @@
+# Web so správou: jediný zdroj verejnej ceny a rozsahu pre /sk/web-so-spravou/.
+# Pred zmenou ceny alebo rozsahu porovnajte s písomnou ponukou a README
+# (sekcia "Managed website release gates"). Len slovenčina; ostatné jazyky
+# túto stránku nemajú a nesmú na ňu odkazovať ako na preklad.
+
+url: /sk/web-so-spravou/
+sample_url: https://mac-studio.tail26a69.ts.net/ubrondaka/
+
+# Všeobecné slovenské texty, ktoré nie sú v _data/i18n/sk.yml.
+site:
+  entry_nav: Web so správou
+  service_link: Web so správou za 199 € + 29 € mesačne
+  privacy_link: Ochrana osobných údajov
+  form_privacy: Ako spracúvame údaje z formulára
+  language_homes: Úvodné stránky
+
+nav_label: Na tejto stránke
+nav:
+  - { href: "#rozsah", label: Čo je v cene }
+  - { href: "#ukazky", label: Ukážky }
+  - { href: "#postup", label: Ako to prebieha }
+  - { href: "#otazky", label: Otázky }
+
+hero:
+  kicker: Web pre menšie firmy a živnostníkov
+  heading: Firemný web, o ktorý sa nemusíte starať sami.
+  body: >-
+    Zrozumiteľne predstaví vaše služby, ukáže vašu prácu a uľahčí zákazníkom
+    kontakt. Pred objednávkou si dohodneme rozsah aj cenu. Po spustení sa
+    postaráme o prevádzku a dohodnuté drobné úpravy.
+  cta: Chcem nezáväznú ponuku
+  secondary: Pozrieť rozsah a ukážky
+  note: Odoslaním dopytu nič neobjednávate.
+
+price:
+  label: Orientačná cena
+  line: 199 € za spustenie + 29 € mesačne za prevádzku a správu
+  qualification: >-
+    Orientačná cena jednoduchého webu v jednom jazyku. Doména sa platí
+    osobitne; daňový režim a konečnú cenu potvrdíme v písomnej ponuke.
+  summary:
+    - Spustenie webu pre jednu firmu v jednom jazyku.
+    - Hosting, HTTPS a technická správa dodaného webu.
+    - Jedna drobná obsahová zmena mesačne podľa vašich podkladov.
+
+fit:
+  good_title: Hodí sa pre vás, ak
+  good:
+    - máte menšiu firmu so službami alebo remeslom,
+    - chcete ukázať ponuku, svoju prácu a spôsob, ako vás kontaktovať,
+    - nepotrebujete často meniť celý web.
+  other_title: Iný rozsah spolu prejdeme, ak potrebujete
+  other:
+    - e-shop,
+    - rezervácie alebo objednávky termínov,
+    - zákaznícke účty,
+    - viac jazykov,
+    - prepojenie s internými systémami.
+  other_note: Takú prácu naceníme samostatne. Pozrite si aj naše ďalšie služby.
+
+launch:
+  title: Za čo je 199 € za spustenie
+  intro: >-
+    Z návrhu a vašich podkladov pripravíme web na spustenie. Táto jednorazová
+    práca je oddelená od mesačnej prevádzky a správy.
+  items:
+    - Prispôsobenie návrhu jednej firme a jednému jazyku.
+    - Kontrola dodaných textov, kontaktov a podkladov.
+    - Dohodnuté úpravy pred spustením.
+    - Kontrola mobilného zobrazenia a dohodnutých kontaktov.
+    - Štandardné spustenie na dohodnutej doméne; rozsah presunu potvrdíme vopred.
+
+care:
+  title: O web sa postaráme aj po spustení
+  body: >-
+    Nemusíte hľadať, kto opraví chybu dodaného webu alebo zmení starý kontakt.
+    Hosting, HTTPS a technickú správu riešime my. Raz mesačne nám môžete poslať
+    jednu drobnú obsahovú zmenu podľa vlastných podkladov.
+  limit: >-
+    Jedna drobná úprava existujúceho obsahu do 15 minút práce mesačne;
+    nevyužitá sa neprenáša. Opravy chýb nami dodaného webu sa do tejto úpravy
+    nepočítajú.
+  examples_title: Napríklad
+  examples:
+    - Zmenilo sa telefónne číslo alebo otváracie hodiny, pošlete nové.
+    - Máte fotografiu hotovej práce, ktorou chcete nahradiť staršiu.
+    - V popise služby je neaktuálna informácia, pošlete opravený text.
+  extra_title: Mimo mesačnej správy
+  extra:
+    - nová stránka alebo nová sekcia,
+    - písanie textov od začiatku,
+    - nové napojenie alebo funkcia,
+    - presun e-mailovej pošty,
+    - reklama a platená propagácia.
+  extra_note: Takú prácu vám najprv naceníme a začneme až po vašom súhlase.
+
+written_offer:
+  title: Čo zapíšeme do písomnej ponuky ešte pred objednávkou
+  items:
+    - presný zoznam stránok alebo sekcií,
+    - termín spustenia,
+    - cena práce navyše nad mesačnú úpravu,
+    - doména, jej držiteľ a rozsah presunu,
+    - podmienky ukončenia služby a výpovedná lehota,
+    - odovzdanie súborov pri ukončení,
+    - konečná cena a daňový režim.
+
+proof:
+  heading: Ukážky
+  intro: >-
+    Pozrite si dodaný e-shop a náhľad webu U Bronďaka. Pri každom
+    uvádzame, čo predstavuje a ako súvisí s touto ponukou.
+  delivered_tag: Dodaný projekt mimo tohto balíka
+  delivered_title: Travertin.at, e-shop s prírodným kameňom
+  delivered_text: >-
+    Väčší projekt s automatickým importom katalógu od dodávateľa a faktúrami
+    pri objednávke. Ukazuje, ako pracujeme, nie je to príklad webu za 29 €
+    mesačne.
+  delivered_link: Podrobnosti projektu
+  sample_tag: Náhľad pred spustením
+  sample_title: U Bronďaka
+  sample_text: >-
+    Web reštaurácie s denným menu, ponukou jedál a kontaktmi. Zatiaľ nie je
+    nasadený na ostrej doméne; odkaz vedie na náš náhľad cez Tailscale.
+  sample_link: Otvoriť náhľad U Bronďaka
+
+steps:
+  heading: Ako to prebieha
+  items:
+    - title: Pozrieme sa, čo potrebujete.
+      text: Ujasníme si služby, podklady a či vám jednoduchý web stačí.
+    - title: Dohodneme návrh a rozsah.
+      text: >-
+        Ak sme vám už pripravili súkromný náhľad, prejdete si ho pred
+        rozhodnutím. Úpravy náhľadu nie sú súčasťou mesačnej správy.
+    - title: Potvrdíte písomnú ponuku.
+      text: >-
+        Cena, doména, rozsah presunu, termín a podmienky budú napísané pred
+        začatím práce.
+    - title: Spustíme web a staráme sa oň.
+      text: >-
+        Po schválení web spustíme a ďalej riešime dohodnutú technickú správu a
+        mesačnú obsahovú zmenu.
+
+faq:
+  heading: Časté otázky
+  items:
+    - q: Prečo platím aj za spustenie?
+      a: >-
+        Spustenie je jednorazová práca: prispôsobenie návrhu, kontrola podkladov,
+        dohodnuté úpravy a nasadenie na doménu. Mesačná platba pokrýva až
+        prevádzku po spustení. Obe sumy uvádzame spolu, aby ste videli celú cenu.
+    - q: Čo presne obsahuje mesačná platba?
+      a: >-
+        Hosting, HTTPS a technickú správu dodaného webu, opravy chýb, ktoré sme
+        spôsobili my, a jednu drobnú zmenu existujúceho obsahu do 15 minút práce
+        mesačne podľa vašich podkladov.
+    - q: Čo ak potrebujem viac úprav?
+      a: >-
+        Väčšiu úpravu, novú stránku alebo napojenie vám najprv naceníme. Pracovať
+        začneme až po vašom súhlase. Cenu práce navyše uvedieme v písomnej
+        ponuke.
+    - q: Koľko stránok bude web mať?
+      a: >-
+        Závisí od toho, čo potrebujete ukázať. Presný zoznam stránok alebo sekcií
+        zapíšeme do ponuky pred objednávkou.
+    - q: Ako je to s doménou?
+      a: >-
+        Doména zostáva vo vašom vlastníctve a platí sa osobitne. Pred presunom
+        overíme, na koho je vedená, a v ponuke uvedieme jej držiteľa aj to,
+        čo pri presune urobíme.
+    - q: Zachováte mi e-mail na doméne?
+      a: >-
+        Najprv skontrolujeme, ako máte nastavenú doménu a poštu. Presun pošty nie
+        je súčasťou bežného rozsahu a nastavenia pošty bez dohody nemeníme.
+    - q: Čo sa stane, keď službu ukončím?
+      a: >-
+        Výpovednú lehotu a to, aké súbory vám odovzdáme, zapíšeme do ponuky ešte
+        pred objednávkou, aby ste to vedeli vopred.
+    - q: Kedy bude web hotový?
+      a: >-
+        Termín dohodneme, keď uvidíme vaše podklady, a zapíšeme ho do ponuky.
+    - q: Garantujete zákazky alebo pozície v Google?
+      a: >-
+        Nie. Web zákazníkom uľahčí zistiť, čo robíte, a ozvať sa. Návštevnosť,
+        dopyty ani pozície vo vyhľadávaní negarantujeme.
+    - q: Prečo fakturuje estónska firma?
+      a: >-
+        Dodávateľom je Skyvault OÜ, firma registrovaná v Estónsku. Daňový režim a
+        konečnú cenu pre vašu firmu uvedieme v písomnej ponuke.
+
+contact:
+  heading: Nezáväzný dopyt
+  intro: >-
+    Napíšte nám, čím sa vaša firma zaoberá, či už máte doménu alebo starý web a
+    čo by mal nový web ukázať. Ozveme sa e-mailom a navrhneme ďalší krok.
+    Odoslaním dopytu nič neobjednávate.
+  fallback: Radšej e-mailom?

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{%- comment -%}
+  Single-topic landing page. Same shell as default.html (side masthead,
+  mobile header, footer, site.js) but renders page content instead of the
+  homepage sections. Optional front matter:
+  - `offer:` names a file in _data/offers/ with the contact heading texts.
+  - `contact: false` omits the contact form (e.g. the privacy notice).
+  - `robots:` adds a robots meta tag, e.g. `noindex`.
+{%- endcomment -%}
+{% assign lang_code = page.lang | default: 'en_US' | split: '_' | first %}
+{% assign t = site.data.i18n[lang_code] %}
+{% assign lang_entry = site.data.languages | where: 'code', lang_code | first %}
+{% assign lang_home = lang_entry.url | prepend: site.baseurl %}
+{% assign offer = nil %}{% if page.offer %}{% assign offer = site.data.offers[page.offer] %}{% endif %}
+<html lang="{{ lang_entry.hreflang }}">
+
+  {% include head.html %}
+
+    <body id="page-top" class="bg-paper text-ink antialiased">
+    <a class="skip-link" href="#main-content">{{ t.ui.skip }}</a>
+    {% include nav.html %}
+    <div class="page-body">
+    <main id="main-content" tabindex="-1">
+      {{ content }}
+      {% unless page.contact == false %}{% include contact.html heading=offer.contact.heading intro=offer.contact.intro fallback=offer.contact.fallback %}{% endunless %}
+    </main>
+    {% include footer.html %}
+    </div>
+    {% include js.html %}
+
+    </body>
+</html>

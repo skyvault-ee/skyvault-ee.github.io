@@ -3,7 +3,7 @@
     <a href="{{ lang_home }}" class="brand-home">
       <img class="brand-logo" src="{{ '/img/logos/skyvault.png' | relative_url }}" alt="Skyvault" width="150" height="80">
     </a>
-    <p class="brand-caption hidden lg:block">{{ t.hero.kicker }}</p>
+    <p class="brand-caption">{{ t.hero.kicker }}</p>
     <nav class="desktop-menu hidden lg:flex" aria-label="{{ t.ui.menu }}">
       {% include nav_links.html %}
     </nav>
@@ -12,15 +12,16 @@
         <summary class="flex min-h-11 min-w-11 items-center justify-center gap-2 text-sm font-medium" aria-label="{{ t.nav.language }}: {{ lang_entry.label }}">
           {{ lang_entry.short }} <span class="text-xs" aria-hidden="true">⌄</span>
         </summary>
-        <nav class="language-options absolute top-full right-0 w-44 border border-line bg-white p-2 shadow-sm" aria-label="{{ t.nav.language }}">
+        <nav class="language-options absolute top-full right-0 lg:top-auto lg:bottom-full w-44 border border-line bg-white p-2 shadow-sm" aria-label="{{ t.nav.language }}">
+          {% if lang_code == 'sk' and page.url != lang_entry.url %}<p class="px-3 pt-1 pb-2 text-xs text-muted">{{ site.data.offers['managed-web-sk'].site.language_homes }}</p>{% endif %}
           {% for l in site.data.languages %}
-          <a class="flex min-h-11 items-center justify-between gap-3 px-3 text-sm hover:bg-mist{% if l.code == lang_code %} font-semibold{% endif %}" href="{{ l.url | relative_url }}" lang="{{ l.hreflang }}" hreflang="{{ l.hreflang }}"{% if l.code == lang_code %} aria-current="page"{% endif %}>{{ l.label }}{% if l.code == lang_code %}<span aria-hidden="true">✓</span>{% endif %}</a>
+          <a class="flex min-h-11 items-center justify-between gap-3 px-3 text-sm hover:bg-mist{% if l.code == lang_code %} font-semibold{% endif %}" href="{{ l.url | relative_url }}" lang="{{ l.hreflang }}" hreflang="{{ l.hreflang }}"{% if page.url == l.url %} aria-current="page"{% endif %}>{{ l.label }}{% if l.code == lang_code %}<span aria-hidden="true">✓</span>{% endif %}</a>
           {% endfor %}
         </nav>
       </details>
       <details class="nav-disclosure mobile-menu lg:hidden">
         <summary class="flex min-h-11 items-center gap-2 border-l border-line pl-4 text-sm font-medium">{{ t.ui.menu }} <span class="disclosure-plus" aria-hidden="true">+</span></summary>
-        <nav class="absolute top-full right-0 left-0 border-b border-line bg-white px-6 py-5 shadow-sm" aria-label="{{ t.ui.menu }}">
+        <nav class="mobile-panel absolute top-full right-0 left-0 border-b border-line bg-white px-6 py-5 shadow-sm" aria-label="{{ t.ui.menu }}">
           {% include nav_links.html %}
         </nav>
       </details>

@@ -1,0 +1,119 @@
+---
+layout: null
+sitemap: false
+permalink: /sk/ukazky/remeselnik/
+---
+<!DOCTYPE html>
+{%- comment -%}
+  Illustrative sample for the managed-website offer. Fictional brand, no real
+  contacts, photos, locations or reviews. The enquiry form is a local
+  simulation (assets/js/managed-demo.js) and has no action or method.
+{%- endcomment -%}
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Ilustračná ukážka: web pre remeselníka | Skyvault</title>
+  <meta name="description" content="Ilustračná ukážka jednoduchého webu pre remeselníka. Vymyslená firma, nie zákaznícka referencia.">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  <link rel="preload" href="{{ '/assets/fonts/ibm-plex-sans-latin-wght-normal.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v=20260926">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/fav/favicon-32x32.png">
+</head>
+<body class="bg-paper text-ink antialiased">
+  <div class="sample-banner" data-sample-label>
+    <p><strong>Ilustračná ukážka, nie zákaznícka referencia.</strong> <span class="hidden sm:inline">Firma aj služby sú vymyslené.</span></p>
+    <a href="/sk/web-so-spravou/">← Späť na ponuku Web so správou</a>
+  </div>
+
+  <header class="border-b border-line">
+    <div class="site-shell flex flex-wrap items-center justify-between gap-4 py-5">
+      <p class="sample-brand"><span class="sample-brand-mark" aria-hidden="true"></span>Rovina <span class="font-normal text-muted">obklady a dlažby</span></p>
+      <nav aria-label="Ukážkový web" class="flex flex-wrap gap-x-5 text-sm">
+        <a class="inline-flex min-h-11 items-center hover:text-brand" href="#sluzby">Služby</a>
+        <a class="inline-flex min-h-11 items-center hover:text-brand" href="#postup">Postup</a>
+        <a class="inline-flex min-h-11 items-center hover:text-brand" href="#dopyt">Dopyt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="sample-hero">
+      <div class="site-shell grid items-center gap-10 py-12 md:grid-cols-2 md:py-16">
+        <div>
+          <p class="text-sm font-medium text-white/80">Vymyslená remeselná firma</p>
+          <h1 class="hero-heading mt-3">Obklady, dlažby a drobné opravy kúpeľní.</h1>
+          <p class="mt-5 max-w-lg text-base leading-relaxed text-white/90">Takto môže vyzerať jednoduchý web remeselníka: čo robí, ako prebieha zákazka a ako mu poslať dopyt.</p>
+          <a href="#dopyt" class="button-light mt-8">Opísať zákazku</a>
+        </div>
+        <div class="tile-diagram" aria-hidden="true">
+          {% for i in (1..24) %}<span></span>{% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <section id="sluzby" class="site-shell section-space" aria-labelledby="sluzby-heading">
+      <h2 id="sluzby-heading" class="section-heading">Služby</h2>
+      <ul class="service-table mt-8 grid gap-x-8 md:grid-cols-2">
+        <li class="service-column"><h3 class="text-xl font-semibold">Obklad kúpeľne a WC</h3><p class="mt-3 text-base leading-relaxed text-muted">Príprava podkladu, obklad stien a dokončenie rohov a líšt.</p></li>
+        <li class="service-column"><h3 class="text-xl font-semibold">Pokládka dlažby</h3><p class="mt-3 text-base leading-relaxed text-muted">Dlažba v interiéri, vyrovnanie podkladu a škárovanie.</p></li>
+        <li class="service-column"><h3 class="text-xl font-semibold">Opravy škár a silikónov</h3><p class="mt-3 text-base leading-relaxed text-muted">Vyčistenie starých škár, nové silikóny okolo vane a sprchy.</p></li>
+        <li class="service-column"><h3 class="text-xl font-semibold">Drobné opravy</h3><p class="mt-3 text-base leading-relaxed text-muted">Výmena prasknutej dlaždice, oprava soklíkov a menšie zapravenia.</p></li>
+      </ul>
+    </section>
+
+    <section id="postup" class="training-section" aria-labelledby="postup-heading">
+      <div class="site-shell section-space">
+        <h2 id="postup-heading" class="section-heading">Ako prebieha zákazka</h2>
+        <ol class="flow-diagram mt-8">
+          <li><span class="flow-step">1</span><h3 class="font-semibold">Dopyt</h3><p class="text-sm text-muted">Opíšete, čo treba urobiť.</p></li>
+          <li><span class="flow-step">2</span><h3 class="font-semibold">Obhliadka</h3><p class="text-sm text-muted">Pozrieme sa na miesto a zameriame.</p></li>
+          <li><span class="flow-step">3</span><h3 class="font-semibold">Cenová ponuka</h3><p class="text-sm text-muted">Dostanete rozpis prác a materiálu.</p></li>
+          <li><span class="flow-step">4</span><h3 class="font-semibold">Práca a odovzdanie</h3><p class="text-sm text-muted">Po dokončení spolu skontrolujeme výsledok.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="dopyt" class="site-shell section-space" aria-labelledby="dopyt-heading">
+      <div class="grid gap-8 xl:grid-cols-12">
+        <div class="xl:col-span-4">
+          <h2 id="dopyt-heading" class="section-heading">Opíšte zákazku</h2>
+          <p class="mt-5 text-base leading-relaxed text-muted">Toto je <strong class="text-ink">simulovaný formulár</strong>. Nič sa neodosiela a nepýtame si žiadne osobné údaje. Skutočný web by tu mal overené doručovanie dopytov.</p>
+        </div>
+        <form id="demo-enquiry" class="xl:col-span-8" aria-describedby="demo-nojs">
+          <fieldset class="grid gap-y-6" disabled>
+            <legend class="sr-only">Ukážkový dopyt bez odosielania</legend>
+            <div>
+              <label class="field-label" for="demo-service">Služba *</label>
+              <select class="form-field" id="demo-service" name="service" required>
+                <option value="">Vyberte službu</option>
+                <option>Obklad kúpeľne a WC</option>
+                <option>Pokládka dlažby</option>
+                <option>Opravy škár a silikónov</option>
+                <option>Drobné opravy</option>
+              </select>
+            </div>
+            <div>
+              <label class="field-label" for="demo-description">Čo treba urobiť</label>
+              <textarea class="form-field min-h-32 resize-y" id="demo-description" name="description" rows="4" maxlength="2000"></textarea>
+              <p class="mt-2 text-sm text-muted">Napríklad: obklad kúpeľne, približná plocha, či je treba odstrániť starý obklad.</p>
+            </div>
+          </fieldset>
+          <p id="demo-nojs" class="mt-6 border-l-2 border-brand bg-mist p-4 text-sm leading-relaxed" data-nojs-note>Simulácia je vypnutá, pretože v prehliadači nebeží JavaScript. Formulár v ukážke nič neodosiela.</p>
+          <div id="demo-status" class="form-status" data-state="success" role="status" aria-live="polite" aria-atomic="true"></div>
+          <div class="mt-6 flex flex-wrap items-center justify-between gap-5">
+            <p class="text-xs text-muted">* Povinné pole v ukážke</p>
+            <button type="submit" class="button-primary" disabled>Vyskúšať simuláciu</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-shell border-t border-line py-8 text-sm text-muted">
+    <p>Ukážku pripravil Skyvault OÜ ako ilustráciu k ponuke <a class="text-link" href="/sk/web-so-spravou/">Web so správou</a>. Rovina je vymyslená firma.</p>
+  </footer>
+  <script src="{{ '/assets/js/managed-demo.js' | relative_url }}?v=20260926" defer></script>
+</body>
+</html>

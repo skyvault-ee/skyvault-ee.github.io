@@ -8,6 +8,7 @@
     <article class="service-column">
       <h3 class="text-xl font-semibold">{{ item.title }}</h3>
       <p class="mt-4 text-base leading-relaxed text-muted">{{ item.text }}</p>
+      {% if forloop.first and lang_code == 'sk' %}{% assign managed = site.data.offers['managed-web-sk'] %}<a href="{{ managed.url }}" class="text-link mt-3">{{ managed.site.service_link }} <span aria-hidden="true">→</span></a>{% endif %}
     </article>
     {% endfor %}
   </div>
