@@ -6,6 +6,12 @@
       <a class="inline-flex min-h-11 items-center hover:text-brand{% if l.code == lang_code %} font-semibold underline underline-offset-4{% endif %}" href="{{ l.url | relative_url }}" lang="{{ l.hreflang }}" hreflang="{{ l.hreflang }}"{% if page.url == l.url %} aria-current="page"{% endif %}>{{ l.label }}</a>
       {% endfor %}
     </nav>
+    <nav class="flex flex-wrap gap-x-5" aria-label="{{ t.nav.social }}">
+      {% for url in site.social.links %}
+      {% if url contains 'facebook.com' %}{% assign network = 'Facebook' %}{% elsif url contains 'instagram.com' %}{% assign network = 'Instagram' %}{% else %}{% assign network = url %}{% endif %}
+      <a class="inline-flex min-h-11 items-center hover:text-brand" href="{{ url }}" rel="me">{{ network }}</a>
+      {% endfor %}
+    </nav>
     {% if lang_code == 'sk' %}<a class="inline-flex min-h-11 items-center hover:text-brand" href="/sk/ochrana-udajov/">{{ site.data.offers['managed-web-sk'].site.privacy_link }}</a>{% endif %}
     <a href="#page-top" class="text-link">{{ t.ui.back_top }} <span aria-hidden="true">↑</span></a>
   </div>

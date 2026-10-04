@@ -17,18 +17,13 @@ people:
   pic: 2
   position: Devops coordinator
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-# social:
-#   - title: twitter
-#     url: http://twitter.com/jekyllrb
-#   - title: facebook
-#     url:
-#   - title: stack-overflow
-#     url: http://stackoverflow.com/questions/tagged/jekyll
-#   - title: bitbucket
-#     url: http://bitbucket.org/jekyll
-#   - title: github
-#     url: http://github.com/jekyll
+# Company profiles. jekyll-seo-tag turns social.links into schema.org sameAs on
+# the homepage; the footer renders the same list, so the two can't drift apart.
+social:
+  name: Skyvault
+  links:
+    - https://www.facebook.com/skyvault.ee/
+    - https://www.instagram.com/skyvault.ee/
 
 
 # Build settings
