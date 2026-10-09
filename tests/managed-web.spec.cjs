@@ -28,9 +28,50 @@ test('offer: price, scope, exclusions and nonbinding enquiry are explicit', asyn
   await expect(page.locator('#otazky details')).not.toHaveCount(0);
 });
 
+test('offer: mobile section explains the problem with a sourced number and a schematic, not real sites', async ({ page }) => {
+  await page.goto(path);
+  const mobile = page.locator('#mobil');
+  await expect(mobile.locator('h2')).toHaveText('Ako vidí váš web zákazník na mobile');
+  await expect(mobile).toContainText('StatCounter');
+  await expect(mobile).toContainText('47 až 59 %');
+  await expect(mobile).toContainText('gs.statcounter.com');
+  await expect(mobile).toContainText('z verejných údajov nevidno');
+  await expect(mobile.locator('.phone[role="img"]')).toHaveCount(2);
+  await expect(mobile.locator('img, iframe')).toHaveCount(0);
+  await expect(mobile.locator('.offer-numbered').first().locator('li')).toHaveCount(3);
+  await expect(mobile.locator('.offer-numbered').nth(1).locator('li')).toHaveCount(2);
+  await expect(mobile).toContainText('Otvorte svoj web na telefóne');
+  await expect(mobile).not.toContainText(/strat|tržb|zákazk.*(denne|mesačne)/i);
+});
+
+test('offer: private-preview section answers the e-mail recipient and lets them verify us', async ({ page }) => {
+  await page.goto(path);
+  const preview = page.locator('#sukromna-ukazka');
+  await expect(preview.locator('h2')).toHaveText('Dostali ste od nás e-mail s ukážkou?');
+  await expect(preview.locator('.preview-fact')).toHaveCount(7);
+  for (const fact of ['Váš súčasný web sa nemení', 'Odkaz je súkromný', 'simulované', '„3 úpravy zadarmo“', '„Chcem tento web“', 'Nemáte záujem?']) {
+    await expect(preview).toContainText(fact);
+  }
+  await expect(preview).toContainText('Odpíšte na e-mail „NIE“');
+  const verify = preview.locator('[data-verify-identity]');
+  await expect(verify).toContainText('14603713');
+  await expect(verify).toContainText('EE102117448');
+  await expect(verify).toContainText('+421 940 900 565');
+  await expect(verify.locator('a[href="https://ariregister.rik.ee/eng/company/14603713"]')).toBeVisible();
+  await expect(verify.locator('a[href="https://ec.europa.eu/taxation_customs/vies/"]')).toBeVisible();
+  await expect(preview.locator('a[href*="ukazka.skyvault.ee"]')).toHaveCount(0);
+  const faq = page.locator('#otazky');
+  await expect(faq).toContainText('Je to naozaj od vás?');
+  await expect(faq).toContainText('Čo sa stane s mojím súčasným webom?');
+  await expect(faq).toContainText('§ 7a');
+  await expect(faq).toContainText('bez pripočítanej DPH');
+  await expect(faq.locator('details')).toHaveCount(13);
+});
+
 test('offer: no unapproved promises, payment actions or private prospects', async ({ page }) => {
   await page.goto(path);
-  const text = await page.locator('body').innerText();
+  // The demo toolbar's own button label is the one approved use of the word.
+  const text = (await page.locator('body').innerText()).replace(/„3 úpravy zadarmo“/g, '');
   for (const claim of [
     /zaručen/i, /(?<!ne)garantujeme/i, /bez viazanosti/i, /neobmedzen/i, /web je (váš|vaš)/i, /zadarmo/i,
     /\b\d+\s*(stránok|podstránok|strán)\b/i, /do \d+ (hodín|dní)/i, /\b(24|48)\s*h/i, /zálohujeme|zálohy/i,
@@ -59,7 +100,7 @@ test('offer: page navigation, language home links and footer privacy', async ({ 
   await page.goto(path);
   const hrefs = await page.locator('.desktop-menu a').evaluateAll(links => links.map(l => l.getAttribute('href')));
   expect(hrefs).toEqual([
-    '/sk/#services', '/sk/web-so-spravou/', '#rozsah', '#ukazky', '#postup', '#otazky',
+    '/sk/#services', '/sk/web-so-spravou/', '#mobil', '#sukromna-ukazka', '#rozsah', '#ukazky', '#postup', '#otazky',
     '/sk/#automation', '/sk/#portfolio', '/sk/#training', '#contact',
   ]);
   for (const anchor of await page.locator('a[href^="#"]').all()) {
@@ -73,7 +114,7 @@ test('offer: page navigation, language home links and footer privacy', async ({ 
   await expect(page.locator('.site-nav img.brand-logo')).toHaveAttribute('src', '/img/logos/skyvault.png');
 });
 
-test('offer: proof labels U Brondaka as not live and links its Tailscale preview', async ({ page }) => {
+test('offer: proof labels U Brondaka as not live and links its public ukazka preview', async ({ page }) => {
   await page.goto(path);
   const proof = page.locator('#ukazky');
   await expect(proof.locator('img[src="/img/portfolio/travertin.jpg"]')).toBeVisible();
@@ -81,7 +122,8 @@ test('offer: proof labels U Brondaka as not live and links its Tailscale preview
   await expect(proof).toContainText('U Bronďaka');
   await expect(proof).toContainText('Náhľad pred spustením');
   await expect(proof).toContainText('Zatiaľ nie je nasadený na ostrej doméne');
-  await expect(proof.locator('a[href="https://mac-studio.tail26a69.ts.net/ubrondaka/"]')).toBeVisible();
+  await expect(proof.locator('a[href="https://ukazka.skyvault.ee/ubrondaka/"]')).toBeVisible();
+  await expect(page.locator('a[href*="ts.net"]')).toHaveCount(0);
   await expect(proof.locator('img[src="/img/portfolio/ubrondaka-preview.jpg"]')).toBeVisible();
   await expect(proof.locator('a[href="/sk/ukazky/remeselnik/"]')).toHaveCount(0);
   await expect(proof).not.toContainText('Web pre remeselníka');

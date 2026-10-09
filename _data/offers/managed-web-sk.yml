@@ -4,7 +4,9 @@
 # túto stránku nemajú a nesmú na ňu odkazovať ako na preklad.
 
 url: /sk/web-so-spravou/
-sample_url: https://mac-studio.tail26a69.ts.net/ubrondaka/
+sample_url: https://ukazka.skyvault.ee/ubrondaka/
+register_url: https://ariregister.rik.ee/eng/company/14603713
+vies_url: https://ec.europa.eu/taxation_customs/vies/
 
 # Všeobecné slovenské texty, ktoré nie sú v _data/i18n/sk.yml.
 site:
@@ -16,6 +18,9 @@ site:
 
 nav_label: Na tejto stránke
 nav:
+  - { href: "#mobil", label: Web na mobile }
+  - href: "#sukromna-ukazka"
+    label: "Dostali ste ukážku?"
   - { href: "#rozsah", label: Čo je v cene }
   - { href: "#ukazky", label: Ukážky }
   - { href: "#postup", label: Ako to prebieha }
@@ -31,6 +36,90 @@ hero:
   cta: Chcem nezáväznú ponuku
   secondary: Pozrieť rozsah a ukážky
   note: Odoslaním dopytu nič neobjednávate.
+
+# Prečo: ako vyzerá starší web na telefóne. Čísla len z verejného zdroja
+# (StatCounter, Slovensko, Desktop vs Mobile, mesačné hodnoty 9/2025 – 9/2026).
+mobile:
+  heading: Ako vidí váš web zákazník na mobile
+  intro: >-
+    Približne polovica návštev slovenských webov je dnes z mobilu (StatCounter,
+    9/2025 – 9/2026: 47 až 59 % mesačne). Starší web bez mobilnej verzie sa na
+    telefóne zobrazí ako zmenšená verzia stránky pre počítač: písmo má na
+    displeji 3 až 5 bodov a telefónne číslo je tam len ako text, nedá sa naň
+    ťuknúť.
+  old_label: "Dnes: web bez mobilnej verzie"
+  old_alt: >-
+    Starší web na telefóne: celá počítačová stránka zmenšená na tretinu, text
+    je nečitateľný a pod obsahom je prázdne miesto.
+  new_label: "Nový web: prispôsobený telefónu"
+  new_alt: >-
+    Nový web na telefóne: čitateľný nadpis, krátky popis služieb a tlačidlo
+    na zavolanie hneď v úvode.
+  old_title: Dnes, s telefónom v ruke
+  old_steps:
+    - Zákazník otvorí web a vidí zmenšenú stránku. Musí ju približovať a posúvať do strán.
+    - Nájde číslo a opíše si ho do telefónu ručne.
+    - Alebo stránku zavrie a skúsi ďalšiu firmu vo výsledkoch vyhľadávania.
+  new_title: Na webe prispôsobenom telefónu
+  new_steps:
+    - Otvorí web a hneď vidí, čo robíte a kde.
+    - Jedným ťuknutím vám zavolá alebo pošle dopyt.
+  check_title: Overte si to na vlastnom webe
+  check: >-
+    Otvorte svoj web na telefóne. Ak musíte text približovať a na číslo sa nedá
+    ťuknúť, ide presne o tento prípad. Firmám, ktorým posielame ukážku,
+    prikladáme aj PDF s porovnaním ich webu a ukážky: snímky z telefónu
+    a počítača a namerané hodnoty.
+  source: >-
+    Zdroj podielu mobilu: gs.statcounter.com, Slovensko, platforma Desktop vs
+    Mobile vs Tablet. Koľko návštev z mobilu má konkrétny web, z verejných
+    údajov nevidno.
+
+# Pre firmy, ktorým sme poslali e-mail so súkromným odkazom na ukážku.
+preview:
+  heading: Dostali ste od nás e-mail s ukážkou?
+  intro: >-
+    Firmám, ktorých web sme si pozreli na mobile, posielame súkromný odkaz na
+    ukážku nového webu pripravenú z ich vlastných textov a fotiek. Vysvetľujeme,
+    čo to znamená a čo s tým môžete urobiť.
+  items:
+    - title: Váš súčasný web sa nemení.
+      text: >-
+        Ukážka beží na našej adrese ukazka.skyvault.ee. Na vašej doméne,
+        hostingu ani pošte sme nič neupravovali a bez písomnej objednávky ani
+        neupravíme.
+    - title: Odkaz je súkromný.
+      text: >-
+        Vedie len na ukážku pre vašu firmu. Nie je vo vyhľadávačoch ani v
+        žiadnom verejnom zozname. Pokojne ho prepošlite kolegom alebo
+        spoločníkovi.
+    - title: Kontakty a formulár sú v ukážke simulované.
+      text: >-
+        Z ukážky sa nedá omylom zavolať ani odoslať dopyt. Na spustenom webe sa
+        bude dať na číslo ťuknúť a dopyt príde na váš e-mail.
+    - title: Texty a fotky sú z vášho webu.
+      text: >-
+        Čo sme na vašom webe nenašli, nahradili sme ilustráciami a označili.
+        Pred spustením ich vymeníme za vaše fotky z realizácií.
+    - title: Tlačidlo „3 úpravy zadarmo“.
+      text: >-
+        Napíšte, čo chcete zmeniť: titulok, texty, farby alebo fotky. Tri úpravy
+        ukážky urobíme pred vaším rozhodnutím, bez platby a bez záväzku.
+    - title: Tlačidlo „Chcem tento web“.
+      text: >-
+        Nezáväzný záujem, nie objednávka. Ozveme sa, dohodneme rozsah a pošleme
+        písomnú ponuku. Nič sa neúčtuje, kým ju nepotvrdíte.
+    - title: Nemáte záujem?
+      text: >-
+        Odpíšte na e-mail „NIE“. Ukážku odstránime a viac sa neozveme.
+  verify_title: Ako si overiť, že píšeme naozaj my
+  verify:
+    - E-mail prichádza z adresy končiacej na @skyvault.ee a ukážka je na adrese začínajúcej na ukazka.skyvault.ee.
+    - Dodávateľom je spoločnosť Skyvault OÜ, registračný kód 14603713, zapísaná v estónskom obchodnom registri.
+    - IČ DPH EE102117448 si overíte v systéme VIES Európskej komisie.
+    - Alebo nám jednoducho zavolajte na +421 940 900 565. Ozve sa Alexander Sádovský, ktorý ukážku pripravil.
+  register_link: Obchodný register (ariregister.rik.ee)
+  vies_link: Overenie IČ DPH (VIES)
 
 price:
   label: Orientačná cena
@@ -121,7 +210,7 @@ proof:
   sample_title: U Bronďaka
   sample_text: >-
     Web reštaurácie s denným menu, ponukou jedál a kontaktmi. Zatiaľ nie je
-    nasadený na ostrej doméne; odkaz vedie na náš náhľad cez Tailscale.
+    nasadený na ostrej doméne; odkaz vedie na náš náhľad na ukazka.skyvault.ee.
   sample_link: Otvoriť náhľad U Bronďaka
 
 steps:
@@ -145,6 +234,19 @@ steps:
 faq:
   heading: Časté otázky
   items:
+    - q: Dostal som e-mail s odkazom na ukážku. Je to naozaj od vás?
+      a: >-
+        Áno, ak prišiel z adresy končiacej na @skyvault.ee a odkaz vedie na
+        ukazka.skyvault.ee. Firmu Skyvault OÜ (registračný kód 14603713, IČ DPH
+        EE102117448) si overíte v estónskom obchodnom registri a vo VIES; odkazy
+        sú vyššie v časti „Ako si overiť, že píšeme naozaj my“. Heslá ani
+        prístupové údaje od vás nikdy nežiadame.
+    - q: Čo sa stane s mojím súčasným webom?
+      a: >-
+        Do potvrdenia písomnej ponuky nič. Beží ďalej na vašom hostingu, my sa
+        ho nedotýkame. Pri spustení nového webu ho na vašej doméne nahradíme a
+        pôvodné adresy podstránok podľa dohody presmerujeme na nové, aby staré
+        odkazy naďalej fungovali.
     - q: Prečo platím aj za spustenie?
       a: >-
         Spustenie je jednorazová práca: prispôsobenie návrhu, kontrola podkladov,
@@ -160,6 +262,11 @@ faq:
         Väčšiu úpravu, novú stránku alebo napojenie vám najprv naceníme. Pracovať
         začneme až po vašom súhlase. Cenu práce navyše uvedieme v písomnej
         ponuke.
+    - q: Môžem do webu dať vlastné fotky a texty?
+      a: >-
+        Áno, vlastné fotky sú lepšie než ilustrácie. Fotky z realizácií, logo a
+        opravené texty, ktoré pošlete pred spustením, zapracujeme v rámci
+        spustenia. Úplne nové texty a nové sekcie naceníme osobitne.
     - q: Koľko stránok bude web mať?
       a: >-
         Závisí od toho, čo potrebujete ukázať. Presný zoznam stránok alebo sekcií
@@ -184,10 +291,15 @@ faq:
       a: >-
         Nie. Web zákazníkom uľahčí zistiť, čo robíte, a ozvať sa. Návštevnosť,
         dopyty ani pozície vo vyhľadávaní negarantujeme.
-    - q: Prečo fakturuje estónska firma?
+    - q: Prečo fakturuje estónska firma a ako je to s DPH?
       a: >-
-        Dodávateľom je Skyvault OÜ, firma registrovaná v Estónsku. Daňový režim a
-        konečnú cenu pre vašu firmu uvedieme v písomnej ponuke.
+        Dodávateľom je Skyvault OÜ, firma registrovaná v Estónsku. Faktúru
+        vystavíme bez pripočítanej DPH. Ak je vaša firma platiteľom DPH, DPH si
+        priznáte na Slovensku a pri plnom nároku na odpočet vám z tejto služby
+        nevznikne ďalší náklad na DPH. Ak platiteľom nie ste, pri službe od
+        zahraničného dodávateľa vzniká povinnosť registrácie podľa § 7a zákona o
+        DPH a DPH odvediete sami. Daňový režim a konečnú cenu pre vašu firmu
+        uvedieme v písomnej ponuke.
 
 contact:
   heading: Nezáväzný dopyt

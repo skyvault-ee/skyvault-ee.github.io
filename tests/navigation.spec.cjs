@@ -78,7 +78,7 @@ test('SK offer: page sections nest under the current page, without a second cont
   const sections = current.locator('xpath=following-sibling::ul[contains(@class, "nav-sections")]');
   await expect(sections).toHaveAccessibleName('Na tejto stránke');
   const hrefs = await sections.locator('a').evaluateAll(ls => ls.map(l => l.getAttribute('href')));
-  expect(hrefs).toEqual(['#rozsah', '#ukazky', '#postup', '#otazky']);
+  expect(hrefs).toEqual(['#mobil', '#sukromna-ukazka', '#rozsah', '#ukazky', '#postup', '#otazky']);
   expect((await sections.locator('a').first().boundingBox()).x).toBeGreaterThan((await current.boundingBox()).x);
   await expect(page.locator('.desktop-menu a[href$="#contact"]')).toHaveCount(1);
   await expect(page.locator('.site-nav')).not.toContainText('Nezáväzný dopyt');

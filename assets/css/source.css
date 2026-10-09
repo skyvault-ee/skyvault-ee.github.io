@@ -160,6 +160,42 @@
   .step-list li::before { content: counter(step); display: block; margin-bottom: .5rem; font-size: 1.5rem; font-weight: 600; color: var(--color-brand); }
   .faq-item { border-bottom: 1px solid var(--color-line); }
   .faq-item:first-child { border-top: 2px solid var(--color-brand); }
+  /* Mobile schematic on the offer page: two phones, no screenshots of real firms. */
+  .phone-compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; align-items: start; }
+  .phone-figure { margin: 0; }
+  .phone { width: 100%; max-width: 16.5rem; margin-inline: auto; padding: .45rem; border-radius: 1.6rem; background: #111; box-shadow: 0 1.25rem 2rem -1.25rem rgba(7, 62, 91, .5); }
+  .phone-screen { position: relative; overflow: hidden; aspect-ratio: 390 / 664; border-radius: 1.2rem; background: white; }
+  .phone-old .phone-screen { background: #e7e9ec; }
+  .desk-shrunk { position: absolute; inset: 0 auto auto 0; width: 322.6%; transform: scale(.31); transform-origin: top left; background: white; }
+  .desk-shrunk i, .desk-shrunk b, .desk-shrunk s { display: block; border-radius: 2px; }
+  .d-nav { display: flex; gap: 18px; align-items: center; height: 44px; padding: 0 30px; background: #1f2d3a; }
+  .d-nav i { width: 64px; height: 8px; background: #8da0b3; }
+  .d-hero { height: 220px; padding: 60px 40px 0; background: linear-gradient(135deg, #cfd8e0, #9fb1c0); }
+  .d-hero b { width: 46%; height: 16px; margin-bottom: 10px; background: #ffffffd9; }
+  .d-hero b.short { width: 28%; }
+  .d-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; padding: 34px 40px 40px; }
+  .d-cols s { width: 55%; height: 9px; margin-bottom: 10px; background: #1f2d3a; text-decoration: none; }
+  .d-cols i { height: 5px; margin-bottom: 6px; background: #b9c4cd; }
+  .d-cols i:nth-child(4n) { width: 72%; }
+  .phone-new .phone-screen { padding: 7% 7% 0; display: flex; flex-direction: column; gap: 5%; }
+  .m-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2%; }
+  .m-logo { width: 34%; height: 9%; aspect-ratio: 4 / 1; height: auto; background: var(--color-navy); border-radius: 2px; }
+  .m-menu { padding: 2% 6%; border: 1px solid var(--color-line); border-radius: 999px; font-size: .55rem; color: var(--color-ink); }
+  .m-kicker { width: 55%; height: 3%; background: var(--color-brand); opacity: .7; border-radius: 2px; }
+  .m-h1 { width: 92%; height: 7%; margin-top: -2%; background: var(--color-ink); border-radius: 3px; }
+  .m-h1.short { width: 60%; }
+  .m-p { width: 100%; height: 2.6%; margin-top: -2.5%; background: var(--color-line); border-radius: 2px; }
+  .m-p.short { width: 70%; }
+  .m-btn { display: flex; align-items: center; justify-content: center; height: 9%; margin-top: 0; background: var(--color-brand); color: white; border-radius: 4px; font-size: .62rem; font-weight: 600; }
+  .m-btn-ghost { margin-top: -3%; background: white; color: var(--color-ink); border: 1px solid var(--color-ink); }
+  .m-img { flex: 1; margin: 0 -8% -1px; background: linear-gradient(160deg, #cfe0ea, #8fb3c8); }
+  .phone-figure figcaption { margin-top: .75rem; text-align: center; font-size: .875rem; color: var(--color-muted); }
+  .phone-tag { display: block; width: max-content; margin: 0 auto .3rem; padding: .1rem .45rem; border-radius: 2px; font-size: .75rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; }
+  .phone-tag-old { background: #f7e7e3; color: #8e2821; }
+  .phone-tag-new { background: #e6f0e7; color: #245331; }
+  .preview-facts { display: grid; gap: 1.5rem; }
+  .offer-panel .offer-numbered li:last-child { padding-bottom: 0; border-bottom: 0; }
+  .preview-fact { padding: 1.25rem 1.5rem; background: white; border: 1px solid var(--color-line); border-top: 2px solid var(--color-brand); }
   /* Illustrative trades sample (/sk/ukazky/remeselnik/) */
   .sample-banner { position: sticky; top: 0; z-index: 30; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .25rem 1.5rem; padding: .5rem 1.5rem; background: #fff4d6; color: #3d2d00; border-bottom: 1px solid #e3c870; font-size: .875rem; }
   .sample-banner a { display: inline-flex; min-height: 2.75rem; align-items: center; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
@@ -188,6 +224,8 @@
     .section-intro > p { flex: 1; }
     .offer-row { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 3rem; }
     .offer-price { margin-inline: 2.5rem; margin-bottom: 2.5rem; }
+    .preview-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .preview-fact:last-child:nth-child(odd) { grid-column: 1 / -1; }
     .flow-diagram { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
   @media (width >= 64rem) {
