@@ -44,9 +44,9 @@ mobile:
   intro: >-
     Približne polovica návštev slovenských webov je dnes z mobilu (StatCounter,
     9/2025 – 9/2026: 47 až 59 % mesačne). Starší web bez mobilnej verzie sa na
-    telefóne zobrazí ako zmenšená verzia stránky pre počítač: písmo má na
-    displeji 3 až 5 bodov a telefónne číslo je tam len ako text, nedá sa naň
-    ťuknúť.
+    telefóne zobrazí ako zmenšená verzia stránky pre počítač: písmo je drobné,
+    treba si ho zväčšovať prstami, a telefónne číslo je tam uvedené len ako
+    text, nedá sa naň ťuknúť a zavolať.
   old_label: "Dnes: web bez mobilnej verzie"
   old_alt: >-
     Starší web na telefóne: celá počítačová stránka zmenšená na tretinu, text
@@ -57,8 +57,8 @@ mobile:
     na zavolanie hneď v úvode.
   old_title: Dnes, s telefónom v ruke
   old_steps:
-    - Zákazník otvorí web a vidí zmenšenú stránku. Musí ju približovať a posúvať do strán.
-    - Nájde číslo a opíše si ho do telefónu ručne.
+    - Zákazník otvorí web a vidí zmenšenú stránku. Musí si ju zväčšovať prstami a posúvať do strán.
+    - Nájde číslo a ručne si ho prepíše do telefónu.
     - Alebo stránku zavrie a skúsi ďalšiu firmu vo výsledkoch vyhľadávania.
   new_title: Na webe prispôsobenom telefónu
   new_steps:
@@ -66,7 +66,7 @@ mobile:
     - Jedným ťuknutím vám zavolá alebo pošle dopyt.
   check_title: Overte si to na vlastnom webe
   check: >-
-    Otvorte svoj web na telefóne. Ak musíte text približovať a na číslo sa nedá
+    Otvorte svoj web na telefóne. Ak si musíte text zväčšovať a na číslo sa nedá
     ťuknúť, ide presne o tento prípad. Firmám, ktorým posielame ukážku,
     prikladáme aj PDF s porovnaním ich webu a ukážky: snímky z telefónu
     a počítača a namerané hodnoty.
